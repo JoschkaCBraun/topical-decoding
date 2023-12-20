@@ -119,7 +119,8 @@ def batch_dict_topic_score(
     documents: list[str], lda: LdaModel, tids: list[int], dictionary: dict
 ) -> list[float]:
     """
-    Calculates topic scores using a dictionary method for a list of documents, each against a corresponding topic ID.
+    Calculates topic scores using a dictionary method for a list of documents, each
+    against a corresponding topic ID.
 
     :param documents: A list of documents.
     :param lda: A trained LdaModel.
@@ -138,7 +139,8 @@ def batch_dict_topic_score(
 # Multiprocessing
 def process_documents_chunk(doc_chunk, lda, tids_chunk, method, result_list):
     """
-    Processes a chunk of documents and appends the calculated topic scores to a shared list.
+    Processes a chunk of documents and appends the calculated topic scores to a shared
+    list.
 
     :param doc_chunk: A subset of documents.
     :param lda: A trained gensim LdaModel.

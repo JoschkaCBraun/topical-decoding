@@ -101,11 +101,13 @@ def topic_score(tid, document, lda, dictionary):
     Returns
     -------
     float
-        A float representing the prevalence (probability) of the specified topic in the given document.
+        A float representing the prevalence (probability) of the specified topic in the
+        given document.
 
     Notes
     -----
-    If the topic ID is not present in the document's topic prevalence, the function returns 0.0.
+    If the topic ID is not present in the document's topic prevalence, the function
+    returns 0.0.
 
     Examples
     --------
@@ -125,7 +127,8 @@ def topic_score(tid, document, lda, dictionary):
 
 def ab_topic_diff_score(tid_a, tid_b, document, lda, dictionary):
     """
-    Calculate a normalized score indicating the relative prevalence of two topics in a document.
+    Calculate a normalized score indicating the relative prevalence of two topics in a
+    document.
 
     This function computes the difference between the topic scores for two topics,
     then normalizes by the sum of those scores, resulting in a metric that ranges
@@ -149,11 +152,13 @@ def ab_topic_diff_score(tid_a, tid_b, document, lda, dictionary):
     Returns
     -------
     float
-        A number between -1 and 1, where a higher value means higher prevalence of `tid_a` relative to `tid_b`, and 0 means equal prevalence.
+        A number between -1 and 1, where a higher value means higher prevalence of
+        `tid_a` relative to `tid_b`, and 0 means equal prevalence.
 
     Notes
     -----
-    If `tid_a` and `tid_b` are the same, the function returns 0. If both topic scores are 0, the function also returns 0.
+    If `tid_a` and `tid_b` are the same, the function returns 0. If both topic scores
+    are 0, the function also returns 0.
 
     Examples
     --------
