@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "topical-decoding"
+version = "0.1.0"
+description = ""
+authors = ["Balint Mucsanyi <mucsanyibalint99@gmail.com>"]
+readme = "README.md"
+packages = [{include = "topical_decoding"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+nltk = "^3.8.1"
+spacy = "^3.7.2"
+gensim = "^4.3.2"
+transformers = "^4.36.2"
+torch = "^2.1.2"
+ipywidgets = "^8.1.1"
+sentencepiece = "^0.1.99"
+pandas = "^2.1.4"
+matplotlib = "^3.8.2"
+black = {extras = ["jupyter"], version = "^23.12.0"}
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^23.12.0"
+jupyterlab = "^4.0.9"
+ipython = "^8.18.1"
+ipykernel = "^6.27.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
