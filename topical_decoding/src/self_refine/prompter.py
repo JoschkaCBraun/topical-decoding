@@ -1,4 +1,5 @@
 import json
+import re
 
 
 class Prompter:
@@ -11,15 +12,20 @@ class Prompter:
         self.separator = "\n\n\n###\n\n\n"
 
         # Init
-        self.init_current_template = """Topic words: {words}
+        self.init_current_stripped_template = """Topic words: {words}
 
 Document: {document}"""
 
         self.init_example_template = (
-            self.init_current_template + "\n\nSummary: {summary}"
+            self.init_current_stripped_template + "\n\nSummary: {summary}"
         )
 
-        self.init_suffix = (
+        self.init_current_template = (
+            self.init_current_stripped_template + "\n\nSummary: "
+        )
+
+        self.init_prefix = (
+            "We want to create a summary that incorporates the specified words. "
             "Do your best! Put a large emphasis on aligning your "
             "summary with the topic words but also make sure you "
             "capture the essence of the document."
@@ -38,17 +44,18 @@ Document: {document}"""
         self.feedback_current_stripped_template = """Summary: {summary}
 
 What words from the word list are missing from the summary? Are there non-stopwords in
-the summary that are not in the word list? Does the summary make sense?"""
+the summary that are not in the word list? Does the summary make sense? Make sure to
+follow the example templates exactly."""
 
         self.feedback_current_template = (
             "Topic words: {words}\n\nDocument: {document}\n\n"
             + self.feedback_current_stripped_template
+            + "\n\nConcept Feedback: "
         )
 
         self.feedback_example_template = (
-            f"{self.feedback_current_template}"
-            "\n\nConcept Feedback: {concept_feedback}"
-            "\n\nCommonsense Feedback: {commonsense_feedback}"
+            self.feedback_current_template
+            + "{concept_feedback}\n\nCommonsense Feedback: {commonsense_feedback}"
         )
 
         self.feedback_examples = self.create_feedback_examples(feedback_examples_path)
@@ -89,7 +96,7 @@ the summary that are not in the word list? Does the summary make sense?"""
         current_string = self.init_current_template.format(
             words=words, document=document
         )
-        init_prompt = f"{self.init_examples}{current_string}\n\n{self.init_suffix}"
+        init_prompt = f"{self.init_prefix}\n\n\n{self.init_examples}{current_string}"
 
         return init_prompt
 
@@ -122,6 +129,16 @@ the summary that are not in the word list? Does the summary make sense?"""
 
         return feedback_prompt
 
+    @staticmethod
+    def extract_feedbacks(response: str) -> tuple[str, str]:
+        concept_feedback, commonsense_feedback = response.split(
+            "Commonsense Feedback: "
+        )
+        concept_feedback = concept_feedback.strip()
+        commonsense_feedback = commonsense_feedback.strip()
+
+        return concept_feedback, commonsense_feedback
+
     def reset_iter(self) -> None:
         self.iter_history = ""
 
@@ -135,6 +152,7 @@ the summary that are not in the word list? Does the summary make sense?"""
             example_strings = [
                 self.feedback_example_template.format(
                     words=sub_example["words"],
+                    document=sub_example["document"],
                     summary=sub_example["summary"],
                     concept_feedback=sub_example["concept_feedback"],
                     commonsense_feedback=sub_example["commonsense_feedback"],
@@ -143,7 +161,7 @@ the summary that are not in the word list? Does the summary make sense?"""
             ]
             sequences.append(self.iter_separator.join(example_strings))
 
-        return f"{self.separator.join(sequences)}{self.separator}"
+        return f"{self.init_prefix}\n\n\n{self.separator.join(sequences)}{self.separator}"
 
     def create_iter_prompt(
         self,
