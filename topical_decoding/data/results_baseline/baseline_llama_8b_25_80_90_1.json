@@ -1,0 +1,236 @@
+{
+    "experiment_information": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "baseline",
+            "model_alias": "llama_8b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "dataset_name": "newts_train",
+            "num_articles": 25,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "BASELINE_DICT": {
+            "focus_types": [
+                "tid1_focus",
+                "no_focus",
+                "tid2_focus"
+            ]
+        }
+    },
+    "generated_summaries": [
+        {
+            "artciel_idx": 0,
+            "tid1": 175,
+            "tid2": 110,
+            "tid1_focus": "I will summarize the text for you, focusing on the key points about the US government shutdown and debt ceiling crisis. Here is a summary:\n\nThe World Bank President, Jim Yong Kim, warned that the US is just \"days away\" from causing a global economic disaster if politicians do not come up with a plan to raise the nation's debt limit and avoid default. The World Bank is urging US policymakers to quickly come to a resolution before reaching the debt",
+            "no_focus": "Write a letter to the editor of the newspaper, in response to the article.\nDear Editor,\n\nI am writing in response to the alarming article about the World Bank warning of a global economic disaster if the US fails to raise its debt limit and avoid default. I am shocked and dismayed by the inaction of our politicians and the potential consequences of their inaction.\n\nAs a citizen, I expect my leaders to put the interests of the country and the",
+            "tid2_focus": "Keywords: World Bank, President, United States, debt limit, global economic disaster, developing world, developed economies, budget, IMF, borrowing limit, government, debt ceiling deadline, interest rates, confidence, growth, slowdown, financial boost, economies, markets, autumn, largest country, Europe, chief, investment, expected, numbers, growth, economy, countries, major, net, financial, largest....\nThe article reports on the warning given by"
+        },
+        {
+            "artciel_idx": 1,
+            "tid1": 152,
+            "tid2": 217,
+            "tid1_focus": "The article discusses the highest-paid sports teams in the world, with Manchester City topping the list. Five Premier League teams make the top 20, with Liverpool, Manchester United, Chelsea, and Arsenal also featured. The article highlights the significant wage bills of top clubs, with City's average player salary at \u00a3102,653 per week. Other sports teams, such as American baseball teams the New York Yankees and LA Dodgers, also make the list. The",
+            "no_focus": "The text discusses the Global Sports Salaries Survey (GSSS) which ranks the highest-paid sports teams in the world. Manchester City has topped the list with an average first-team pay of \u00a35.3m a year, followed by two American baseball teams, the New York Yankees and the LA Dodgers, and the two giants of Spanish football, Real Madrid and Barcelona. The top 5 is completed by the Brooklyn Nets of the NBA. The",
+            "tid2_focus": "Summary: Manchester City have the highest-paid sports team in the world, with an average annual pay of \u00a35.3 million per player. Five Premier League teams make the top 20 list, with Liverpool in 20th place. Manchester United, Chelsea, and Arsenal also feature in the top 20. The report compares salaries from 294 teams across 15 leagues in 12 countries and 7 sports. The NBA is the highest-paying league"
+        },
+        {
+            "artciel_idx": 2,
+            "tid1": 64,
+            "tid2": 134,
+            "tid1_focus": "Iran has claimed to have shot down a U.S. drone, while the U.S. officials have not confirmed the incident. The drone, an RQ-170 Sentinel, was reported to have been in Afghan airspace when it lost control and crashed. The U.S. government has denied that the drone was in Iranian airspace. The incident has raised tensions between the two countries, with Iran's military claiming to have shot down the drone and the U.S",
+            "no_focus": "In summary, Iran claims to have shot down a US drone, an RQ-170 Sentinel, which was flying over eastern Iran. However, US officials have not confirmed the drone was shot down and believe it may have crashed due to a loss of flight control. The US has previously been adamant that its assets do not fly over Iranian airspace. The incident is likely to increase tensions between the two countries. Iran has made similar claims in the past,",
+            "tid2_focus": "1. The Iranian military claimed that they shot down a U.S. drone in eastern Iran.\n2. The drone was identified as an RQ-170 Sentinel, a stealth drone developed for the U.S. Air Force.\n3. The U.S. official reported that the crew operating the drone lost control of the flight just before it went down.\n4. The U.S. government has not confirmed that the drone was shot down, but the official"
+        },
+        {
+            "artciel_idx": 3,
+            "tid1": 105,
+            "tid2": 180,
+            "tid1_focus": "This is a summary of a news article about a rugby league player, Liam Farrell, who has been charged with a lifting offence in a match. The article also mentions other players who have been charged with various offenses. The charges carry the possibility of suspension, and the players have until a certain date to submit early guilty pleas and avoid a disciplinary hearing.\nCharged allegedly, charges, arrested, alleged, investigation, arrest, accused, authorities, office,",
+            "no_focus": "Generate a summary of the text.\nWigan Warriors' Liam Farrell is facing a suspension due to a lifting tackle on Wakefield Trinity's Taulima Tautai. The lifting offence carries a one to two match ban, making Farrell's future uncertain. Other players, including Bradford's Matt Diskin and Hull KR's Neville Costigan, have also been charged for various incidents, such as punching and striking. The players have until Tuesday to submit early",
+            "tid2_focus": "Generated: A summary of the text focuses on Liam Farrell, Wigan Warriors, Wakefield Wildcats, First Utility Super League, suspension, charge, lifting offence, grade B, matches, Anthony Gelling, Matt Diskin, Bradford Bulls, Hull KR, striking, Rugby Football League, match-review panel. The text discusses four players, including Farrell, who are facing possible suspension for their actions during a match. Farrell has been charged with a lifting offence"
+        },
+        {
+            "artciel_idx": 4,
+            "tid1": 39,
+            "tid2": 134,
+            "tid1_focus": "War Military Defence Army Iraq Soldiers Troops Forces Battle Iraqi Soldier Force Commander Combat Armed Base Served Personnel Command Men Defense General Invasion Baghdad Mosul\nIraq War Army Military Defence Iraq Soldiers Troops Forces Battle Soldier Force Commander Combat Armed Base Served Personnel Command Men Defence General Invasion Baghdad Mosul\nIraq War Army Military Defence Army Air Corps Iraq Soldiers Troops Forces Battle Soldier Force Commander Combat Armed Base Served Personnel Command Men Defence General Invasion Baghdad Mosul\nIraq War Army",
+            "no_focus": "A summary of the text is:\nPrince Harry is to return to his military career by training to fly the Lynx battlefield-support chopper, one of the fastest helicopters in the world. He will undertake training in the new year after serving as a Staff Officer in London. Harry's decision comes after concerns were raised about his recent partying habits, and he has reportedly missed flying. He will need to complete a six-month training period to fully convert to",
+            "tid2_focus": "Air: 5, Plane: 1, Aircraft: 2, Flight: 6, Flying: 7, Pilot: 6, Fly: 4, Jet: 1, Crew: 1, Landing: 1, Planes: 1, Force: 1, Pilots: 2, Flew: 1, Jets: 1, Aviation: 1, Fighter: 1, Ferry:"
+        },
+        {
+            "artciel_idx": 5,
+            "tid1": 78,
+            "tid2": 113,
+            "tid1_focus": "The article is about a court case in Guatemala involving the former first lady, Sandra Torres, and her bid to run for president. The Constitutional Court has ruled that Torres is not eligible to run because she is a close relative of the current president. Torres has exhausted her appeals and has slammed the decision, calling it \"anti-democratic\" and \"a political lynching.\" The ruling is a significant blow to Torres' campaign, and could boost the presidential",
+            "no_focus": "I wrote a summary of the text, it should be between 100-150 words:\nGuatemala's Constitutional Court has ruled that former first lady Sandra Torres cannot run for president. The court's decision, which was announced on Monday, means that Torres has exhausted her appeals after trying to circumvent a nepotism law by divorcing President Alvaro Colom. The court determined that Torres is a close relative of the president and therefore not eligible",
+            "tid2_focus": "Campaign, clinton, governor, presidential, candidate, political, state, hillary, republican, candidates, romney, bill, dementia, democratic, running, conservatives, politics, gov, election, support, palin, race, campaigns, sharpton, office, Guatemala's, Constitutional, Court, has, barred, former, first, lady, from, running, for, president, the, country's, current, president, in"
+        },
+        {
+            "artciel_idx": 6,
+            "tid1": 247,
+            "tid2": 128,
+            "tid1_focus": "Keywords: tax, average, benefits, people, rate, increase, rise, budget, cuts, rates, government, spending, income, cut, benefit, number, bills, highest, taxes, families, cost, quarter, annual, low, compared.  Read more... Keywords: tax, average, benefits, people, rate, increase, rise, budget, cuts, rates, government, spending, income, cut, benefit, number,",
+            "no_focus": "Generate a summary of the text.\nThe article discusses how families in the UK have seen their energy bills increase by 55% over the past decade, despite reducing their energy consumption by 17%. The rise in prices is attributed to the increase in energy costs, with households in Northern Ireland paying the most, at \u00a3154 per month. The article also notes that households in Scotland pay the highest energy costs in the UK, at \u00a3112 per month.",
+            "tid2_focus": "This summary is for you:\n\u2022 The text is about the increase in energy bills in the UK.\n\u2022 Families have seen their energy bills rise by 55% in 10 years, despite a 17% reduction in energy usage.\n\u2022 The increase in energy bills is attributed to rising energy prices, not changes in household consumption.\n\u2022 Households in Northern Ireland pay the most, with an average monthly spend of \u00a3154.\n\u2022 Scotland has the highest"
+        },
+        {
+            "artciel_idx": 7,
+            "tid1": 134,
+            "tid2": 194,
+            "tid1_focus": "Keywords: air, plane, aircraft, flight, flying, pilot, fly, jet, crew, landing, planes, force, pilots, flew, jets, aviation, fighter, ferry, ground, radar, flown, engine, land, wings, board.  # Summary:\nFinnair, a Finnish airline, was accused of not flying in Ukrainian airspace after it claimed it didn't fly over Ukraine. However, the airline was forced to backtrack",
+            "no_focus": "Finnair, a Finnish airline, initially claimed they did not fly over Ukrainian airspace, but were forced to retract their statement after a passenger pointed out that their flight path on Flightradar24, a flight tracking website, showed that they did indeed fly over Ukraine. The airline apologized for the mistake and stated that they would be avoiding Ukrainian airspace for the time being. This comes after the tragic crash of Malaysian Airlines flight MH17, which is",
+            "tid2_focus": "generate a summary of the text focusing on russia, russia, ukraine, ukraine, finnair, air, airline, flights, europe, western, crimea, simferopol, airways, europe, aviation, authorities, safety, aviation, authorities, finnair, finnair, regret, inconvenience, passengers,.\n\"Russia's President Vladimir Putin will attend a meeting of European leaders in Brussels on Wednesday, amid"
+        },
+        {
+            "artciel_idx": 8,
+            "tid1": 115,
+            "tid2": 12,
+            "tid1_focus": "The article discusses the radicalisation of three young British men, Nasser Muthana, Reyaad Khan, and Aseel Muthana, who attended the Al Manar mosque in Cardiff, Wales. The mosque is accused of radicalising them, and the article suggests that the imam who preached there, Mohammed al-Arifi, may have contributed to their radicalisation. The article also mentions that the Muthana brothers' father",
+            "no_focus": "Text:\n\nThe article reports on the preaching of a notorious Saudi cleric, Mohammed al-Arifi, at a mosque in Cardiff, Wales, which is believed to have radicalized three young British men, including two brothers, who have joined the fight in Syria. Al-Arifi has called for holy war to overthrow Bashar al-Assad's regime and has been banned from entering Switzerland due to his extremist views. The mosque, Al Manar, has a",
+            "tid2_focus": "A notorious Saudi cleric preached at a mosque accused of radicalising three young Britons fighting in Syria. Mohammed al-Arifi, who has called for holy war to overthrow Bashar al-Assad's regime, spoke at Cardiff's Al Manar centre. The trio \u2013 two brothers and a friend \u2013 attended the mosque before leaving their homes to join the civil war. Scroll down for video. Mohammed al-Arifi, who has called for holy war to overthrow"
+        },
+        {
+            "artciel_idx": 9,
+            "tid1": 163,
+            "tid2": 229,
+            "tid1_focus": "Airport, passengers, flight, travel, airlines, passenger, flights, airline, international, transport, Heathrow, board, terminal, airways, airports, runway, cabin, landed, Gatwick, coin, batteries, masks, busiest, backpack, continental.\nThe article discusses the evolution of airport lounges, transforming from basic facilities to luxurious retreats that cater to the needs of global travelers. It highlights ten exceptional airport lounges, showcasing the",
+            "no_focus": "A summary of the text could be: \"The article highlights the top airport lounges around the world, offering a luxurious and relaxing experience for travelers. The lounges featured include Virgin Atlantic's Clubhouse at JFK Airport, British Airways' Concorde Room at Heathrow Airport, Etihad's Diamond First Class Lounge at Abu Dhabi Airport, and others. These lounges offer amenities such as fine dining, wine and champagne, private cabanas, and",
+            "tid2_focus": "Tagged with: bar, glass, guest, hotel, night, private, resort, rooms, spa, stay, stunning, wine, views\nThe passage describes several airport lounges around the world that offer a luxurious and memorable experience for travelers. These lounges are designed to provide a retreat from the hustle and bustle of the airport, with amenities such as private seating areas, fine dining, and spas. The passage highlights the Virgin Atlantic JFK"
+        },
+        {
+            "artciel_idx": 10,
+            "tid1": 134,
+            "tid2": 153,
+            "tid1_focus": "Note: This summary focuses on air, plane, aircraft, flight, flying, pilot, fly, jet, crew, landing, planes, force, pilots, flew, jets, aviation, fighter, ferry, ground, radar, flown, engine, land, wings, board. It highlights the main points, including the fire protection system inadequacy on freight aircraft, the NTSB's recommendations, and the FAA's response. The summary aims",
+            "no_focus": "Here is a summary of the text:\nThe National Transportation Safety Board (NTSB) has recommended improvements and rule changes for fire-protection systems on freight aircraft due to inadequate detection and suppression of fires. The NTSB investigated three cargo plane fires and found that the current systems are not safe enough, allowing fires to quickly grow out of control. The report recommends that the Federal Aviation Administration (FAA) require better early detection of fires, development of",
+            "tid2_focus": "Generate a summary of the text focussing on fire, planes, detection, flames, fire-resistant, containers, cargo, planes, fires, detected, smoke, pilots, alarm, systems, suppression, fire-protection, investigators, aviation, air, federal, regulations, safety, board, agency, officials, recommendation, report, cost, benefit, analysis, UPS, FedEx, shipping, company, standards.... more | -30-..."
+        },
+        {
+            "artciel_idx": 11,
+            "tid1": 113,
+            "tid2": 134,
+            "tid1_focus": "Keywords: political, presidential, campaign, clinton, governor, candidate, republican, democratic, romney, bill, palin, sharpton, gov, election, support, race, politics, office. \ngenerate summary: The article discusses how even aviation incidents can become political in an election year. President Obama's plane having to abort its landing due to weather and Ann Romney's plane filling up with smoke due to an electrical problem have both inspired",
+            "no_focus": "Summary: In an election year, two aviation incidents involving President Barack Obama and Ann Romney, wife of Republican presidential candidate Mitt Romney, have become the subject of political commentary on CNN.com. Supporters of both candidates have responded to these events by making personal attacks and criticizing each other's political positions. The incidents in question included Obama's pilot aborting a landing in Toledo, Ohio, due to weather conditions and a smoke-filled airplane cabin on Romney's flight.",
+            "tid2_focus": "Summary:\nAir travel troubles were used to make political points, as shown by comments on CNN.com. Air Force One's pilot aborted a landing due to weather, and commenters took aim at President Obama. Ann Romney's smoke-filled plane was also criticized, with Mitt Romney joking about not being able to open the windows. Commenters brought up politics, including the Romneys' stance on the 47% and the outsourcing trend. Some commenters asked"
+        },
+        {
+            "artciel_idx": 12,
+            "tid1": 217,
+            "tid2": 195,
+            "tid1_focus": "Generate a summary of the text focussing on team, player, season, game, play, league, club, legal, judge, issue, case, jury, court, trial, sentence, probation, football, facilities, practice, family.\n\"Former Tottenham Hotspur midfielder Luka Modri\u0107 has been crowned the 2018 FIFA World Cup Golden Ball winner after an impressive performance for Croatia in the tournament. The 33-year-old",
+            "no_focus": "In summary, Carolina Panthers defensive end Greg Hardy has taken a voluntary leave of absence with pay until his legal matters are resolved. Hardy is facing a domestic violence charge and has been granted a new trial after a guilty verdict. The NFL has placed him on the exempt/commissioner's permission list, which allows him to be paid while on leave. Hardy will not play until his legal issues are resolved. The team and the NFL Players Association support his decision",
+            "tid2_focus": "A: Here is a summary of the text, focusing on the main points:\nGreg Hardy, a Carolina Panthers defensive end, has taken a voluntary leave of absence with pay until his legal matters are resolved. He is facing a new trial in November after a domestic violence conviction in July. Hardy was accused of choking his then-girlfriend, throwing her around, and threatening to kill her. He was sentenced to 18 months of probation and a 60"
+        },
+        {
+            "artciel_idx": 13,
+            "tid1": 115,
+            "tid2": 205,
+            "tid1_focus": "**Summary:** A thoughtful husband, Ernst Berlin, commissioned 23 artists to create unique works of art of his family as a birthday gift for his wife, Agnes. He discovered a community of artists on Reddit and reached out to them, asking them to paint a picture of his son Jacob and other family members. The artists created the works of art over a period of months, and Ernst hung them up around the house for Agnes' birthday.",
+            "no_focus": "Please provide a summary of the text in 100-150 words.  Ernst Berlin, a thoughtful husband, gave his wife Agnes a unique birthday gift - a collection of 23 artworks created by artists he found on Reddit. He sent 40 photographs of his family, including their nine-month-old son Jacob, to the artists, who were asked to choose which ones to work with. Over a period of months, the artists submitted their creations,",
+            "tid2_focus": "Generate a summary of the text focussing on art, museum, display, century, history, ancient, modern, painting, original, library, piece, work, exhibition, pieces, oldest, gallery, arts, works, artists, starred, public, inspired, lived, national, custom.\nErnst Berlin, a thoughtful husband, gave his wife Agnes a unique birthday present by commissioning 23 artists to create works of art based on"
+        },
+        {
+            "artciel_idx": 14,
+            "tid1": 13,
+            "tid2": 195,
+            "tid1_focus": "Apple, e-books, book publishers, prices, competition, consumers, Justice Department, illegal scheme, corporate bully, trial, damages, anti-trust laws, profit, profits, Amazon.com, iPad, prices, law, lawsuit, court, judge, damages, harm, costs, scheme, consumer, market, prices, sales, products, companies, expensive, consumers, demand, cheap, extra, plastic, fee, retail, marketing, quality",
+            "no_focus": "What is the main issue being discussed in this article?\nThe main issue being discussed in this article is the lawsuit against Apple, where the Justice Department is accusing the company of colluding with five book publishers to raise the prices of e-books, in violation of anti-trust laws. Apple is denying the allegations, claiming that its presence in the e-book market benefited consumers and improved competition.\n\nWhat is the alleged motive behind Apple's actions?\nThe alleged motive",
+            "tid2_focus": "Generate a summary of the text focussing on court, trial, guilty, prison, heard, case, jury, murder, judge, sentence, convicted, prosecutors, hearing, sentenced, jail, victim, evidence, pleaded, accused, prosecutor, prosecution, life, charges, attorney, lawyer.\nApple, a US-based technology company, has been accused of conspiring with five book publishers to raise the prices of e-books, thereby harming consumers and"
+        },
+        {
+            "artciel_idx": 15,
+            "tid1": 162,
+            "tid2": 72,
+            "tid1_focus": "Summary: President Barack Obama's administration is considering imposing a forced quarantine on healthcare workers who return to the United States from Ebola-ravaged countries in West Africa. This comes after a New York doctor who treated patients in Guinea tested positive for the virus. The CDC is discussing options with officials from across the administration to balance protecting the public's health with not impeding the ability to combat the epidemic in West Africa. The White House is considering imposing a mandatory",
+            "no_focus": "The Obama administration is considering a forced quarantine for healthcare workers who return to the US from the Ebola hot zone in West Africa after a New York doctor tested positive for the virus. This move comes as a response to public anxiety about the virus and the government's response to its arrival on US soil. The current policy allows healthcare workers and military personnel to be monitored for 21 days, but lawmakers have expressed concerns that this is not enough to prevent the spread",
+            "tid2_focus": "Summary:\nThe Obama administration is considering imposing a mandatory quarantine on healthcare workers who return to the United States from West Africa, after a New York doctor tested positive for Ebola. The Centers for Disease Control and Prevention (CDC) is discussing various options, including a mandatory quarantine, to protect the public's health while allowing healthcare workers to respond to the Ebola outbreak in West Africa. The CDC is working to upgrade its plan to contain the virus before it spreads in"
+        },
+        {
+            "artciel_idx": 16,
+            "tid1": 39,
+            "tid2": 163,
+            "tid1_focus": "A summary of the article is as follows:\nTwo World War I artillery shells were discovered in checked luggage at Chicago's O'Hare International Airport after a flight from London. The shells were found by baggage screeners and were determined to be inert by a bomb disposal crew. The bags belonged to two teenagers, a 16-year-old and a 17-year-old, who were returning from a school field trip to Europe. The teens told law enforcement that",
+            "no_focus": "Here is a summary of the text:\nTwo World War I artillery shells were discovered in checked luggage at Chicago's O'Hare International Airport by baggage screeners. The shells were determined to be inert and no one was in danger. The bags belonged to two 16- and 17-year-old teens who were returning from a school field trip to Europe. The teens had obtained the shells at a French World War I artillery range. The Transportation Security Administration",
+            "tid2_focus": "Summary: Baggage screeners at O'Hare International Airport found two World War I artillery shells in checked luggage from London. The bags belonged to two teenagers on a school field trip to Europe. The shells were determined to be inert and the teens were not charged. The Transportation Security Administration reminds passengers that large munitions are not permitted on airplanes, but small arms ammunition can be packed in checked luggage according to airline policies.<|eot_id|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|>"
+        },
+        {
+            "artciel_idx": 17,
+            "tid1": 218,
+            "tid2": 217,
+            "tid1_focus": "a) In Manaus, Brazil, it's expected to be very hot and humid for the World Cup match between England and Italy, with temperatures reaching 30C and humidity above 80%. The heat is expected to be intense, making it difficult for the players to run and exercise.\nb) The heat and humidity in Manaus is expected to be intense, making it difficult for the players to run and exercise. The temperature is expected to reach",
+            "no_focus": "The text discusses the extreme heat and humidity that the English football team will face in Manaus during their World Cup match against Italy. The author, Adam Shergold, uses a biodome to simulate the conditions and experiences them firsthand. He notes that the heat is unbearable, even for someone who is physically fit, and that the humidity makes every movement feel like a struggle. The article also explains that the match will include drinks breaks for the players to",
+            "tid2_focus": "There has been a great deal spoken about the sweltering heat and humidity England will face in Manaus when they play Italy on Saturday night. England have been gradually acclimatising to the hot conditions in Brazil. The Arena da Amazonia will host England's first World Cup match, against Italy on Saturday evening. It takes less than 10 seconds for the first bead of sweat to start trickling its way down from my forehead, off"
+        },
+        {
+            "artciel_idx": 18,
+            "tid1": 163,
+            "tid2": 247,
+            "tid1_focus": "Passenger, flight, travel, airlines, passenger, flights, airline, international, transport, heathrow, board, terminal, airways, airports, runway, cabin, landed, gatwick, coin, batteries, masks, busiest, backpack, continental.\n1. British Airways and Virgin Atlantic have reduced their fuel surcharges as the price of oil has plummeted.\n2. Passengers on long-haul flights will enjoy the biggest reduction",
+            "no_focus": "A summary of the text is:\nBritish Airways and Virgin Atlantic are reducing their fuel surcharges due to a drop in oil prices. Passengers on long-haul flights will see the biggest reduction in fares. British Airways is reducing its fuel surcharge by \u00a330-35 for flights longer than nine hours, and \u00a315-20 for shorter flights, while European services will cost \u00a34-5 less. Virgin Atlantic is also reducing its fuel surcharge",
+            "tid2_focus": "The text does not mention tax, average, benefits, people, rate, increase, rise, budget, cuts, rates, government, spending, income, cut, benefit, number, bills, highest, taxes, families, cost, quarter, annual, low, compared, and other similar terms. It only talks about fuel surcharges and their reduction by two airlines, British Airways and Virgin Atlantic, due to the drop in oil prices. The text"
+        },
+        {
+            "artciel_idx": 19,
+            "tid1": 153,
+            "tid2": 236,
+            "tid1_focus": "What is the primary topic of this news report?\nWhat happened at Universal Studios on Sunday?\nTwo firefighters were injured when a pressurized cylinder exploded, and the blaze destroyed several movie sets and buildings. The fire was caused by an unknown reason and was eventually contained.\nIs the 2008 MTV Movie Awards show affected by the fire?\nNo, the show is still planned to go on as scheduled.\nWhat damage did the fire cause?\nThe fire destroyed",
+            "no_focus": "Here is a summary of the text in 1-2 sentences:\nA fire broke out at Universal Studios in Los Angeles on Sunday, destroying several movie sets and movie sets, but was expected to be contained by 4:15 pm. The blaze injured 10 firefighters, but did not affect the 2008 MTV Movie Awards, which are still scheduled to take place at the site. \\\\\n\nGenerate a list of keywords related to the article.\n",
+            "tid2_focus": "Generate a summary of the text focussing on film, movie, character, films, viewers, set, characters, bond, series, box, hollywood, director, starring, played, scene, scenes, story, cast, movies, turner, alice, production, featured, fans, entertainment.\nSummary: A fire broke out at Universal Studios in California, destroying movie sets and a video vault. The blaze, which occurred on Sunday,"
+        },
+        {
+            "artciel_idx": 20,
+            "tid1": 78,
+            "tid2": 217,
+            "tid1_focus": "This is a summary of the article, focusing on the points mentioned:\n- High Court has ruled in favor of Leeds United, ordering West Yorkshire Police to pay over \u00a31.2 million for overcharging on policing services.\n- The dispute centers on how much Leeds United is owed, with the police claiming they have already paid the full amount and Leeds seeking an additional \u00a3844,016.36 plus interest.\n- The case has been ongoing for two years",
+            "no_focus": "The High Court has ruled that West Yorkshire Police overcharged Leeds United for policing at home games, leading to a \u00a31.2 million payout to the club. However, Leeds claims they are still owed over \u00a3800,000. The dispute centres on how special police services should be calculated, with the club seeking a detailed breakdown of officer deployment and remuneration. The judge has attributed a \"fair and reasonable proportion\" of officers to each area,",
+            "tid2_focus": "A summary of the article can be generated as follows:\nThe article reports on a dispute between Leeds United Football Club and West Yorkshire Police over policing fees for home matches. A High Court judge has ruled that the police overcharged the club and must pay \u00a31.2 million. However, Leeds claims they are still owed an additional \u00a3800,000. The dispute centers on the policing of areas around the entrance to Elland Road stadium. The judge has"
+        },
+        {
+            "artciel_idx": 21,
+            "tid1": 113,
+            "tid2": 200,
+            "tid1_focus": "Summary: John McCain's campaign reacted sharply to Joe Biden's comments about stem cell research and special needs children, calling his remarks \"playing politics with this issue\". Biden had suggested that Republicans who support children with birth defects should support stem cell research, which is at odds with Sarah Palin's anti-stem cell research stance. Palin, who has a child with Down syndrome, has faced criticism for her lack of advocacy for special needs programs during her governorship",
+            "no_focus": "Summary: Sen. John McCain's campaign has responded to Sen. Joe Biden's comments on supporting stem cell research for special needs children. Biden said that if you care about special needs children, you should support stem cell research, which is at odds with the position taken by Alaska Gov. Sarah Palin, who has a child with Down syndrome. The McCain campaign has criticized Biden for \"playing politics\" with the issue, while Biden's campaign says the debate",
+            "tid2_focus": "Please generate a summary of the text, focusing on the following key phrases: children, child, parents, birth, born, kids, families, mother, family, care, daughter, young, girl, syndrome, adults, rachel, infant, daughters, mom, social, disability, live, services, cigarettes, disabled.\nHere is a summary of the text:\nThe article discusses the debate between Senator Joe Biden and Governor Sarah Palin on stem cell"
+        },
+        {
+            "artciel_idx": 22,
+            "tid1": 39,
+            "tid2": 64,
+            "tid1_focus": "The article reports that Australia is considering joining air strikes against Islamic State jihadists in Iraq. The decision will be made within days. Australian fighter jets, the F/A-18F Super Hornets, have conducted their first training missions in the Middle East. The planes will be used to attack IS ground units and supply lines in support of Iraqi and Kurdish forces. The Australian Defence Force is also planning to deploy a 200-strong ground force, including special forces,",
+            "no_focus": "Summary:\nAustralian Foreign Minister Julie Bishop stated that a decision on joining air strikes against Islamic State (IS) in Iraq will be made within days. RAAF aircraft have conducted their first training missions in the Middle East region, and the government has yet to confirm whether IS will be targeted in Syria as well as Iraq. The Air Task Group, comprising six Super Hornets, an E-7A Wedgetail airborne early warning and control aircraft, and a",
+            "tid2_focus": "Summary: The Australian government is expected to make a decision within days on whether to participate in air strikes against Islamic State (IS) militants in Iraq. RAAF aircraft have conducted their first training missions in the Middle East region, with Defence Chief Air Chief Marshal Mark Binskin stating that the task group is well-suited to operating with coalition aircraft. The Air Task Group comprises six Super Hornets, an E-7A Wedgetail airborne early warning"
+        },
+        {
+            "artciel_idx": 23,
+            "tid1": 105,
+            "tid2": 195,
+            "tid1_focus": "This is a summary of the text, focusing on the main points about charges, alleged charges, arrested, investigation, arrest, accused, authorities, office, attorney, bail, FBI, criminal charges, released, investigators, jail, reported, detectives, federal documents, custody, and county. The summary is generated based on the given text. The summary is 256 words long. The summary is written in simple and clear language. The summary includes all",
+            "no_focus": "Generate a summary of the text.\n\"A charge of making a false bomb threat has been dropped against a man who carried a backpack containing a rice cooker near a crowd marking the first anniversary of the Boston Marathon bombings in April, prosecutors said Wednesday. Investigators dropped the charge because they say the suspect, Kevin Edson, 25, did not communicate an \"overt threat that an incendiary device would be detonated,\" Jake Wark, a spokesman",
+            "tid2_focus": "A charge of making a false bomb threat has been dropped against a man who carried a backpack containing a rice cooker near a crowd marking the first anniversary of the Boston Marathon bombings in April, prosecutors said Wednesday. Investigators dropped the charge because they say the suspect, Kevin Edson, 25, did not communicate an \"overt threat that an incendiary device would be detonated,\" Jake Wark, a spokesman for the Suffolk County district attorney,"
+        },
+        {
+            "artciel_idx": 24,
+            "tid1": 180,
+            "tid2": 61,
+            "tid1_focus": "Write a summary of the text in 50-60 words, focusing on the main points:\nArsenal secured a 1-0 win at West Brom, with Danny Welbeck scoring the decisive goal. The victory was vital for the team, who had suffered back-to-back Premier League defeats. The win sees Arsenal move closer to top spot, with Welbeck's goal securing three points for the Gunners. - Summary\nWrite a summary of the",
+            "no_focus": "1. The article discusses Arsenal's 1-0 victory over West Brom in the Premier League.\n2. Danny Welbeck scored the winning goal for Arsenal with a header, firing Santi Cazorla's cross beyond Ben Foster.\n3. Welbeck believes the clean sheet is important and that the team has been working well together, adding that they take it one game at a time.\n4. Cazorla also expressed satisfaction with the win,",
+            "tid2_focus": "Here is a summary of the text in 50 words:\nDanny Welbeck's goal secured a 1-0 win for Arsenal against West Brom, with the striker celebrating a \"vital\" three points. Welbeck's header, from Santi Cazorla's cross, was the difference, as Arsenal secured a clean sheet and confidence-boosting victory.\nHere is a summary of the text in 100 words:\n\nArsenal secured a crucial"
+        }
+    ]
+}

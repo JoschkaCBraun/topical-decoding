@@ -1,9 +1,19 @@
+
+import logging
+import json
+from typing import List, Dict
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from prompter import Prompter
+import os
+import sys
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 MODEL_NAME = "meta-llama/Llama-2-7b-chat-hf"
 MAX_LENGTH = 1024
-
+# huggingface authentication token
+HF_AUTH_TOKEN = os.getenv('HF_AUTH_TOKEN', "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") 
 
 class LlamaModelHandler:
     def __init__(
@@ -13,65 +23,77 @@ class LlamaModelHandler:
         iter_examples_path: str,
         model_name: str = MODEL_NAME,
     ) -> None:
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(model_name)
-        self.prompter = Prompter(
-            init_examples_path, feedback_examples_path, iter_examples_path
-        )
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name, token=HF_AUTH_TOKEN)
+            self.model = AutoModelForCausalLM.from_pretrained(model_name, token=HF_AUTH_TOKEN)
+            self.prompter = Prompter(init_examples_path, feedback_examples_path, iter_examples_path)
+            logging.info("Model and tokenizer initialized successfully.")
+        except Exception as e:
+            logging.error(f"Failed to initialize the model or tokenizer: {e}")
+            raise
 
     def generate_response(self, prompt: str, max_length: int = MAX_LENGTH) -> str:
-        input_ids = self.tokenizer.encode(prompt, return_tensors="pt")
-        output_ids = self.model.generate(
-            input_ids, max_length=max_length, num_return_sequences=1
-        )
-        response = self.tokenizer.decode(output_ids[0], skip_special_tokens=True)
-
-        return response
+        try:
+            input_ids = self.tokenizer.encode(prompt, return_tensors="pt")
+            output_ids = self.model.generate(input_ids, max_length=max_length, num_return_sequences=1)
+            response = self.tokenizer.decode(output_ids[0], skip_special_tokens=True)
+            return response
+        except Exception as e:
+            logging.error(f"Error generating response: {e}")
+            raise
 
     def iterative_refinement(
-        self, words: list[str], document: str, iterations: int = 3
+        self, words: List[str], document: str, iterations: int = 3
     ) -> str:
-        self.prompter.reset_iter()
+        try:
+            self.prompter.reset_iter()
+            initial_prompt = self.prompter.create_init_prompt(words, document)
+            summary = self.generate_response(initial_prompt)
 
-        # Generate initial prompt and summary
-        initial_prompt = self.prompter.create_init_prompt(words, document)
-        summary = self.generate_response(initial_prompt)
+            for _ in range(iterations - 1):
+                feedback_prompt = self.prompter.create_feedback_prompt(words, document, summary)
+                feedback = self.generate_response(feedback_prompt)
+                concept_feedback, commonsense_feedback = self.prompter.extract_feedbacks(feedback)
+                iter_prompt = self.prompter.create_iter_prompt(words, document, summary, concept_feedback, commonsense_feedback)
+                summary = self.generate_response(iter_prompt)
 
-        for _ in range(iterations - 1):
-            # Request and process feedback for new summary
-            feedback_prompt = self.prompter.create_feedback_prompt(
-                words, document, summary
-            )
-            feedback = self.generate_response(feedback_prompt)
-            concept_feedback, commonsense_feedback = self.prompter.extract_feedbacks(
-                feedback
-            )
-
-            # Iterative refinement using previous summary and feedback
-            iter_prompt = self.prompter.create_iter_prompt(
-                words, document, summary, concept_feedback, commonsense_feedback
-            )
-            summary = self.generate_response(iter_prompt)
-
-        return summary
+            return summary
+        except Exception as e:
+            logging.error(f"Error during iterative refinement: {e}")
+            raise
 
 
 def main():
-    # Example usage with paths to your example files
+    
+    # Calculate the directories based on the current file location
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(script_dir))  # This should navigate up to 'local_topical_decoding'
+    data_dir = os.path.join(project_root, 'data', 'self_refine_data')  # Path to the folder containing your JSON files
+    
+    # Example files paths
+    init_examples_path = os.path.join(data_dir, "init_examples.json")
+    feedback_examples_path = os.path.join(data_dir, "feedback_examples.json")
+    iter_examples_path = os.path.join(data_dir, "iter_examples.json")
+
+    # Initialize the model handler with updated paths
     model_handler = LlamaModelHandler(
-        init_examples_path="path/to/init_examples.json",
-        feedback_examples_path="path/to/feedback_examples.json",
-        iter_examples_path="path/to/iter_examples.json",
+        init_examples_path=init_examples_path,
+        feedback_examples_path=feedback_examples_path,
+        iter_examples_path=iter_examples_path,
     )
 
-    # Example inputs
-    words = ["placeholder", "placeholder"]
-    document = "placeholder"
+    # Example usage: Load document-topic data generated by self_refine_loader.py
+    doc_topic_data_path = os.path.join(data_dir, "doc_topic_list.json")
+    with open(doc_topic_data_path, 'r') as f:
+        doc_topic_list = json.load(f)
+    
+    # Assume we want to process the first document and its topics
+    document = doc_topic_list[0]['document']
+    words = doc_topic_list[0]['topic_words']
 
     # Perform iterative refinement
     final_summary = model_handler.iterative_refinement(words, document, iterations=3)
     print("Final Summary:", final_summary)
-
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,16 @@
+[
+    {
+        "tid1": 175,
+        "tid2": 110,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nThe World Bank's president, Jim Yong Kim, has warned the United States that it is days away from a dangerous moment due to the ongoing standoff over the debt ceiling. Failure to reach a resolution could result in interest rate hikes, falling confidence, and slowing growth. The US Treasury Secretary, Jacob Lew, has expressed concern that the",
+        "tid1_focus": "\n\nThe article discusses the dire situation the US is facing due to the standoff over the debt ceiling. The World Bank's President Jim Yong Kim warns that the US is days away from a dangerous moment and that inaction could result in devastating consequences for the developing world. The IMF's Managing Director, Tharman Shanmugaratnam, also expressed concerns about the US economy and the global economy.",
+        "tid2_focus": "\n\nThe World Bank's president warned that the US was just days away from causing a global economic disaster unless politicians come up with a plan to raise the nation's debt limit and avoid default. The US Treasury Secretary has warned that he will exhaust his borrowing authority on Thursday and the government will face the prospect of default on its debt unless Congress raises the $16.7 trillion borrowing limit."
+    },
+    {
+        "tid1": 152,
+        "tid2": 217,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nThe article highlights Manchester City as the highest-paid sports team globally, with an average first-team pay of \u00a35.3m a year. This surpasses the earnings of teams like Liverpool, Chelsea, Arsenal, and Manchester United. The report also reveals that City's owner, Sheik Mansour, has invested significant resources in the",
+        "tid1_focus": "\n\nManchester City are the best-paid sports team in the world, with average first-team pay a whopping \u00a35.3m a year, or \u00a3102,653 per week according to a new report that compares global earnings in the most popular leagues.",
+        "tid2_focus": "\n\nManchester City are the best-paid sports team in the world, with average first-team pay a whopping \u00a35.3m a year, or \u00a3102,653 per week according to a new report that compares global earnings in the most popular leagues."
+    }
+]
