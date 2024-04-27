@@ -1,0 +1,44 @@
+[
+    {
+        "tid1": 175,
+        "tid2": 110,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nThe World Bank's president, Jim Yong Kim, has warned the United States that it is days away from causing a global economic disaster",
+        "tid1_focus": "\n\nSure, here's a summary of the article:\n\nThe World Bank's top official, Jim Yong Kim, has warned that the United States is on the brink of a global economic disaster",
+        "tid2_focus": "\n\nSure, here's a summary of the article:\n\nThe World Bank's president, Jim Yong Kim, warned that the United States was on the brink of a global economic disaster unless politicians"
+    },
+    {
+        "tid1": 64,
+        "tid2": 134,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nIran's military claimed it shot down a U.S. drone in eastern Iran. State media identified the aircraft as an RQ-",
+        "tid1_focus": "\n\nIran's military claimed it shot down a U.S. drone in eastern Iran. A military official identified the aircraft as an RQ-170 Sentinel. The drone was flying over western",
+        "tid2_focus": "\n\nIran's military on Sunday claimed it shot down a U.S. drone into eastern Iran. State media cited a military official who identified the aircraft as an RQ-170 Sentinel."
+    },
+    {
+        "tid1": 39,
+        "tid2": 134,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nPrince Harry is to return to the Army Air Corps to prepare for flying helicopters again. He was desk-bound in a Staff Officer role",
+        "tid1_focus": "\n\nPrince Harry is to return to the Army Air Corps to prepare for flying helicopters again. He will undertake training in the new year so he can fly the Lynx battlefield-support chopper, one of the",
+        "tid2_focus": "\n\nSure, here's a summary of the article:\n\nThe article discusses Prince Harry's potential return to the Army Air Corps to prepare for flying helicopters again. He served as an Apache pilot"
+    },
+    {
+        "tid1": 247,
+        "tid2": 128,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nFamilies have seen their energy bills soar by 55 per cent in a decade, despite them cutting the amount of gas and electricity they",
+        "tid1_focus": "\n\nSure, here's a summary of the article focusing on the topic described by the words: tax, average, benefits, people, rate, increase, rise, budget, cuts, rates,",
+        "tid2_focus": "\n\nSure, here's a summary of the article focusing on the topic described by the words: money, pay, paid, card, credit, paying, cards, spent, fund, amount,"
+    },
+    {
+        "tid1": 115,
+        "tid2": 12,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nA notorious Saudi cleric, Mohammed al-Arifi, has been preaching at a mosque in Cardiff, Wales, and has called for holy",
+        "tid1_focus": "\n\nA Saudi cleric, Mohammed al-Arifi, has been accused of radicalising three young Britons fighting in Syria. The trio \u2013 two brothers and a friend \u2013 attended a mosque before leaving their homes",
+        "tid2_focus": "\n\nSure, here's a summary of the article:\n\nThe article discusses the rise of Islamic extremism in Cardiff, UK, and the threat posed by a notorious Saudi cleric, Mohammed al-Ari"
+    },
+    {
+        "tid1": 134,
+        "tid2": 153,
+        "no_focus": "\n\nSure, here's a summary of the article:\n\nThe National Transportation Safety Board (NTSB) has released a report on the inadequacy of fire-protection systems on freight aircraft. The NTS",
+        "tid1_focus": "\n\nSure, here's a summary of the article:\n\nThe National Transportation Safety Board (NTSB) has released a report on air, plane, aircraft, flight, flying, pilot, fly",
+        "tid2_focus": "\n\nSure, here's a summary of the article:\n\nThe National Transportation Safety Board (NTSB) has released a report on the inadequacy of fire-protection systems on freight aircraft. The NTS"
+    }
+]

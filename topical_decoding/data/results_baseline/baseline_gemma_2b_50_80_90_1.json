@@ -1,0 +1,436 @@
+{
+    "experiment_information": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "baseline",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "dataset_name": "newts_train",
+            "num_articles": 50,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "BASELINE_DICT": {
+            "focus_types": [
+                "tid1_focus",
+                "no_focus",
+                "tid2_focus"
+            ]
+        }
+    },
+    "generated_summaries": [
+        {
+            "artciel_idx": 0,
+            "tid1": 175,
+            "tid2": 110,
+            "tid1_focus": "Sure, here is a summary of the text:\n\nThe World Bank's President Jim Yong Kim has warned the US that the country is \"days away\" from a major economic disaster unless politicians come up with a plan to raise the nation's debt limit. The US Treasury Secretary has warned that he will exhaust his borrowing authority on Thursday if Congress does not raise the debt limit. The International Monetary Fund (IMF) has also expressed concerns about the",
+            "no_focus": "Summary:\nThe World Bank's president, Jim Yong Kim, warned the United States was days away from causing a global economic disaster unless politicians come up with a plan to raise the nation's debt limit. If the debt ceiling is not raised, interest rates will rise, confidence will fall, and growth will slow. The United States is the anchor of the international financial system, so its strength is critical to the global economy. Negotiations between Senate",
+            "tid2_focus": "Sure, here's a summary of the text you provided:\n\n**Summary:**\n\nThe World Bank has warned the US that if it does not raise its debt limit, a global economic disaster could occur. The US Treasury Secretary has also warned that it will exhaust its borrowing authority on Thursday if the debt ceiling is not raised. The talks between the US and other countries to raise the debt limit have stalled, and it is unclear when a resolution will"
+        },
+        {
+            "artciel_idx": 1,
+            "tid1": 152,
+            "tid2": 217,
+            "tid1_focus": "It's important to be aware that the salaries in this report are estimates and may vary depending on the individual players' contracts, the clubs' financial situation, and other factors. Additionally, the information is not comprehensive and may not include all of the highest-paid sports teams in the world. Nevertheless, the report provides a valuable overview of the current landscape of major sports salaries and provides insights into the financial success of various clubs.<eos><pad><pad><pad>",
+            "no_focus": "The text is about the pay of sports teams in the world. It has been compiled from various sources, including ESPN The Magazine. The key takeaways from the text are as follows:\n\n- Manchester City are the highest-paid sports team in the world, with average first-team pay of \u00a35.3m per year.\n\n\n- Five Premier League sides make the top 20 on the list, with Liverpool coming in 20th",
+            "tid2_focus": "Summary:\n\nManchester City are the best-paid sports team in the world, with an average first-team pay of \u00a35.3m a year. City owners Sheikh Mansour has invested hundreds of millions into making them title challengers. The club's squad is paid \u00a35.3m a year and they are one of the most successful clubs in England.\n\nIn the global sports salary list, City players are earning an average of"
+        },
+        {
+            "artciel_idx": 2,
+            "tid1": 64,
+            "tid2": 134,
+            "tid1_focus": "In summary, a U.S. drone crash-landed in eastern Iran, resulting in the death of at least one soldier, according to Iranian media. The drone strike comes amid ongoing tensions between Iran and the United States, with the two countries engaged in a proxy war in the Middle East. The incident also highlights the increasing role of unmanned drones in the battlefield, as the U.S. military increasingly relies on these platforms for intelligence gathering and",
+            "no_focus": "The text is about an incident where an U.S. drone was shot down in eastern Iran. The Iranian military claimed to have shot down the drone, while NATO and the U.S. government remain silent. The RQ-170 Sentinel is a stealth drone developed for the Air Force to help provide intelligence, surveillance, and reconnaissance. The text does not specify whether the drone was operated by the Air Force or the intelligence community.<eos><pad>",
+            "tid2_focus": "Please summarize the following text about air, plane, aircraft, flight, flying, pilot, fly, jet, crew, landing, planes, force, pilots, flew, jets, aviation, fighter, ferry, ground, radar, flown, engine, land, wings, board.\n\nIran's military claimed it shot down a U.S. drone in eastern Iran on Sunday. The aircraft, identified as an RQ-170 Sentinel,"
+        },
+        {
+            "artciel_idx": 3,
+            "tid1": 105,
+            "tid2": 180,
+            "tid1_focus": "Okay, here's a summary of the text focusing on charged, allegedly, charges, arrested, alleged, investigation, arrest, accused, authorities, office, attorney, bail, fbi, criminal, charge, released, investigators, jail, reported, detectives, federal, documents, custody, county, article:\n\n**Charged Individuals:**\n\n* Liam Farrell (Wigan Warriors player)\n* Anthony Gelling (Wigan Warriors player)\n",
+            "no_focus": "Sure, here's a summary:\n\nWigan's forward Liam Farrell is facing a suspension for a lifting offence during their 36-28 defeat at Wakefield. He faces a possible two-match ban after being charged with a grade B lifting offence. Another player facing a charge is Anthony Gelling for punching. Bradford captain Matt Diskin has been charged for striking during his team's match with Hull KR.<eos><pad><pad><pad>",
+            "tid2_focus": "The text provides a summary of several charges against players of Wigan's England team who participated in the First Utility Super League match at Wakefield on Sunday. The charge against Liam Farrell includes a possible two match ban. Anthony Gelling has been charged with a minor grade A offence of punching, while Matt Diskin and Neville Costigan face a grade A charge of striking, respectively. The text does not specify a ruling on the match's outcome,"
+        },
+        {
+            "artciel_idx": 4,
+            "tid1": 39,
+            "tid2": 134,
+            "tid1_focus": "The context is about war, military, defence, army, iraq, soldiers, troops, forces, battle, iraqi, soldier, force, commander, combat, armed, base, served, personnel, command, men, defense, general, invasion, baghdad, mosul.\n\n**Summary:**\n\nThe context describes war, military, defense, and soldiers. It also talks about the training of Prince Harry to become a helicopter pilot",
+            "no_focus": "Sure. Here's a summary of the text:\n\nPrince Harry will return to the Army Air Corps to prepare for flying helicopters again. He has been desk-bound in a Staff Officer role at Horse Guards in London since February and has had 'too much time for partying'. After six months of training, he will take part in reconnaissance missions, as well as ferrying passengers or occasionally in combat.<eos><pad><pad><pad><pad><pad><pad><pad><pad>",
+            "tid2_focus": "The text focuses on the following:\n\n* Airplanes and aircraft\n* Pilot\n* Flights\n* Flying\n* Landing\n* Planes\n* Force\n* Pilots\n* Flied\n* Jets\n* Aviation\n* Fighter\n* Ferry\n* Ground\n* Radar\n* Fly\n* Engine\n* Land\n* Wings\n* Board.\n\nI hope this summary is helpful.<eos><pad><pad><pad><pad><pad><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 5,
+            "tid1": 78,
+            "tid2": 113,
+            "tid1_focus": "**Summary:**\n\nThe Constitutional Court of Guatemala has barred the country's former first lady from running for president. The court ruled that Torres was not eligible to be on the ballot because close relatives of the president are constitutionally barred from running. This decision sets a precedent for preventing political candidates from relying on family members to circumvent constitutional restrictions. The ruling has also sparked debate about the role of the judiciary in upholding democratic principles.<eos><pad><pad><pad><pad>",
+            "no_focus": "<h2><b>Summary</b></h2>\n\nThe Constitutional Court of Guatemala has barred the country's former first lady, Sandra Torres, from running for president. The court's ruling means Torres was disqualified because her close relative, President Alvaro Colom, is barred from running for president. Torres filed for divorce from President Alvaro Colom on March 11, 2019, which was finalized in April, and she was charged with fraud by the",
+            "tid2_focus": "\"The Guatemalan Constitutional Court's ruling could have significant implications for the country's upcoming presidential election,\" according to political analysts. \"It will force politicians to think carefully about their own eligibility to run and could lead to a more diverse political landscape.\" The ruling is expected to spark a political debate in the country and could have an impact on the upcoming presidential election, making it more difficult to predict who will win.<eos><pad><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 6,
+            "tid1": 247,
+            "tid2": 128,
+            "tid1_focus": "The text discusses the impact of energy prices on household's monthly bills and spending patterns. While the average amount of energy used per household has fallen in recent years, the average monthly spend on energy has increased by 55 per cent in a decade. This increase is primarily due to rising energy prices, which have outstripped the decline in energy usage. Additionally, the text highlights that households in Northern Ireland pay substantially more for energy, with the average",
+            "no_focus": "Okay, here is a summary of the text:\n\nFamilies in the UK have seen a significant increase in energy bills over the past decade. Energy prices have risen steadily since 2002, and households have seen an average increase of 55% in their energy bills over the past decade. This rise in energy prices has been driven by a combination of factors, including the rise of the Big Six energy suppliers and the effects of inflation.",
+            "tid2_focus": "(Source: Mailonline)\n\nSummary: The text discusses the rising cost of energy bills in the UK, with an average monthly spend on energy rising by 55 per cent in a decade, despite a decrease in usage by 17 per cent. Despite the high rise in energy prices, the Office for National Statistics stated that the increase in spending is mainly due to rises in energy prices. The Scottish households have the highest energy costs in Britain"
+        },
+        {
+            "artciel_idx": 7,
+            "tid1": 134,
+            "tid2": 194,
+            "tid1_focus": "This text provides a summary of the air related incidents and aviation related information. It focuses on the impact of the Malaysian Airlines tragedy on Finnair's operations and the airline's response to the situation. Additionally, the text explores the debate surrounding the accuracy of flight tracking data and the role of authorities in managing air traffic. It underscores the complex and evolving nature of air travel safety and the challenges airlines face in ensuring passenger and crew safety.<eos><pad>",
+            "no_focus": "The context of the passage is that airlines are struggling to come to terms with the recent tragedy in Ukraine involving the MH17 flight, which resulted in the loss of 298 lives. Finnair was one of the airlines that faced criticism on social media for not providing accurate information about their operations in Ukrainian airspace. In an effort to ease the concerns of their passengers and demonstrate their commitment to safety, Finnair issued a statement expressing their sympathy for",
+            "tid2_focus": "This summary is focused on Russian, Russia, European, Europe, Ukraine, Putin, Moscow, Greece, Eastern, Euro, Countries, Vladimir, Poland, Country, President, Mata, Soviet, Polish, Ukrainian, Union, Germany, International, Summit, France, NATO. It highlights the controversy surrounding Finnair's claims about not flying over Ukrainian airspace after the MH17 disaster, and their subsequent apology and explanation.<eos><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 8,
+            "tid1": 115,
+            "tid2": 12,
+            "tid1_focus": "This summary focuses on the topic of the text, providing a brief overview of the key points mentioned. It is designed to provide a concise understanding of the topic for individuals who may be seeking a summary.\n\nPlease note that the text itself does not provide a comprehensive or objective view of the topic. It may be important to consult other sources for a more complete understanding of the events and perspectives discussed. Additionally, this summary does not provide any opinion or analysis",
+            "no_focus": "The text is about a Saudi cleric, Mohammed al-Arifi, who has called for holy war to overthrow Bashar al-Assad's regime in Syria. The text discusses the recruitment of three young Britons fighting in the Syrian civil war and the impact of the mosque, Al Manar, on radicalisation. It also provides information about the families of the boys and the ongoing efforts by the authorities to combat extremism.<eos><pad><pad><pad><pad><pad>",
+            "tid2_focus": "Summary:\n\nThe text is focused on the rise of Islamic terror in Britain and the role of a notorious Saudi cleric, Mohammed al-Arifi, in radicalising three Britons fighting in Syria. It discusses the recruitment process of young Muslims and the impact of the internet on radicalisation, as well as the challenges faced by families and communities affected by Islamic terrorism. The text also highlights the plight of families who lose their children to extremism.<eos><pad><pad>"
+        },
+        {
+            "artciel_idx": 9,
+            "tid1": 163,
+            "tid2": 229,
+            "tid1_focus": "Sure. Here's a summary of the text about airport, passengers, flight, travel, airlines, passenger, flights, airline, international, transport, heathrow, board, terminal, airways, airports, runway, cabin, landed, gatwick, coin, batteries, masks, busiest, backpack, continental:\n\n**Airport:**\n\n- Well-designed and clean airports.\n- Airport lounges provide a haven from the busy airport experience.\n\n",
+            "no_focus": "Sure, here is a summary of the text:\n\nThe text is about the luxurious airport lounges around the world. It provides examples of some of the most impressive airport lounges and the amenities and services they offer to travelers. It also gives tips on how to get the most out of an airport lounge. Overall, the text is a comprehensive overview of the topic. Is there anything else I can help you with?<eos><pad><pad><pad><pad><pad><pad><pad>",
+            "tid2_focus": "Sure, here's a summary of the text focusing on hotel, guests, bar, glass, wine, resort, rooms, private, dinner, guest, views, spa, night, boasts, offers, table, stay, stunning, apartments, lodge, lavish, inn, bathrooms, outdoor, situated.\n\n**Hotel**\n\n* The airport lounges are a testament to a new age of luxury, offering a range of amenities, privacy, and"
+        },
+        {
+            "artciel_idx": 10,
+            "tid1": 134,
+            "tid2": 153,
+            "tid1_focus": "The text provides a comprehensive overview of the role and importance of air, plane, aircraft, flight, flying, pilot, fly, jet, crew, landing, planes, force, pilots, flew, jets, aviation, fighter, ferry, ground, radar, flown, engine, land, wings, board. It also sheds light on the critical need for the improvement of air and aircraft safety due to the catastrophic cargo plane fires investigated by the NTSB",
+            "no_focus": "The National Transportation Safety Board (NTSB) has concluded that fire-protection systems on freight aircraft are inadequate and recommend improvements and rule changes. The NTSB found three catastrophic cargo plane fires in the past decade, two of which killed the flight crews and destroyed the aircraft. The third incident in Philadelphia injured the crew. The NTSB concluded that current detection and suppression systems are not effective enough to give crews more time and options to evacuate the aircraft in case",
+            "tid2_focus": "This summary focuses on fire, residents, San, wood, firefighters, burning, burned, blaze, flames, fires, diego, burn, homes, resident, department, arson, elderly, destroyed, firefighter, evacuated, local, rubble, sanders, emergency, evacuation. It highlights the importance of improving fire protection on freight aircraft, the need for better detection and suppression of fires, and the need to invest in next-generation safety devices for cars"
+        },
+        {
+            "artciel_idx": 11,
+            "tid1": 113,
+            "tid2": 134,
+            "tid1_focus": "The chaotic campaign for the 2016 presidential election has reignited an interest in politics, with thousands of Americans across the country expressing their opinions on the election, candidates, and political issues. This has inspired a wide range of activities, from rallies and town halls to social media discussions and political campaigns. Many candidates have faced challenges, including controversies and scandals, throughout the campaign season. The 2016 election has also highlighted the importance",
+            "no_focus": "Sure, here is a summary of the text:\n\nHundreds of commenters on CNN.com have taken to social media to connect the political positions of President Barack Obama and Republican candidate Mitt Romney to the incidents surrounding their airplanes. While Obama's plane had several issues, including a rough landing in Ohio, commenters focused more on Romney's situation due to the electrical problem with his plane. Many comments expressed their disapproval of the political bickering",
+            "tid2_focus": "Sure, here's a summary of the text focusing on air, plane, aircraft, flight, flying, pilot, fly, jet, crew, landing, planes, force, pilots, flew, jets, aviation, fighter, ferry, ground, radar, flown, engine, land, wings, board.\n\nThe text discusses the political reactions to aviation incidents involving Presidents Barack Obama and Mitt Romney. Commenters have taken to social media to express their"
+        },
+        {
+            "artciel_idx": 12,
+            "tid1": 217,
+            "tid2": 195,
+            "tid1_focus": "\"The Carolina Panthers star defensive end Greg Hardy has been granted a new trial this fall after a domestic violence conviction in July. The team announced Wednesday that he will take a voluntary leave with pay until his legal matters are resolved. The Panthers believe this is the right course of action at this time for both Greg and the Carolina Panthers.\" What can we conclude from the text?\n\nSure, here's a summary of the text, focusing on the club",
+            "no_focus": "Sure, here is a summary of the text:\n\nThe Carolina Panthers' star defensive end Greg Hardy has been granted a new trial after a domestic violence conviction in July. He will take a voluntary leave with pay until his legal matters are resolved. He will be placed on the NFL's exempt/commissioner's permission list, which allows in special circumstances for players to be paid while on leave.<eos><pad><pad><pad><pad><pad><pad><pad><pad>",
+            "tid2_focus": "- Greg Hardy was found guilty of domestic violence in May and sentenced to 18 months of probation and a 60-day suspended sentence.\n\n\n- Hardy was granted a jury trial and will face trial mid-November.\n\n\n- The NFL Players Association and the Carolina Panthers worked to resolve the matter and the player was placed on the NFL's exempt/commissioner's permission list.\n\n\n- Hardy will be unable to use team facilities"
+        },
+        {
+            "artciel_idx": 13,
+            "tid1": 115,
+            "tid2": 205,
+            "tid1_focus": "This beautiful story reminds us that sometimes the best gifts don't come from stores or traditional sources - they come from the heart of a community of like-minded people who share a passion for creativity. By supporting and encouraging artists, we not only uplift them but also enrich our own lives in so many ways. Family is a core part of life, and Mr. Berlin's story is a testament to the joy and love that can blossom when a",
+            "no_focus": "End Summary.\n\nA thoughtful husband has given his wife a birthday present she will never forget - after commissioning 23 artists to create unique works of art of his family. The artworks were each based on various photographs of the family supplied to the 23 artists for inspiration. The artists chose from 40 pictures altogether, and Jacob features in the majority of the artworks, which were given to his surprised mother on her birthday.<eos><pad><pad>",
+            "tid2_focus": " \n**Summary:**\n\nA thoughtful husband has given his wife Agnes a birthday present she will never forget. Ernst Berlin, from Chicago, Illinois, commissioned 23 artists to create unique works of art of his family. The artworks were based on various photographs of the family supplied to the artists for inspiration. Ernst, an amateur photographer, selected 40 pictures of his family and asked the artists to choose which they would like to work with."
+        },
+        {
+            "artciel_idx": 14,
+            "tid1": 13,
+            "tid2": 195,
+            "tid1_focus": "This legal battle has significant implications for the future of the . industry, which is still emerging and facing competition from other technology companies. The case also raises questions about the role of . in regulating the . industry. Will Apple and the other major tech companies be held liable for raising prices to protect their profits? Stay tuned for more developments in this high-profile case. | . Disclaimer | Please note that the source is a news article and may contain biased",
+            "no_focus": "The trial is expected to last several weeks, and the outcome could have significant implications for the e-book industry and consumer rights. It is still unclear whether Jobs' email and other correspondence will be admitted as evidence during the trial. The trial could also shed light on the role of Apple's competitors and whether they were involved in the pricing scheme. The outcome of the case could also depend on how Apple responds to the government's allegations and whether",
+            "tid2_focus": "The trial is expected to be . to last several weeks. Both sides have put on . teams of lawyers, experts and witnesses.\n\nIn the end, a jury found Apple guilty of price fixing. Sentenced to life in prison, Apple's case will go to a higher court and appeal if necessary. The outcome of this case will have a major impact on the . ebook industry and its . competitors.<eos><pad><pad><pad><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 15,
+            "tid1": 162,
+            "tid2": 72,
+            "tid1_focus": "Sure, here's a summary of the text:\n\nThe Obama administration is considering imposing a forced quarantine on healthcare workers who return to the United States from the Ebola hot zone of West Africa. The CDC-led discussions are likely to produce some change in current policy and that the aim is to reach a decision as soon as possible. The Trump administration's policy of not imposing mandatory quarantines was also discussed during the meeting.<eos><pad><pad><pad>",
+            "no_focus": "Sure, here's a summary of the text:\n\nThe Obama administration is considering imposing a forced quarantine on healthcare workers who return to the United States from the Ebola hot zone of West Africa, after a New York doctor who treated patients there tested positive for the virus on Thursday. The CDC-led discussions began on Thursday after Dr. Craig Spencer in New York became the fourth person diagnosed with the disease in the United States. The aim is to reach",
+            "tid2_focus": "Sure, here's a summary of the text:\n\n**Health**\nThe Obama administration is considering imposing a forced quarantine on healthcare workers who return to the United States from the Ebola hot zone of West Africa.\n\n**Virus**\nA New York doctor who treated patients there tested positive for the virus on Thursday.\n\n**Cases**\nAt least 4,877 people have died of the disease in the impoverished West African countries of"
+        },
+        {
+            "artciel_idx": 16,
+            "tid1": 39,
+            "tid2": 163,
+            "tid1_focus": "The incident raises questions about the security of baggage screening procedures and the oversight of travelers' rights, as well as the importance of historical artifacts and military equipment being properly handled. It highlights the need for transparency and accountability in managing and securing both checked and carry-on baggage. This incident also underscores the importance of vigilance and the ongoing security challenges that airlines and airports must address.\n\nIn addition to the information in the text, here are some other details that",
+            "no_focus": "Sure, here is a summary of the text:\n\nTwo World War I artillery shells were discovered in checked luggage at Chicago's O'Hare International Airport. The teens, who were part of a school field trip to Europe, obtained the shells at a French artillery range. The TSA determined that the shells were inert and no one was in danger. The teens were questioned and allowed to travel onward, but they were not charged.<eos><pad><pad><pad>",
+            "tid2_focus": "This context provides information about the discovery of two World War I artillery shells in checked luggage arriving at Chicago's O'Hare International Airport. It also provides details about the teenagers involved, their field trip to Europe, and the luggage screening process at the airport. The incident raises questions about the importance of firearm safety and the potential consequences of bringing military-grade weapons into an airport. This summary focuses on the key elements of the story, including the discovery"
+        },
+        {
+            "artciel_idx": 17,
+            "tid1": 218,
+            "tid2": 217,
+            "tid1_focus": "In summary, Adam Shergold's experience in the hot and humid conditions of Manaus demonstrates that it takes only a few seconds for the body to start perspiring heavily, rendering exercise nearly impossible for someone who's training for a half-marathon. Even the elite athletes playing in the World Cup are not immune to these extreme conditions, with the temperatures reaching as high as 38C.<eos><pad><pad><pad><pad><pad><pad><pad><pad><pad>",
+            "no_focus": "Summary:\n\nThe text describes the challenges faced by Adam Shergold during a 10-minute run and exercise in the hot and humid conditions of Manaus. The extreme temperatures and humidity make it almost impossible to maintain normal fitness levels, and he experiences a rapid onset of sweat and discomfort. Despite the difficult conditions, he shows determination and willpower by pushing through and eventually finishing his workout. The text highlights the importance of preparation and hydration for athletes participating",
+            "tid2_focus": "In summary, the text describes the challenges athletes face in hot and humid conditions, particularly in the match against Italy in Manaus. It highlights the importance of acclimatisation and the need for players to stay hydrated to avoid exhaustion and potential injury. The article also provides an insight into the challenges faced by players preparing for the tournament. Overall, the text showcases the unique challenges and sacrifices athletes must face when competing in extreme weather conditions.<eos><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 18,
+            "tid1": 163,
+            "tid2": 247,
+            "tid1_focus": "The passage describes several key terms associated with airports, passengers, flights, travel, airlines, passengers, flights, airlines, international, transport, Heathrow, boarding, terminal, airways, airports, runway, cabin, landed, gatwick, coin, batteries, masks, busiest, backpack, continental. These terms give a comprehensive picture of the topic, allowing readers to easily understand the content. The passage also provides a clear and concise summary of the topic,",
+            "no_focus": "British Airways and Virgin Atlantic have announced they are reducing their fuel surcharges as the price of oil has plummeted. Passengers on long-haul flights will enjoy the biggest reduction in fares. Both airlines said the cuts, effective Thursday, reflected the lower price of oil, and BA also credited its fuel hedging policy. It means BA passengers will pay \u00a330-35 ($46-54) less on flights longer than nine hours, and",
+            "tid2_focus": "Sure, here is the summary you requested:\n\n**Summary:**\n\nBritish Airways and Virgin Atlantic have announced that they will reduce fuel surcharges on long-haul flights effective Thursday. The price of oil has plummeted in recent months, and both airlines are seeing a significant drop in the cost of oil. As a result, they are able to offer significant reductions in fares. BA's fuel surcharge is expected to cost passengers between \u00a330-"
+        },
+        {
+            "artciel_idx": 19,
+            "tid1": 153,
+            "tid2": 236,
+            "tid1_focus": "\"LOS ANGELES, California (CNN) -- A pressurized cylinder exploded at Universal Studios on Sunday, injuring two firefighters as they tried to fight a blaze that began earlier in the day,\" Los Angeles authorities said. The fire destroyed buildings and movie sets at Universal Studios on Sunday. Eight other firefighters were injured in the fire, which was expected to be contained by 4:15 p.m. (7:15 p.m. ET),",
+            "no_focus": "- A pressurized cylinder exploded at Universal Studios in Los Angeles on Sunday.\n- Two firefighters were injured in the fire.\n- The fire destroyed buildings and movie sets at Universal Studios on Sunday.\n- The 2008 MTV Movie Awards show will go on as planned.\n- Hours after the blaze was reported, the roughly two-block area appeared charred and resembled a \"disaster movie.\"<eos><pad><pad><pad><pad><pad><pad><pad><pad>",
+            "tid2_focus": "\"LOS ANGELES, California (CNN) \u2014 A pressurized cylinder exploded at Universal Studios on Sunday, injuring two firefighters as they tried to fight a blaze that began earlier in the day. The fire destroyed buildings and movie sets at Universal Studios on Sunday. Eight other firefighters were injured in the fire, which was expected to be contained by 4:15 p.m. (7:15 p.m. ET), said Ron Haralson"
+        },
+        {
+            "artciel_idx": 20,
+            "tid1": 78,
+            "tid2": 217,
+            "tid1_focus": "The case is ongoing and Leeds have appealed the court's decision. The outcome of the case could have major implications for other football clubs in the country. It also raises important questions about the role of justice and fairness in policing and how the system should be reformed to ensure that clubs like Leeds are not unjustly disadvantaged. The case is expected to continue in the courts and could have a profound impact on the future of football in Leeds and beyond.<eos><pad>",
+            "no_focus": "In summary, Leeds United has been awarded more than \u00a31.2 million after a judge ruled that the club had been overcharged for policing home games. Leeds' bosses, however, claim they are still owed more than \u00a3800,000. The figures emerged after a further High Court hearing in London in June. The dispute related to how special police service charges should be made for the 2012-13 and",
+            "tid2_focus": "It is important to note that, while the case is about how much Leeds United Football Club should be owed by West Yorkshire Police, there are other issues to consider, including how Leeds United has to cover the costs of police, and how the financial situation of the club has to be taken into account. The High Court will make a final decision on the case, but this summary provides an overview of the main arguments and issues that are likely to be considered"
+        },
+        {
+            "artciel_idx": 21,
+            "tid1": 113,
+            "tid2": 200,
+            "tid1_focus": "Sure, here is a summary of the text focusing on the campaign, Clintons, Governor, Presidential, Candidate, Political, State, Hillary, Republican, Candidates, Romney, Bill, Dementia, Democratic, Running, Conservatives, Politics, Gov, Election, Support, Palin, Race, Campaigns, Sharpton, Office.\n\n**Campaign**: Sen. John McCain's campaign rebuked Sen. Joe Biden, criticizing Biden's stance on stem cell",
+            "no_focus": "Sure, here is a summary of the text:\n\nThe Republican campaign has rebuked Sen. Joe Biden for raising a debate about who cares more for special needs children. Biden's support of stem cell research is at odds with the position taken by the Republicans' vice presidential nominee, Alaska Gov. Sarah Palin, whose 5-month-old son, Trig, has Down syndrome. Palin opposes stem cell research because it involves the use of human",
+            "tid2_focus": "## Summary\n\nThe text discusses a political debate about who should support stem cell research for children with birth defects. While Biden supports stem cell research, McCain-Palin's campaign has criticized Biden's stance and argued that the issue should be viewed as a clash of policies and not a personal matter. The debate has raised questions about the role of the vice presidency and the impact of party politics on issues that affect children and families.<eos><pad><pad>"
+        },
+        {
+            "artciel_idx": 22,
+            "tid1": 39,
+            "tid2": 64,
+            "tid1_focus": "This context describes a current situation involving the war in Iraq. Given the information, create a summary focusing on war, military, defense, army, Iraq, soldiers, troops, forces, battle, Iraqi, soldier, force, commander, combat, armed, base, served, personnel, command, men, defense, general, invasion, Baghdad, Mosul.\n\nSummary:\n\nThe context describes the ongoing war in Iraq where Australia is considering joining",
+            "no_focus": "The government will make a decision on the decision to join air strikes against Islamic State jihadists in Iraq within days. The Air Task Group is conducting training flights with RAAF aircraft to prepare for the deployment of air strikes. The government has yet to give the final go-ahead for air attacks to start, but it plans to coordinate operations of the Air Task Group with international partners. The Super Hornets can conduct precision strikes against IS ground units and supply",
+            "tid2_focus": "* Group: Air Task Group, Coalition, Iraqi security forces\n* Forces: F/A-18F Super Hornets, Wedgetail, KC-30A\n* Fighters: Aircrew\n* Killed: No information in the context\n* Fighting: Air strikes on Islamic State jihadists\n* Militants: Islamic State jihadists\n* Syrian: Syria\n* Border: Iraq\n* Town: Not provided\n* City"
+        },
+        {
+            "artciel_idx": 23,
+            "tid1": 105,
+            "tid2": 195,
+            "tid1_focus": "The passage is focused on charged, allegedly, charges, arrested, alleged, investigation, arrest, accused, authorities, office, attorney, bail, fbi, criminal, charge, released, investigators, jail, reported, detectives, federal, documents, custody, county, article.\n\nSummary:\n\nA charge of making a false bomb threat has been dropped against a man named Kevin Edson after he was arrested at an anniversary event for the Boston Marathon bombings",
+            "no_focus": "The police have dropped a charge against a man who carried a backpack containing a rice cooker near a crowd marking the first anniversary of the Boston Marathon bombings in April. The suspect, Kevin Edson, 25, did not communicate an \"overt threat that an incendiary device would be detonated.\" As a result, prosecutors decided to drop the charge. Edson faces charges of disturbing the peace, disorderly conduct, disturbing a public assembly and possession or use",
+            "tid2_focus": "The context does not mention anything about 26.2 miles, so I cannot generate the requested summary from the context. Therefore, I cannot provide the information requested in the prompt. Would you like me to try generating something else? I can try generating a summary of the text that focuses on the other aspects mentioned in the context. Please let me know. Thank you. \n\nI am unable to generate the summary you requested as I am unable"
+        },
+        {
+            "artciel_idx": 24,
+            "tid1": 180,
+            "tid2": 61,
+            "tid1_focus": "The text focuses on the following goals: \n\n- The decisive goal scored by Danny Welbeck, which sealed victory for Arsenal.\n\n\n- Another goal by Welbeck just before the end of the first half.\n\n\n- A penalty kick converted by Welbeck in the second half.\n\n\n- A winning goal for Arsenal, after the initial set-pieces in the first half.\n\n\n- A late equalizer from Saido Berahino, which Arsenal eventually",
+            "no_focus": "The main points of the text are:\n\n- Danny Welbeck scored a goal that secured Arsenal a 1-0 victory at West Brom.\n- The team took three vital points on the pitch.\n- Welbeck felt confident after scoring a goal against Borussia Dortmund in midweek.\n- Arsenal dominated West Brom, but a late header by Saido Berahino ensured the hosts remained in the lead.\n- The match was important for",
+            "tid2_focus": "This text is about Arsenal's match against West Brom. The text highlights several key points:\n\n* Arsenal won the match 1-0.\n* Danny Welbeck scored the winning goal for Arsenal.\n* Arsenal scored two goals in the second half, which was a vital win for the team.\n* Arsenal's clean sheet was important in securing the win.\n* The team is on a winning streak and they want to continue"
+        },
+        {
+            "artciel_idx": 25,
+            "tid1": 55,
+            "tid2": 13,
+            "tid1_focus": "Summary:\n\nSure, here's a summary of the text:\n\n**BeOn smart bulbs** combine energy-saving features with advanced technology to provide homeowners with a safer and more convenient living environment. These bulbs learn your lighting habits and replicate them when you're away, eliminating the need to manually search for torches or candles. They also feature an energy storage layer and respond to doorbells and smoke alarms to provide real-time notifications of any",
+            "no_focus": "Sure, here's a summary of the text:\n\nBeOn is a company that is developing a smart lighting and alarm system. The system can learn your lighting habits and replicate them when you're away on holiday. It also stores energy in reserve and responds to doorbells and smoke alarms. The system can be pre-ordered from Kickstarter for $199 (\u00a3124), six units can be bought for $395 (\u00a3",
+            "tid2_focus": "This text is a summary of the BeOn bulb on Kickstarter, which is a smart lighting and alarm system that can be operated by anyone. The bulb can be controlled using a smartphone app, and it uses soft white LEDs with a brightness of 800 lumens, which is the equivalent to a 60-watt incandescent bulb. A pack of three bulbs can be pre-ordered from the campaign for $199 (\u00a3124"
+        },
+        {
+            "artciel_idx": 26,
+            "tid1": 39,
+            "tid2": 46,
+            "tid1_focus": "This context does not mention anything about war, military, defense, army, Iraq, soldiers, troops, forces, battle, iraqi, soldier, force, commander, combat, armed, base, served, personnel, command, men, defense, general, invasion, baghdad, mosul, so I cannot generate the requested summary from the context.\n\nIs there anything else I can do to help you generate a summary of the text that",
+            "no_focus": "Sure, here is a summary of the text:\n\nThe Secretary of Defense is expected to announce this week that same-sex spouses of service members will be granted some benefits that they had been denied until now. These benefits include housing on military bases, military ID cards to access on-base activities and programs, access to commissaries, and consideration of a same-sex spouse and family in duty assignments.<eos><pad><pad><pad><pad><pad><pad><pad><pad>",
+            "tid2_focus": "This text focuses on the law, legal, state, marriage, rights, laws, civil, federal, couples, petition, attorney, cases, lawyers, case, discrimination, lawyer, marry, states, married, public, papers, seeking, battle, legally, filed. The context is about the issue of same-sex marriage benefits for service members. The text emphasizes the ongoing debate and efforts to provide equal benefits to LGBTQ+ service members and highlights"
+        },
+        {
+            "artciel_idx": 27,
+            "tid1": 180,
+            "tid2": 211,
+            "tid1_focus": "**Summary:**\n\nPrince Harry watched the first game of the Autumn Internationals between England and Australia and cheered on the home team to victory. He witnessed England's dominance in the second half, scoring tries from Farrell and Robshaw, and held his grin throughout the match. England secured third position in the world rankings with their victory. The Prince was also present for the halftime lap of honour, showing his support for the team.<eos><pad><pad>",
+            "no_focus": "Sure, here's a summary of the text:\n\nPrince Harry witnessed England's victory against Australia in the first game of the Autumn Internationals. He cheered from the stands wearing a smart suit and red tie. Despite an early shaky performance by Stuart Lancaster's men in the first half, England turned the game around in the second half. The home team won the match with a final score of 20-13.<eos>",
+            "tid2_focus": "Sure, here's a summary:\n\nPrince Harry was cheering on England's national rugby team in London, British. He grinned widely as England defeated Australia in the first game of the Autumn Internationals. He was dressed in a smart suit and red tie and cheered on from the stands. He was later seen talking to guests in the Royal Box and speaking to fans who were sitting in front of him.<eos><pad><pad><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 28,
+            "tid1": 61,
+            "tid2": 180,
+            "tid1_focus": "This summary highlights the following key points about the text:\n\n- American Bill Haas won the Bob Hope Classic final match.\n- He went into the final day two strokes behind the lead but broke free and finished with a flawless 64.\n- He defeated four other golfers tied for second place.\n- He fired a birdie at the last hole for victory.\n- This victory matches his father's win in 1988",
+            "no_focus": "This is an article about American Bill Haas's victory in the Bob Hope Classic. Haas won the tournament by one stroke and joined his father, Jay Haas, as a winner of the event. He finished on 30 under par and led the pack by two strokes early in the final round, but the chasing pack reduced his lead and he eventually fell back to second place. He then birdied the last hole to secure victory.<eos><pad><pad>",
+            "tid2_focus": "The article focuses on the final hole victory of American Bill Haas in the Bob Hope Classic. It highlights his successful attempt to break free from the chasing pack to finish with a flawless score of 30 under par. The article also mentions the close second place finish of Tim Clark, Matt Kuchar, and Bubba Watson, who were tied with 29 under par. The focus is on Haas's emotional victory, achieved with the support of his"
+        },
+        {
+            "artciel_idx": 29,
+            "tid1": 247,
+            "tid2": 113,
+            "tid1_focus": "\"Taxes\" is a recurring theme in the text, with state and federal governments considering cuts to various programs and services, including education and infrastructure. The text also mentions \"average\" income, which is said to be affected by the economic climate. Furthermore, the concept of \"benefits\" is highlighted, with state lawmakers considering various programs and services to help people in need.\n\nIn conclusion, the text presents a crisis of the United States economy, with",
+            "no_focus": "This text is a summary of the article, \"COLUMBIA, South Carolina (CNN) -- The United States faces a Zimbabwe-style economic collapse if it keeps 'spending a bunch of money we don't have'\". It covers the following points:\n\n- South Carolina Governor Mark Sanford does not want to spend money that his state doesn't have.\n\n\n- Sanford claims that the stimulus plan is akin to Zimbabwe's economic meltdown.\n\n\n-",
+            "tid2_focus": "The passage contains several key points:\n\n- South Carolina Governor Mark Sanford is an outspoken critic of the Obama administration's stimulus plan.\n- He has stated that he will turn down about a quarter of his state's $2.8 billion share unless Washington lets him use that money to pay down debt.\n- Sanford's announcement has prompted debate about the role of state governments in the economic stimulus.\n- He is one of several"
+        },
+        {
+            "artciel_idx": 30,
+            "tid1": 196,
+            "tid2": 247,
+            "tid1_focus": "# School\n\n- A place of learning where students receive instruction from teachers.\n- A school is an institution that offers educational services to students in a particular area.\n\n# Teacher\n\n- A person employed by a school to provide instruction and guidance to students.\n- Teachers often have degrees or certifications in education.\n\n# High School\n\n- A secondary school that offers courses and programs that prepare students for college or the workforce.\n- Students in",
+            "no_focus": "* Nearly 6.2 million students in the United States between the ages of 16 and 24 in 2007 dropped out of high school.\n* Most of the dropouts were Latino or black.\n* A national re-enrollment strategy should be a fundamental part of America's national education agenda.\n* There have been re-enrollment successes nationally and in a number of cities including Chicago; Los Angeles,",
+            "tid2_focus": "The report's findings suggest that there is a need for a national re-enrollment strategy to address the problem of high school dropouts. The report recommends specific actions that could be taken to address the challenge, including: increasing funding for programs that help at-risk youth stay in school, providing incentives for high school graduates to stay in school and return to college, and expanding access to financial aid and other resources for students.<eos><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 31,
+            "tid1": 217,
+            "tid2": 194,
+            "tid1_focus": "In summary, the text describes the upcoming UEFA Euro 2012 football tournament, highlighting the teams, players, stadiums, and other relevant information. It emphasizes the extensive preparation and excitement surrounding the tournament as fans eagerly await the start of the championship in Poland and Ukraine. The text also provides a brief overview of the qualifying process, with teams vying for a spot in the main event. It concludes by emphasizing the upcoming tournament's significance and the",
+            "no_focus": "Sure. Here's a summary of the text:\n\nEuro 2012 is a football tournament that will be held in Poland and Ukraine from June 8 to July 1. The tournament features 16 teams from all over Europe. Eight cities across Poland and Ukraine will host the games, with the main stadium being the National Stadium in Warsaw. The tournament features knockout matches, with the aim of determining the winning team at the end",
+            "tid2_focus": "This text is about Euro 2012. It provides information on the location of the tournament, the participating teams, and the dates of the tournament. It also mentions some of the key figures involved in the event, such as the Spanish Football Federation and President Vladimir Putin. It also provides a brief overview of the qualifying campaign that led to the final tournament. I hope this summary is helpful!<eos><pad><pad><pad><pad><pad><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 32,
+            "tid1": 217,
+            "tid2": 90,
+            "tid1_focus": "Sure, here's the summary you requested:\n\n**Arsenal's transfer quest for William Carvalho has gained further momentum, with the club expressing their interest in the 22-year-old defensive midfielder. The Gunners are keen on adding a defensive midfielder to their squad, and are prepared to negotiate a fee that is closer to the club's release clause than what they initially offered. This transfer is a potential coup for Arsenal, as they",
+            "no_focus": "Sure, here is the summary:\n\nArsenal have made a fresh enquiry for Sporting Lisbon's \u00a335million-rated midfielder William Carvalho. They are looking to sign a defensive midfielder and are keen on taking the 22-year-old to the Emirates. However, Sporting are looking for an offer closer to the \u201a\u00f6\u00e1\u00ae45m (\u00a335.6m) release clause he has in his current contract.<eos><pad>",
+            "tid2_focus": "Sure, here's the summary you requested:\n\nArsenal have made a fresh enquiry for Sporting Lisbon's \u00a335million-rated midfielder William Carvalho. The 22-year-old Portuguese international has been a long-term target for Manchester United and now Arsenal have joined the chase. However, it is understood Sporting are looking for an offer closer to the \"\u00f6\u00e1\u00ae45m (\u00a335.6m) release clause"
+        },
+        {
+            "artciel_idx": 33,
+            "tid1": 128,
+            "tid2": 196,
+            "tid1_focus": "The text is about an innovative mortgage-style payment scheme offered by the Fernhill School in Glasgow for parents of children attending the school. The scheme allows parents to spread the cost of their child's school fees over ten years, interest free. This could reduce monthly payments by up to 50 per cent. This scheme is the first of its kind in Scotland and could provide relief for families who would otherwise struggle to afford an independent education.<eos>",
+            "no_focus": "Sure, here is a summary of the text:\n\nThe Fernhill School in Glasgow has launched a new mortgage-style payment scheme for parents who wish to spread the cost of their child's school fees over ten years, interest free. This scheme is the first of its kind in Scotland and could reduce monthly payments by up to 50 per cent. The average cost of private education in Scotland is now more than \u00a312,00",
+            "tid2_focus": "**Summary:**\n\nThe Fernhill School in Glasgow has launched a mortgage-style payment scheme for parents' children's school fees. The scheme allows parents to spread the cost of fees over ten years, interest-free. This scheme is seen as a innovative way to make private education more affordable for families facing financial difficulties. The scheme is available for the 2013/14 school year and will allow parents whose children are joining that"
+        },
+        {
+            "artciel_idx": 34,
+            "tid1": 200,
+            "tid2": 247,
+            "tid1_focus": "**Summary:**\n\nAccording to a recent study by the Work and Pensions Department, only half of British children still live with both their birth parents by the age of 15. The figures highlight the importance of family stability for children's well-being, and the government is taking steps to ensure this stability. The study focuses on tracking factors that affect family stability, such as parental relationships, socioeconomic status, and exposure to violence. By measuring factors",
+            "no_focus": "Sure, here's a summary of the text:\n\nThe text discusses the percentage of British children still living with both birth parents by the time they reach 15. It reveals that only 55 per cent of babies are raised by couples living together after they grow up. The article emphasizes the importance of families for children's well-being and stability. It highlights measures taken by the government to support families facing breakdown, including payments based",
+            "tid2_focus": "### Summary:\n\nThe government plans to intervene to stop parents splitting up and to help keep families together. They will pay private firms and charities to help keep families together and will log how they promote family stability, combat worklessness and whether children in the families affected perform as well their peers in other families. The government will also measure whether children from disadvantaged backgrounds do as well at school as other pupils and the percentage of young people who fall into a pattern"
+        },
+        {
+            "artciel_idx": 35,
+            "tid1": 144,
+            "tid2": 245,
+            "tid1_focus": "Sure, here is a summary of the text, focusing on online, users, internet, site, device, people, computer, iphone, data, devices, phones, access, software, post, digital, technology, sites, blog, content, web, including, feature, called, phone, electronic:\n\n**Online:** Facebook's under-13 policy remains a point of debate, with some arguing that allowing young children access could enhance",
+            "no_focus": "Sure, here's a summary of the text:\n\nA debate is ongoing regarding the question of whether young children should be allowed to use Facebook. According to data from Microsoft Research and Consumer Reports, many kids use Facebook with their parents' knowledge, particularly 11- and 12-year-olds. Proponents argue that allowing young children to use Facebook with parental consent would allow them to use the platform more safely and introduce them to",
+            "tid2_focus": "Sure, here is a summary of the text focusing on Facebook, mobile, phone, network, samsung, screen, apps, smart, ad, watch, networks, microsoft, technology, tech, platform, company, screens, social, yahoo, personal, super, services, giant, companies, connect:\n\nFacebook is looking into ways to give younger children access to the social-networking site, with more than 900 million users around the"
+        },
+        {
+            "artciel_idx": 36,
+            "tid1": 163,
+            "tid2": 248,
+            "tid1_focus": "## Summary: \n\nA woman was arrested at Madrid airport for hiding \u00a370,000 worth of cocaine in her breasts. She concealed the drugs by using two plastic bags as breast implants. The passenger arrived from Bogota, Colombia, and was singled out due to her nervous appearance. After a thorough search, the woman confessed to carrying the implants. Airport officials removed one implant from each breast, resulting in the discovery of 1.7",
+            "no_focus": "Sure, here's a summary of the text:\n\nA Venezuelan woman has been arrested at Madrid airport after confessing to hiding \u00a370,000 worth of cocaine in her breasts. She concealed the drugs by using two plastic bags containing 3.75lbs of cocaine as breast implants to get through customs. The bags were found in her breasts upon a frisk by female officers.<eos><pad><pad><pad><pad><pad><pad><pad><pad><pad>",
+            "tid2_focus": "Sure, here's a summary of the text:\n\n**Hospital**\n\n- A woman was arrested at Madrid airport after confessing to hiding \u00a370,000 worth of cocaine in her breasts.\n\n**Medical and Doctors**\n\n- Doctors removed an implant from each breast, containing a total of 1.7 kilos of cocaine.\n\n**Patients and Care**\n\n- The woman was rushed to the hospital, where she underwent"
+        },
+        {
+            "artciel_idx": 37,
+            "tid1": 115,
+            "tid2": 227,
+            "tid1_focus": "The context does not specify anything about family, wife, daughter, husband, couple, pictured, friends, left, brother, friend, married, mother, sister, life, father, met, love, relationship, wanted, months, mum, moved, happy, dad, days. Therefore, I cannot generate the requested summary from the context.\n\nIs there anything else I can help you with?<eos><pad><pad><pad><pad><pad>",
+            "no_focus": "Sure, here's the summary you requested:\n\nA pop superstar, Gloria Estefan, is in negotiations to play Santana's mother on \"Glee.\" The episode is expected to feature some of Estefan's own music as well as some other bilingual tunes. This is not the first time Estefan has been linked to the show, as she has appeared in the past as a judge on \"American Idol.\"<eos><pad>",
+            "tid2_focus": "The text focuses on the upcoming episode of \"Glee\" featuring pop superstar Gloria Estefan. The episode will feature some of Estefan's own music as well as some other bilingual tunes. The source also mentions that the entire cast is \"really really big fans of hers and we love her music and her husband's music.\" It is expected to air in January. The full article can be found on EW.com.<eos>"
+        },
+        {
+            "artciel_idx": 38,
+            "tid1": 163,
+            "tid2": 105,
+            "tid1_focus": "This text discusses the accidental death of a 16-year-old girl by a rescue vehicle while attempting to disembark from an Asiana Airlines flight at San Francisco International Airport. The firefighter involved will not face charges, concluding an investigation that has spanned over two weeks. Two other individuals were also killed in the crash, and more than 180 passengers sustained injuries. Asiana Airlines has pledged $10,000 per passenger",
+            "no_focus": "This is the summary of the text.\n\nThe firefighter who accidentally ran over and killed a 16-year-old girl who survived the Asiana Airlines crash in San Francisco will not be charged in the case. The decision comes more than two weeks after authorities completed their investigation into the incident. The coroner ruled that Ye Mengyuan of China was alive when she was flung from the plane that crashed as it landed short of the runway at San Francisco",
+            "tid2_focus": "The context does not provide the specific charges that were made or any other relevant information about the case. Therefore, I cannot generate the requested summary from the context.\n\nIn summary, the text does not provide specific charges or other relevant information about the case, so I cannot generate the requested summary from the context. Is there anything else I can help you with?\n\nI can provide a summary of the event without specific details, or I can provide a"
+        },
+        {
+            "artciel_idx": 39,
+            "tid1": 62,
+            "tid2": 198,
+            "tid1_focus": "The ocean is salty like the Dead Sea, and this salt content would also imply a high density for the ocean's brine, which would affect the gravitational behavior of the ocean. The new results strengthen the possibility that Titan may host a vast salty ocean, which could pose a significant challenge to life as we know it. The researchers suggest that further exploration of the ocean should focus on understanding its properties, including salinity and density, and investigating the environmental conditions",
+            "no_focus": "In summary, a massive underground ocean on Saturn's largest moon, Titan, is as salty as the Earth's Dead Sea, it has been revealed. The ocean is probably an extremely salty brine of water mixed with dissolved salts. It is believed to be composed of sulfur, sodium and potassium. The new results come from a study of gravity and topography data collected during Cassini's repeated flybys of Titan during the past 10 years.",
+            "tid2_focus": "The data presented in this paper suggests that Titan has a vast ocean of salt, possibly the most salty ocean in the Solar System. The findings challenge previous studies and provide new insights into the structure and habitability of the moon. The team's work highlights the incredible diversity of the natural world and inspires further research into this fascinating world. The research team is comprised of scientists from diverse backgrounds, including astrophysicists, geophysicists, and chemists"
+        },
+        {
+            "artciel_idx": 40,
+            "tid1": 105,
+            "tid2": 195,
+            "tid1_focus": "(CNN) -- Former Guatemalan President Alfonso Portillo appeared in a New York court Tuesday and pleaded not guilty to charges that he laundered $70 million through U.S. banks while in power. Portillo, who was extradited to the United States last week, has always denied the charges against him and says the accusations are based on the lies of political enemies. \"This is a case of clear overreaching by the Department of Justice",
+            "no_focus": "Sure, here is a summary:\n\nFormer Guatemalan President Alfonso Portillo appeared in a New York court and pleaded not guilty to charges that he laundered $70 million through U.S. banks while in power. Portillo, who was extradited to the United States last week, has always denied the charges against him and says the accusations are based on the lies of political enemies. His defense attorney, David Rosenfield, intends to vigorously",
+            "tid2_focus": "**Summary:**\n\nFormer Guatemalan President Alfonso Portillo appeared in a New York court and pleaded not guilty to charges that he laundered $70 million through U.S. banks while in power. Portillo has always denied the charges against him and says the accusations are based on the lies of political enemies. The case has drawn the attention of US prosecutors and the country's legal system and court proceedings, where he was tried on similar charges"
+        },
+        {
+            "artciel_idx": 41,
+            "tid1": 217,
+            "tid2": 218,
+            "tid1_focus": "This text is about England's training camp in Miami ahead of the upcoming FIFA World Cup in Qatar. It focuses on various aspects of the training process, including the challenges players face in the hot weather, the preparation of the team and players, and the importance of patience and technicality in their training. The text also mentions some interesting facts about the tournament, such as England's match against Ecuador and the conditions they will be facing in Qatar.",
+            "no_focus": "Summary: \n\nEngland is in Miami for World Cup preparations. The players will train in slow-motion and wear bobble hats, gloves and winter tights to help them prepare for the challenge. A patient, technical approach is the only viable tactic. England will continue their preparations in the heat of Miami, where temperatures have been reaching 29 degrees by midday this week. No-one in their right mind will come out all guns blazing in these",
+            "tid2_focus": "This text is about the weather in Miami, Florida. It provides temperature, humidity, training details, and the preparation for England's training. Can you condense the information into a summary of the text?\n\nSure, here is a summary of the text:\n\n* The temperature in Miami was 29 degrees by midday on Sunday.\n* The humidity was 73 per cent.\n* England will be training in slow-motion when"
+        },
+        {
+            "artciel_idx": 42,
+            "tid1": 211,
+            "tid2": 134,
+            "tid1_focus": "The text is about Prince Harry's training to become a military helicopter pilot for the British Army Air Corps. He will begin his training in January 2009. The training is expected to take two and a half years. He is the third in line to the British throne. Harry has spent time in Afghanistan as a member of the British Army's Household Cavalry. He qualified for the course by flying a light aircraft under instruction.<eos>",
+            "no_focus": "In summary, Prince Harry has passed the first stage of training to become a military helicopter pilot. He will now begin a two-and-a-half year course with the Army Air Corps in January 2009. His training could result in him seeing active service as a pilot. If he qualifies, he will be available for operational service wherever the AAC flies. Harry's elder brother William was awarded his Royal Air Force wings in April",
+            "tid2_focus": "This text is about air, planes, aircraft, flight, flying, pilot, fly, jet, crew, landing, planes, force, pilots, flew, jets, aviation, fighter, ferry, ground, radar, flown, engine, land, wings, board. It is specifically about British Prince Harry's training to become a military helicopter pilot in the Army Air Corps. The text provides a brief summary of the training process, highlighting the key"
+        },
+        {
+            "artciel_idx": 43,
+            "tid1": 113,
+            "tid2": 236,
+            "tid1_focus": "I hope this summary is helpful. Please let me know if you have any other questions.\n\nThe context describes a film about the death of Osama bin Laden, directed by Harvey Weinstein and produced by Voltage Pictures. The film is set to debut two days before the U.S. presidential election. It will air on the National Geographic Channel and is part of a marketing campaign for Obama's re-election.<eos><pad><pad><pad><pad><pad><pad><pad>",
+            "no_focus": "I hope this is a summary of the text you provided. Let me know if you have any other questions.\n\nThe film \"Seal Team Six: The Raid on Osama bin Laden\" will air on the National Geographic Channel the day before the US presidential election. The movie is directed by John Stockwell and will explore the raid that killed Osama bin Laden in Pakistan. The film has been praised by experts for its accuracy and its depiction of the tragic event",
+            "tid2_focus": "Sure, here's a summary of the text:\n\n**Film:**\n\n- A film will be released next month about the death of Osama bin Laden.\n- The movie will air on November 4 before the US presidential election.\n- The film is produced by the production company of movie mogul Harvey Weinstein.\n- Weinstein is a prominent fundraiser for Obama's re-election campaign.\n\n**Character:**\n\n- Bin Laden is"
+        },
+        {
+            "artciel_idx": 44,
+            "tid1": 89,
+            "tid2": 236,
+            "tid1_focus": "(CNN)\nSure, here's a summary of the text focusing on weight, pounds, fat, diet, body, sugar, healthy, lose, lost, loss, bell, obesity, eating, weighed, calories, chips, obese, skin, weighs, healthcare, tongue, losing, pill, fletcher, granddaughter.\n\nAdam Sandler gained weight for the movie \"You Don't Mess With the Zohan,\" but he was able",
+            "no_focus": "-- CNN\n\nSure, here's a summary of the text:\n\nAdam Sandler gained weight for his latest comedy, \"You Don't Mess with the Zohan,\" but then he lost it again. He got buff for the movie, but then he let himself go a bit, leading to an unintentional broken ankle during filming for his latest comedy. He is recovering, but his ankle is still slightly swollen.<eos><pad><pad><pad><pad><pad><pad>",
+            "tid2_focus": "- Adam Sandler\n- Bedtime Stories\n- Adam Sandler\n- Movies\n- Television\n- Fans\n- Entertainment\n- Hollywood\n- Director\n- Starring\n- Played\n- Scene\n- Scenes\n- Story\n- Cast\n- Movies\n- Production\n- Box\n- Characters\n- Bond\n- Series\n- Turner\n- Alice\n- Production\n- Featured\n- Fans\n- Entertainment<eos><pad><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 45,
+            "tid1": 115,
+            "tid2": 195,
+            "tid1_focus": "This text is about a tragic accident that resulted in the death of a man named Eric Codling. The accident was caused by a woman named Emma Egan, who was driving her Vauxhall Astra and tailgated a cyclist at nearly 70mph. Egan lost control of her car and smashed into the cyclist, killing him instantly. She was arrested and charged with causing death by dangerous driving.\n\nThe sentencing was severe, with Egan receiving a four-year",
+            "no_focus": "In conclusion, a woman named Emma Egan has been jailed for four years after admitting causing death by dangerous driving. She was driving a Vauxhall Astra and was over the drink-drive limit when she chased a cyclist and hit him, killing him instantly. The court heard that Egan, from Dewsbury, West Yorkshire, was over the drink-drive limit when she chased Mr Dent through Sheffield after he ended their relationship in November last year.<eos><pad><pad><pad>",
+            "tid2_focus": "In this case, the court heard the testimonies of the victim, the defendant, and several witnesses. The jury deliberated for four hours before returning with a guilty verdict. The court found that Emma Egan was guilty of causing death by dangerous driving. She was sentenced to 12 years in prison. The judge took into consideration the victim's suffering, the defendant's remorse, and the possibility of rehabilitation.\n\n**Summary:**\n\nA woman"
+        },
+        {
+            "artciel_idx": 46,
+            "tid1": 134,
+            "tid2": 236,
+            "tid1_focus": "This interview gives an insider's look into the filmmaking process of \"Planes,\" revealing a high level of attention to detail and a deep respect for the aviation world. Bautista's input undoubtedly helped shape the look and feel of the film. He even contributed some of his real-world experiences to the characters, which helped to bring the movie closer to reality. It's clear that the filmmakers took great care to get everything right, and the result",
+            "no_focus": "This summary is about an interview with Sean Bautista, a veteran pilot who worked on the movie \"Planes.\" Bautista provides behind-the-scenes details about his role on the film and how he ensured that the aircraft in the movie were as accurate as possible. He also discusses his personal aviation background and how he was able to contribute to the film. Overall, the summary provides a fascinating glimpse into the world of aviation and the meticulous attention to detail that goes",
+            "tid2_focus": "Sean Bautista is an aviation enthusiast with a background in general aviation and military pilots. He has a deep understanding of the aviation world and a passion for storytelling. Bautista's insights into the movie \"Planes\" are invaluable to any aviation enthusiast and anyone who appreciates the power of storytelling to convey complex historical and technical concepts. He gives us a glimpse into the world of pilots, airliners, and the thrilling world of aviation.<eos><pad><pad><pad><pad><pad>"
+        },
+        {
+            "artciel_idx": 47,
+            "tid1": 217,
+            "tid2": 48,
+            "tid1_focus": "In summary, the text describes the creation of \"Le Zlatan\", a monstrous 600 gram burger in homage to Zlatan Ibrahimovic. The burger is made with a mixture of minced beef and onions, bacon and three types of cheeses, and is served in a chunky custom-made bun that weighs over one kilogram, including 250 grams of bread and 300 grams of cheese. The restaurant, Doddy's",
+            "no_focus": "The text is about a monstrous 600 gram burger called \"Le Zlatan\" that is served up in homage to Zlatan Ibrahimovic, the Swedish striker for Paris Saint-Germain. The restaurant, Doddy's Cafe, in Boulogne-Billancourt, Paris, is the brainchild of Jean-Philippe Grandin, who is an ardent PSG fan and manager of the restaurant. The burger is said to be the biggest burger on the",
+            "tid2_focus": "(CNN) -- This text describes a monstrous 600 gram burger called \"Le Zlatan\" served up at a restaurant in Paris, France, as a tribute to Zlatan Ibrahimovic, the famous Swedish striker. The burger, weighing over one kilogram, is made with a blend of minced beef and onions, bacon and three types of cheeses and stands head and shoulders above the regular burgers on the menu. The restaurant, called Doddy'"
+        },
+        {
+            "artciel_idx": 48,
+            "tid1": 218,
+            "tid2": 115,
+            "tid1_focus": "Sure! Here's a summary of the text focusing on snow, weather, cold, winter, temperatures, conditions, hot, morning, expected, parts, freezing, weekend, summer, today, georgia, days, degrees, fall, met, country, low, early, high, retailers, forecast.\n\n**Snow** is a popular topic, with people having strong opinions about its impact on life and the environment. While some enjoy the quiet",
+            "no_focus": "Sure, here is a summary of the text:\n\nSnow is a polarizing force for people, with some people loving it and others loathing it. Those who love snow find it serene and peaceful, while those who hate it find it cold and wet. Snow can be a nuisance, but it can also be a source of beauty and wonder. Ultimately, whether or not you love snow is a matter of personal preference.<eos><pad><pad><pad><pad>",
+            "tid2_focus": "Sure, here's a summary of the text focusing on the topic of family, wife, daughter, husband, couple, pictured, friends, left, brother, friend, married, mother, sister, life, father, met, love, relationship, wanted, months, mum, moved, happy, dad, days.\n\nFamily and friends are a source of love and support. The text highlights the different ways that people can be a source of"
+        },
+        {
+            "artciel_idx": 49,
+            "tid1": 217,
+            "tid2": 128,
+            "tid1_focus": "# Summary\n\nBT has won the rights to show Champions League football matches in a \u00a3900 million deal. This deal is likely to raise questions about whether BT is paying too much for sports rights, to which it has now committed nearly \u00a32 billion ($3.2 billion). However, BT's shareholders will be keen to see clear returns from such significant investments from a group that has previously focused on cutting costs and streamlining its operations.<eos>",
+            "no_focus": "The BT-Sky deal has been agreed, with BT paying \u00a3900 million to show Champions League football matches in the UK. This deal will significantly bolster BT's channels as serious rivals to Sky in the eyes of viewers and advertisers. BT's shareholders will be keen to see clear returns from such significant investments from a group that has previously focused on cutting costs and streamlining its operations. The group last week revealed a good start in customer numbers",
+            "tid2_focus": "Sure, here's a summary of the text focusing on money, pay, paid, card, credit, paying, cards, spent, fund, amount, payments, costs, account, fees, taxpayers, financial, debt, Clark, accounts, higher, spend, funding, payment, total, spending.\n\n**Money and Payments**\n\n* BT has won the right to show Champions League football matches for \u00a3900 million ($1,"
+        }
+    ]
+}
