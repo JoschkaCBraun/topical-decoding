@@ -19,7 +19,7 @@ import numpy as np
 from gensim.models.ldamodel import LdaModel
 from gensim.corpora import Dictionary
 from rouge_score import rouge_scorer
-from transformers import AutoTokenizer, BertTokenizer, BertModel
+from transformers import AutoTokenizer
 from bert_score import BERTScorer
 from evaluate import load
 import torch
@@ -28,7 +28,7 @@ import torch
 script_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(parent_dir)
-from config import DATASET_CONFIG, TOPICS_CONFIG, ROUGE_METRICS
+from config import TOPICS_CONFIG
 from utils.read_and_load_utils import load_lda, load_dictionary, read_dataset, load_tokenizer
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -195,7 +195,7 @@ def baseline_quality_scores(experiment_results: dict, method: str) -> Dict[str, 
     elif method == 'bert':
         device = "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu"
         print(f"Using device: {device}")
-        bert = BERTScorer(model_type='bert-large-uncased', lang='en',
+        bert = BERTScorer(model_type='microsoft/deberta-xlarge-mnli', lang='en',
                           rescale_with_baseline=True, device=device)
     elif method in ['avg_rouge', 'rouge1', 'rouge2', 'rougeL']:
         scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
@@ -376,12 +376,8 @@ def calculate_bert_scores(text_predictions: List[str], text_targets: List[str], 
     :return: List of BERT scores.
     """
     logger.info("Calculating BERT scores...")
-    device = "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu"
-    logger.info(f"Using device: {device}")
-    bert_outputs = bert.score(cands=text_predictions, refs=text_targets)
-    p, r, f1 = bert_outputs
-    f1 = f1.tolist()
-    return f1
+    _, _, f1 = bert.score(cands=text_predictions, refs=text_targets)
+    return f1.tolist()
 
 def calculate_dict_topic_scores(texts: List[str], tids: List[int], lda: LdaModel) -> List[float]:
     """
