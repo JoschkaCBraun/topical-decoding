@@ -126,25 +126,34 @@ def load_tokenizer(model_alias: str) -> AutoTokenizer:
         logger.error(f"Error loading tokenizer: {e}")
         raise
 
+def find_project_root(start_path):
+    """
+    Recursively finds and returns the path to the project root, which is indicated by the presence of a '.git' directory.
+    """
+    current_path = start_path
+    while current_path != os.path.dirname(current_path):  # Iterate until the filesystem root is reached
+        if os.path.exists(os.path.join(current_path, '.git')):
+            return current_path
+        current_path = os.path.dirname(current_path)
+    return None  # Return None if no project root is found
+
 def find_data_dir(start_path):
     """
     Dynamically finds and returns the path to the 'data' directory starting from a given path.
-    
-    Parameters:
-    - start_path (str): The starting directory path for the search.
-
-    Returns:
-    - str: The path to the found 'data' directory. Logs an error if not found.
+    It searches for the project root first and then for the 'data' directory.
     """
-    current_path = start_path
-    while current_path != os.path.dirname(current_path):  # Check until the root directory
-        potential_data_path = os.path.join(current_path, 'data')
-        if os.path.exists(potential_data_path):
-            logging.info(f"Data directory found at {potential_data_path}.")
-            return potential_data_path
-        current_path = os.path.dirname(current_path)
-    logging.error("Data directory not found.")
-    return None
+    project_root = find_project_root(start_path)
+    if project_root is None:
+        logging.error("Project root not found.")
+        return None
+
+    potential_data_path = os.path.join(project_root, 'topical_decoding', 'data')
+    if os.path.exists(potential_data_path):
+        logging.info(f"Data directory found at {potential_data_path}.")
+        return potential_data_path
+    else:
+        logging.error("Data directory not found in the project structure.")
+        return None
 
 def read_dataset(dataset_name: str) -> pd.DataFrame:
     """

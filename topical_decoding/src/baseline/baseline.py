@@ -42,7 +42,7 @@ def main():
     # Generate summaries
     summaries = generate_baseline_summaries(dataloader=dataloader, model=model, tokenizer=tokenizer,
                                             device=device, lda=lda)
-    
+
     # Save summaries to a file in the results_logits_reweighting directory
     file_name = (f"{experiment_name}_{EXPERIMENT_CONFIG['model_alias']}_"
                  f"{DATASET_CONFIG['num_articles']}_{GENERATION_CONFIG['min_new_tokens']}_"
