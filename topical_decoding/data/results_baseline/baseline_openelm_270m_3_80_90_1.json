@@ -1,0 +1,42 @@
+{
+    "experiment_information": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "baseline",
+            "model_alias": "openelm_270m"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "dataset_name": "newts_train",
+            "num_articles": 3,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "PLAIN_SUMMARISATION_DICT": {}
+    },
+    "generated_summaries": [
+        {
+            "artciel_idx": 0,
+            "summary": "The U.S. Senate yesterday rejected a Republican plan to raise the nation's debt ceiling and begin negotiations with lawmakers who backed a Democratic deal to preserve funding for government spending.\nThe Republican-dominated chamber passed the measure 59-51, sparking a frantic rush by Democrats who had promised a bipartisan vote on a separate spending bill. They quickly sought to"
+        },
+        {
+            "artciel_idx": 1,
+            "summary": "Manchester City are the best-paid sports team in the world, with average first-team pay a whopping \u00a35.3m a year, or \u00a3102,653 per week according to a new report that compares global earnings in the most popular leagues in the most<unk> 2014 Global Sports Salaries Survey - The 2014 report considers 294 teams in"
+        },
+        {
+            "artciel_idx": 2,
+            "summary": "Disagrees? Agree? We'd love to read your thoughts, so be sure to drop us a comment and let us know. Or better yet, tweet us at @journalsopposing and we'll retweet your comment back to the author. Thanks!\nComment Guidelines\nComment on the article: Write an Op-Ed\nBe respectful and maintain proper usage of Capitalization, Colon, and"
+        }
+    ]
+}

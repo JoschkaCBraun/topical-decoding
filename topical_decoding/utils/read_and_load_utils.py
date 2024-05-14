@@ -59,33 +59,33 @@ def load_model_and_tokenizer(CustomModel: Optional[AutoModelForCausalLM] = None,
                 model = CustomModel(pretrained_model_name_or_path=model_name,
                                     device_map=device_map,
                                     torch_dtype=torch.float16,
-                                    token=hf_auth_token)
+                                    token=hf_auth_token,
+                                    trust_remote_code=True)
                 model.model.to(device)
+                model.model.generation_config.pad_token_id = tokenizer.eos_token_id
             else:
                 logger.error("Custom model is required for this experiment: {experiment_name}.")
+                raise ValueError(f"Custom model is required for this experiment: {experiment_name}.")
         else:
             model = AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path=model_name,
                                                          device_map=device_map,
                                                          torch_dtype=torch.float16,
-                                                         token=hf_auth_token).to(device)
-        # Set model to half precision
-        # model = model.half().to(device)
+                                                         token=hf_auth_token,
+                                                         trust_remote_code=True).to(device)
+            model.generation_config.pad_token_id = tokenizer.eos_token_id
+
+        # Ensure the tokenizer has a pad token, set to eos token if not
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
+            # tokenizer.add_special_tokens({'pad_token': '[PAD]'})
             if CustomModel:
                 model.model.resize_token_embeddings(len(tokenizer))
             else:
-                model.resize_token_embeddings(len(tokenizer))
-
-        # if tokenizer.pad_token is None:
-        #     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
-        #     model.resize_token_embeddings(len(tokenizer))
-        # if tokenizer.pad_token_id is None:
-        #     tokenizer.pad_token_id = tokenizer.eos_token_id
+               model.resize_token_embeddings(len(tokenizer))
 
         # Gemma's activation function should be approximate GeLU and not exact GeLU.
         # Changing the activation function to `gelu_pytorch_tanh`.if you want to use the legacy
-        # `gelu`, edit the `model.config` to set `hidden_activation=gelu`   instead of `hidden_act`.
+        # `gelu`, edit the `model.config` to set `hidden_activation=gelu` instead of `hidden_act`.
         # See https://github.com/huggingface/transformers/pull/29402 for more details.
         if model_name in ['google/gemma-2b-it', 'google/gemma-7b-it']:
             if CustomModel:
@@ -104,7 +104,6 @@ def load_model_and_tokenizer(CustomModel: Optional[AutoModelForCausalLM] = None,
         logger.error(f"Error loading model or tokenizer: {e}")
         raise
     return tokenizer, model, device
-
 
 def load_tokenizer(model_alias: str) -> AutoTokenizer:
     """
@@ -171,7 +170,7 @@ def read_dataset(dataset_name: str) -> pd.DataFrame:
     elif dataset_name == 'newts_test':
         dataset_name = 'NEWTS_test_600'
     else:
-        logging.error(f"Given dataset_name {dataset_name} is not valid. Please provide a valid"/ 
+        logging.error(f"Given dataset_name {dataset_name} is not valid. Please provide a valid"/
                       "dataset name with 'newts_train' or 'newts_test'")
         return None
     file_path = os.path.join(data_path, "NEWTS", f"{dataset_name}.csv")
