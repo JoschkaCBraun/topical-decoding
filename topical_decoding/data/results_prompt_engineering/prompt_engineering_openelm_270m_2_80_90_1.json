@@ -1,0 +1,52 @@
+{
+    "experiment_information": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "baseline",
+            "model_alias": "openelm_270m"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "dataset_name": "newts_train",
+            "num_articles": 2,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "BASELINE_DICT": {
+            "focus_types": [
+                "tid1_focus",
+                "no_focus",
+                "tid2_focus"
+            ]
+        }
+    },
+    "generated_summaries": [
+        {
+            "artciel_idx": 0,
+            "tid1": 175,
+            "tid2": 110,
+            "tid1_focus": "The debate\nWorld Bank chief Jim Yong Kim tells delegates at the World Bank annual meeting at the end of July that the world economy is 'days away from a very dangerous moment' as politicians fail to resolve a standoff over the debt limit, warning the U.S. has now five days to raise the nation's borrowing limit before a deadline that lawmakers are pushing the president to rationally extend",
+            "no_focus": "Last Updated:\nNov 26, 2013 \u2022 Subscriber Services\nTechnology\nBehind The Headlines\nMore Trending:\nEducation\n- Health\n- News\n- News in Photo\n- Business\n- Opinion\n- Technology\n- Arts & Entertainment\n- Human Interest\n- Feature\n- Multimedia\n- More</s>",
+            "tid2_focus": "- 'We.\n- The US economy fell 0.5% in the second quarter, according to preliminary data released Monday, while personal incomes and consumer spending advanced at the fastest pace since the recession began in 2009.\n- The decline was driven by a 0.9% drop in personal consumption expenditures, down to $529.4 billion, or"
+        },
+        {
+            "artciel_idx": 1,
+            "tid1": 152,
+            "tid2": 217,
+            "tid1_focus": "Manchester City's unprecedented pay package makes them the world's best-paid sports teams, and they earn an average of \u00a35.3m per year according to a new report. Five Premier League sides make the top 20 on the league's worldwide earning table, including Liverpool - City's title contender - at No 8 on \u00a34.3m a year, Champions League",
+            "no_focus": "The world's richest sports personalities are enjoying a luxury tax holiday.\nManchester City are the world's richest sports personalities, according to a new report.\nNicholas Harris - Managing editor of Sports Illustrated's UK coverage, Nick Harris (@NickHarrisSport) reports on the top 10 richest sports personalities in the world.\nHigh earners:",
+            "tid2_focus": "Manchester City have paid \u00a34.3m to sign top-earning footballer Manchester United winger . Nick Harris.\nHigh earners: Manchester City have topped a global sports salary list, with their squad paid \u00a34.3m a year.\nBlank cheque: Manchester United owner Sheik Mansour has invested hundreds of millions into making them title challengers.\nBucks: Brooklyn Nets baseball"
+        }
+    ]
+}

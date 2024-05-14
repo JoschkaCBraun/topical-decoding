@@ -281,7 +281,8 @@ def generate_summaries(dataloader: DataLoader, model: AutoModelForCausalLM,
                                              max_length=model.model.config.max_length).to(device)
 
                 # Set parameters for generation as defined in the config.py file
-                generation_config = get_generation_config(model_alias=model_alias)
+                generation_config = get_generation_config(model_alias=model_alias,
+                                                          tokenizer=tokenizer)
 
                 for factor in factors:
                     output = model.generate(
