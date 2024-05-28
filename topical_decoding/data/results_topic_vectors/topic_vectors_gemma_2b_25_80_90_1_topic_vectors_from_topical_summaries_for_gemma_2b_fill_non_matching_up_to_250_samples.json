@@ -1,0 +1,134 @@
+{
+    "experiment_information": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "topic_vectors",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "dataset_name": "newts_train",
+            "num_articles": 25,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "TOPIC_VECTORS_CONFIG": {
+            "topic_encoding_type": "topical_summaries",
+            "include_non_matching": true,
+            "num_samples": 250
+        }
+    },
+    "generated_summaries": [
+        {
+            "artciel_idx": 0,
+            "summary": "<h2><b>Summary</b></h2><b></b> Senate congressional congressional legislative legislative process concerning congressional congressional legislative legislative process concerning congressional legislative legislative legislative process concerning congressional congressional congressional legislative process congressional legislative legislative process congressional congressional legislative legislative process congressional legislative legislative process congressional congressional legislative legislative process congressional congressional legislative legislative process congressional congressional legislative legislative process congressional congressional legislative legislative process congressional congressional legislative legislative process congressional congressional legislative legislative process congressional congressional legislative legislative legislative process congressional congressional legislative legislative process congressional congressional legislative legislative legislative"
+        },
+        {
+            "artciel_idx": 1,
+            "summary": "Manchester City Chelsea Manchester United Liverpool Chelsea Chelsea Manchester United Liverpool Liverpool Manchester United Chelsea Chelsea Manchester City Chelsea Chelsea Chelsea ChelseaChelsea Chelsea Chelsea ChelseaChelsea ChelseaChelseaChelsea Chelsea ChelseaChelseaChelsea Chelsea ChelseaChelseaChelseaChelseaChelseaChelsea ChelseaChelseaChelseaChelseaChelsea ChelseaChelseaChelseaChelseaChelsea ChelseaChelseaChelsea ChelseaChelseaChelseaChelseaChelsea ChelseaChelseaChelseaChelseaChelseaChelseaChelseaChelsea ChelseaChelseaChelsea ChelseaChelsea ChelseaChelsea ChelseaChelseaChelsea ChelseaChelseaChelsea ChelseaChelseaChelseaChelsea ChelseaChelseaChelseaChelseaChelseaChelsea"
+        },
+        {
+            "artciel_idx": 2,
+            "summary": "Human casualties are civilians civilians and civilians killed in civilian attacks by the Islamic humanitarian group known Syrian government since the Syrian civil war.\nHuman human rights violations by Syrian government have been documented by human rights groups, including civilian attacks and violence civilians civilians in sectarian massacres .\nEf international humanitarian efforts in Syria over the country's humanitarian humanitarian crisis has been hampered by the authorities' brutality against civilians civilians civilians civilians civilians civilians civilians against civilians in the country' humanitarian"
+        },
+        {
+            "artciel_idx": 3,
+            "summary": "Police allegedly found drugs and cash allegedly linked to the investigation police allegedly found drugs and cash allegedly linked to the investigation investigation investigation magistrate bail bail bond was posted pretrial pretrial bond posted pretrial bond bond\nPolice are investigating the police investigation police investigation authorities are allegedly investigating police officers who allegedly allegedly searched police search police allegedly allegedly searched police search investigators allegedly allegedly Police allegedly allegedly searched a police search investigator allegedly Police allegedly searched police evidence Police police police\n\nBail bail bond bond was"
+        },
+        {
+            "artciel_idx": 4,
+            "summary": "The Ministry of Defense has assured soldiers they will deploy soldiers, and this includes the training of soldiers. The Defense Ministry's justification was based on the Ministry's assessment of the situation and the need to maintain deterrence against threats to military security. The deployment of soldiers was made in response to the military threat posed by rogue elements, and it was not related to the training of regular soldiers. Instead, they were mobilized for specific tasks, and their mission"
+        },
+        {
+            "artciel_idx": 5,
+            "summary": " nunc nunc nunc, the case remains remitted to the Supreme Court. pursuant pursuant ruling of precedent precedent precedent precedent. affirming the ruling granting the nunc nunc nunc nunc, the matter remitted to the court. pursuant pursuant precedent precedent precedent precedent precedent. the court remand the case to nunc nunc nunc, pursuant precedent precedent precedent precedent precedent precedent. upholding nunc nunc nunc, the appellate court affirmed the decision of the constitutional court order as it dismissed the nunc nunc nunc proced nunc"
+        },
+        {
+            "artciel_idx": 6,
+            "summary": "Help explain the solution to declining demand for the fiscal stimulus measures proposed by the spending government spending increase in income tax rates thereby reducing demand for aggregate demand. Lower tax rates, especially income tax rates particularly targeted low income earners and increased disposable income will encourage consumption tax  this is a fiscal multiplier effect. Therefore, lower taxes provide a stimulus to demand and reduce the burden on lower income households. In turn, this is likely to have a lower fiscal multiplier effect"
+        },
+        {
+            "artciel_idx": 7,
+            "summary": "<br>\nAircraft crew successfully landed the aircraft and passengers safely, but the aircraft crashed into the sea, killing all 298 passengers. The aircraft had flown from flight training airspace into Ukrainian airspace before entering civilian airspace and crashed into an aircraft collision in the Sea of Archangel.\n\nThe aircraft encountered radar malfunctions near aircraft traffic control radar, causing the aircraft to go off course. The cockpit crew reported radar contact with the aircraft, but radar crew"
+        },
+        {
+            "artciel_idx": 8,
+            "summary": "She understood that they were doing everything she could to help him but she wasn' she ever her son. Her daughter, Sarah she said she understood that she felt she had her heart broken and she felt she was doing everything she could to support her husband and her children. They took him to their family' she understood that she was always there for her husband and her children and that she never hid her love, she always told her they loved her dearly"
+        },
+        {
+            "artciel_idx": 9,
+            "summary": " passengers passengers passengers airlines airlines airlines passengers passengers passengers passengers airlines airlines passengers passengers passengers airlines airlines airlines passengers passengers airlines airlines airlines passengers passengers passengers passengers airlines airlines airlines passengers passengers passengers airlines airlines airlines passengers passengers airlines airlines airlines passengers airlines airlines airlines passengers airlines airlines airlines passengers passengers passengers passengers airlines airlines airlines passengers passengers airlines airlines airlines passengers passengers airlines airlines airlines airlines passengers passengers passengers airlines airlines airlines airlines passengers passengers airlines airlines airlines passengers passengers passengers passengers airlines airlines airlines airlines passengers passengers passengers"
+        },
+        {
+            "artciel_idx": 10,
+            "summary": "The NTSB is investigating a series of cockpit and aircraft crew training accidents, and one crew survived. No injuries were reported, but air traffic controllers reported 14 aircraft misoperations between November 2006 and October 2007. Seven passengers and one pilot were aboard the aircraft during the three misoperations. All of the aircraft misoperations were attributed to weather conditions and pilot fatigue, but the NTSB is investigating the equipment malfunctions"
+        },
+        {
+            "artciel_idx": 11,
+            "summary": "The issue of voters participating in election campaigns through debates or endorsements in political candidates' debates or political stances will continue to be divisive during election campaigns. However, voters who do engage in debates, polls, or voter mobilization can hold candidates accountable. Political commentators and voters often agree that voters listen to candidates' speeches, voters candidate voter polling polls, and voters also participate in political debates. Some commentators argue that voters listen more to candidates' speeches since voters voters"
+        },
+        {
+            "artciel_idx": 12,
+            "summary": "So, Greg Hardy will be taking a leave with pay until his legal matters are resolved. He will be eligible to return to the team when he is eligible.\n\nWhat is the summary of the text?\n\nThe Carolina Panthers star defensive end, Greg Hardy, has been granted a new trial after a domestic violence conviction in July. He will be taking a leave with pay until his legal matters are resolved. He will be eligible to return to the team"
+        },
+        {
+            "artciel_idx": 13,
+            "summary": " Family and friends always cherished the unique and thoughtful gifts they gave to her and they were always grateful for her happiness. She later said they were her family and she always loved her family unconditionally. She said they always loved her and they treated her with love and kindness. She later said they always loved her and she always cherished her family. She knew she would always love her family and that they would always be her family. She said they told her she"
+        },
+        {
+            "artciel_idx": 14,
+            "summary": "Consumers are consumers as long as the sellers sell it price consumers sellers demand but demand will demand sellers to rise prices prices consumers are consumers as long as sellers demand demand demand sellers to rise prices prices consumers consumers are consumers as long as sellers demand demand demand sellers to increase price prices sellers will increase prices in price buyers demand and will demand market prices prices products sellers sell sellers' prices cheaper for consumers customers customers, consumers consumers consumers, consumers consumers consumers consumers consumers consumers"
+        },
+        {
+            "artciel_idx": 15,
+            "summary": "Obama administration is considering imposing a forced quarantine on healthcare workers who return to the U.S. from the Ebola hot zone of West Africa, after a New York doctor tested positive for the virus. Obama administration's officials are discussing his options on Obama's speech on Thursday Obama emphasized the Obama Obama administration will strike the right balance between doing what is best to protect the public's health while not impeding Obama's ability to combat the Obama"
+        },
+        {
+            "artciel_idx": 16,
+            "summary": "The military weapons were discovered by soldiers during security checks as part of an ongoing military training exercise, and were not part of current operations. The soldiers reported the weapons to military commanders, who determined they posed no threat and were subsequently redeployed to their units. These weapons were not part of military intelligence reports and had no purpose in the operational military force.\n\nThe military weapons found in the baggage were identified as French 77 mm artillery shells by munitions"
+        },
+        {
+            "artciel_idx": 17,
+            "summary": " temperatures temperatures temperatures temperatures temperatures thermometers thermometer temperatures frost frost frost frost frost frost frost frost frost frost frost frost frost thermometers thermometer temperatures frost frost frost frost frost frost frost frost frost frost frost frost frost thermometers thermometers thermometers thermometers thermometers thermometers temperatures temperatures snow snow snow snow snow snowfall cold thermometers thermometer thermometers thermometer thermometers thermometers thermometers thermometers thermometers thermometers thermometer temperatures temperatures snow snow snow snow snowfall warm snow snow snow snow snowfall snow snow snow precipitation moisture moisture moisture moisture moisture moisture moisture thermometers thermometers thermometer"
+        },
+        {
+            "artciel_idx": 18,
+            "summary": " airlines airlines airlines airlines airlines airlines airlines airlines airlines airlines passengers passengers passengers passengers passengers airlines airlines airlines airlines airlines passengers airlines airlines airlines airlines airlines passengers passengers passengers passengers passengers airlines airlines airlines airlines airlines passengers passengers passengers airlines airlines airlines airlines airlines passengers airlines airlines airlines airlines airlines airlines passengers airlines airlines airlines airlines airlines airlines passengers passengers passengers passengers passengers passengers passengers airlines airlines airlines airlines airlines airlines passengers passengers passengers airlines airlines airlines airlines airlines passengers passengers passengers airlines airlines airlines airlines passengers passengers passengers passengers"
+        },
+        {
+            "artciel_idx": 19,
+            "summary": " firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters Fire firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters firefighters"
+        },
+        {
+            "artciel_idx": 20,
+            "summary": "_ The judge based its decision on the remand remand nisi nisi interloc proceedings pursuant to the case pursuant remand in the appeal. pursuant order, remand remand nisi nisi interloc appellate court affirm the order appealed case, pursuant precedent, case remand in remit proceedings pursuant judgment precedent precedent precedent. pursuant case remand judge remand pursuant on the precedent precedent ruling on jurisdiction. pursuant pursuant jurisprudence, the appeal court affirm affirm affirm his decision as an appeal decision, as the order remand pursuant"
+        },
+        {
+            "artciel_idx": 21,
+            "summary": "Sure, here is a summary of the text:\n\nSen. McCain's campaign attacked Biden's stance on political endorsements in Democratic candidates and voters who have concerns about how candidates will influence voters\u2019 decisions. Biden is often criticized for his polling among Democratic voters and supporters, and his polling poll polls among Democrats, voters who are Democratic voters, have historically declined in recent polls. Biden's voters often focus on the issue of voters who do not"
+        },
+        {
+            "artciel_idx": 22,
+            "summary": "The Australian government is considering the decision to join air strikes against Islamic State jihadists in Iraq and is expected to meet soon to discuss the matter. They are preparing their military forces and units to participate in the military effort in Iraq. They are conducting exercises to train air forces and air forces commanders. They are also setting up bases and infrastructure for military operations. Australia's military presence in Iraq is currently focused on support operations and combat missions in the"
+        },
+        {
+            "artciel_idx": 23,
+            "summary": "The police police investigation is ongoing and prosecutors prosecutors have filed police bail bail bond based bond investigation authorities authorities are unable to obtain evidence video investigators interviewed two investigators involved the case three police officers involved in the case allegedly released their police report, police authorities authorities are reportedly awaiting a police body camera video obtained prosecutors prosecutors prosecutors prosecutors prosecutor investigation law enforcement authorities authorities are reportedly investigating the case allegedly police body camera video police body camera footage was obtained without a search warrant prosecutors prosecutors"
+        },
+        {
+            "artciel_idx": 24,
+            "summary": " \n scored scored hero hero scorer for Arsenal against West Brom!scored scored winner against stoppage time against West Brom scored scored scored scored scored scored goals header header header scored scored scored against West Brom. scored scored scored scored scored scored scored scored scored in stoppage time! chapeau chapeau chapeau!\nArsenal scored scored scored scored scored scored goals from midfield midfield midfield midfield midfield midfielder midfielder midfielder score.scored scored scored scored scored scored scored scored scored conceded conceded handball handball scored"
+        }
+    ]
+}

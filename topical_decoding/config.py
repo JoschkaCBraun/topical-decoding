@@ -6,11 +6,11 @@ This script contains all the hyperparameters that can be adapted by the user.
 # Third-party imports
 from transformers import GenerationConfig, AutoTokenizer
 
-# Choose experiment between 'baseline', 'prompt_engineering', 'constant_shift', 'factor_scaling' and 'threshold_selection'
-EXPERIMENT_NAME = 'baseline'
+# Choose experiment between 'baseline', 'prompt_engineering', 'constant_shift', 'factor_scaling' and 'threshold_selection', 'topic_vectors'
+EXPERIMENT_NAME = 'topic_vectors'
 
 # Choose model between 'openelm_270m', 'openelm_450m', 'openelm_1b', 'openelm_3b', 'gemma_2b', 'gemma_7b', 'falcon_7b', 'mistral_7b', 'llama_8b'
-MODEL_ALIAS = 'openelm_270m'
+MODEL_ALIAS = 'gemma_2b'
 
 EXPERIMENT_CONFIG = {
     'experiment_name': EXPERIMENT_NAME,
@@ -19,7 +19,7 @@ EXPERIMENT_CONFIG = {
 
 # Experiment agnostic hyperparameters
 DATASET_NAME = 'newts_train' # choose from 'newts_train', 'newts_test'
-NUM_ARTICLES = 3  # number of articles for which summaries are generated
+NUM_ARTICLES =25  # number of articles for which summaries are generated
 BATCH_SIZE = 1  # batch size for data loader ! Code is not prepared for batch size > 1 !
 NUM_WORKERS = 0  # number of workers for generating summaries
 SHUFFLE = False  # shuffle data loader
@@ -66,6 +66,28 @@ GENERATION_CONFIG = {
     'do_sample': DO_SAMPLE,
     'top_p': TOP_P,
     'top_k': TOP_K,
+}
+
+TOPIC_ENCODING_TYPE = 'zeros' # Choose from zeros, topic_strings and topical_summaries
+INCLUDE_NON_MATCHING = True # Include non-matching samples in training data
+NUM_SAMPLES = 250 # Number of samples to generate for training the steering vector
+
+TOPIC_VECTORS_CONFIG = {
+    'zeros' : {
+        'topic_encoding_type': 'zeros',
+    },
+    'topic_strings': {
+        'topic_encoding_type': 'topic_strings',
+    },
+    'topical_summaries_excluding_non_matching': {
+        'topic_encoding_type': 'topical_summaries',
+        'include_non_matching': False
+    },
+    'topical_summaries_including_non_matching': {
+        'topic_encoding_type': 'topical_summaries',
+        'include_non_matching': True,
+        'num_samples': NUM_SAMPLES
+    }
 }
 
 # Experiment specific hyperparameters

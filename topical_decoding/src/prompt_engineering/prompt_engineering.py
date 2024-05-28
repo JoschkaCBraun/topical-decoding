@@ -21,7 +21,7 @@ parent_dir = os.path.dirname(os.path.dirname(script_dir))
 sys.path.append(parent_dir)
 from config import DATASET_CONFIG, GENERATION_CONFIG, EXPERIMENT_CONFIG
 from utils.read_and_load_utils import load_lda, setup_dataloader, load_model_and_tokenizer
-from utils.generation_utils import generate_prompt_engineering_summaries
+from utils.generation_utils import generate_summaries
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -40,8 +40,8 @@ def main():
     tokenizer, model, device = load_model_and_tokenizer(CustomModel=None)
 
     # Generate summaries
-    summaries = generate_prompt_engineering_summaries(dataloader=dataloader, model=model,
-                                                      tokenizer=tokenizer,device=device, lda=lda)
+    summaries = generate_summaries(dataloader=dataloader, model=model, tokenizer=tokenizer,
+                                   device=device, lda=lda)
 
     # Save summaries to a file in the results_logits_reweighting directory
     file_name = (f"{experiment_name}_{EXPERIMENT_CONFIG['model_alias']}_"

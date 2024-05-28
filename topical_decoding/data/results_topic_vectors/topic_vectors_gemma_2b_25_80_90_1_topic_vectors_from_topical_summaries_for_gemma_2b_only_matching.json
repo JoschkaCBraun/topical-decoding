@@ -1,0 +1,134 @@
+{
+    "experiment_information": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "topic_vectors",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "dataset_name": "newts_train",
+            "num_articles": 25,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "TOPIC_VECTORS_CONFIG": {
+            "topic_encoding_type": "topical_summaries",
+            "include_non_matching": false,
+            "num_samples": 250
+        }
+    },
+    "generated_summaries": [
+        {
+            "artciel_idx": 0,
+            "summary": "## Summary:\n\n- The two major political parties, Democrat and Republican, are facing a deadline within the next two weeks to pass legislation related to the US government debt limit.\n- both parties understand that any delays or inaction could lead to a major issue for the global economic landscape.\n- congressional leaders are attempting to negotiate and compromise so that they can reach a compromise before the deadline.\n- each party is trying to see the bill through without"
+        },
+        {
+            "artciel_idx": 1,
+            "summary": "It appears that Manchester City is the top-paid sports team in the world with an average salary of \u00a35.3m a year, according to a new report that compares global earnings in the most popular leagues. Chelsea have seen their wages and fortunes soar since Roman Abramovich arrived at Stamford Bridge in 2003 but they still have a chance of winning the Premier League title this season.<eos>"
+        },
+        {
+            "artciel_idx": 2,
+            "summary": "Human attacks or against civilian targets constitute a large and complex area of the conflict in the country's border with Iraq and Syria, and the Islamic State has been responsible for numerous attacks against civilian infrastructure and targets in the country's own territory, including civilian attacks attributed to the Syrian regime and NATO attacks in the country's territory, including the deaths of thousands of civilians and civilians in the Syrian Civil War. It is difficult to establish a precise military"
+        },
+        {
+            "artciel_idx": 3,
+            "summary": "Police are investigating a third man who was allegedly found at the scene, who has been referred for further investigation. Police are awaiting further statements and are expected to interview the alleged victim and the two arrested brothers who were allegedly detained at the scene. According to police, the investigation is ongoing, and more charges are likely to follow.\n\nThe prosecution will be conducted by the CPS in accordance with the Police investigation process. Initial police bail has been offered to all"
+        },
+        {
+            "artciel_idx": 4,
+            "summary": "The paragraph describes the situation and the need for Prince Harry to return to active service. It then provides a brief description of his previous military role and the purpose of his military service. Finally, it highlights the need for him to undertake training in order to be deployed in a military role.\n\nThe paragraphs also provide a brief video clip for reference. It's purpose is to illustrate the situation and purpose of training.\n\nThe summary focuses on the need"
+        },
+        {
+            "artciel_idx": 5,
+            "summary": "The ruling of the Constitutional Court is an order of remand, which means the decision will remain in effect until further further appeal. The case will be remanded to the Supreme Court with remand remand the matter. This means that the decision will only be stayed pending further determination by the Supreme Court. This decision sets a precedent for the future on the procedural issues of the case. It means that the lower court must remand the case to the Supreme Court.<eos>"
+        },
+        {
+            "artciel_idx": 6,
+            "summary": "This would suggest that people living in Northern Ireland would be particularly hit by higher energy prices. How government intervention would be required to ease the burden on households, such as income tax relief or targeted cash transfers to low income families, would be explored. The extent of such measures and the potential fiscal costs should be carefully assessed by fiscal policymakers. Given that the UK government has already announced a reduction in fuel duty, direct tax relief would be considered as a means"
+        },
+        {
+            "artciel_idx": 7,
+            "summary": "The text describes a major aircraft accident that occurred in Ukrainian airspace. The crew of a commercial flight from Singapore to the Middle East attempted to land the aircraft, but they were unable to do so. The aircraft crashed into a residential area, killing all of the passengers. The aircraft's pilot attempted to land the aircraft, but he was unsuccessful. The aircraft crashed into a residential area, killing all of the passengers.\n\nThe aircraft had originated from Singapore"
+        },
+        {
+            "artciel_idx": 8,
+            "summary": "\"A family's love and loyalty is something that would never be underestimated.\" They were willing to let go and sacrifice to help their children when they were in danger. They said they understood that no matter what they did, they could always come back. They would love each of their children unconditionally, no matter how they grew or looked. They were a support to the family as they dealt with the pain of their children's departure. They didn"
+        },
+        {
+            "artciel_idx": 9,
+            "summary": "CNN -- Travel has been changed for the better, with airports catering to global travelers by offering exceptional service and facilities. From airports like Heathrow to JFK and Dubai, passengers can enjoy spacious airport lounges that cater to passengers of different airlines, ensuring they arrive in comfort and style. Airline airlines have implemented various initiatives to redefine the travel experience by offering amenities such as personalized service, onboard hospitality, and exclusive lounges. The service is so good that airlines are willing to"
+        },
+        {
+            "artciel_idx": 10,
+            "summary": "Summary:\n\nThe NTSB has recommended improvements to fire-protection systems on freight aircraft. This includes requiring active fire-suppression systems on all freight airlines, as well as requiring training crew members on how to operate fire-extinguishing equipment. The NTSB also recommended that the FAA require cargo airlines to use fire-resistant containers for cargo. Additionally, the NTSB recommended that FAA conduct a cost-benefit analysis to determine the feasibility of installing fire"
+        },
+        {
+            "artciel_idx": 11,
+            "summary": "The atmosphere during the presidential campaign in Ohio was charged, with voters participating directly in the polls, or by criticizing or endorsing candidates or parties. The incident involving the candidates' airplanes also reminded voters of the importance of issues and candidates in the political process.\" Voters participating in the race often used their voting choice as a means of expressing their support for candidates or party.\" Some voters felt that candidates' actions and speeches during a campaign could impact their voters' decision"
+        },
+        {
+            "artciel_idx": 12,
+            "summary": "Who is Greg Hardy?\nGreg Hardy is a star defensive end for the Carolina Panthers. He has been granted a new trial this fall after a domestic violence conviction in July.\n\nWhat are his accomplishments?\nHe led the team with 15 sacks in last season and was a Pro Bowl selection.\n\nHow long has he been playing in the NFL?\nHe has been playing in the NFL since 2015.\n\nWhich team"
+        },
+        {
+            "artciel_idx": 13,
+            "summary": "End of story.\n\n\nSummary: The family commissioned 23 artists to create unique works of art of their family and they were very grateful for the gift they gave them. They were able to help their family members see their loved ones and she was always loved and cherished. They felt that they were lucky to have such a close family and she was so grateful to her family for the gift she received.<eos>"
+        },
+        {
+            "artciel_idx": 14,
+            "summary": "$$$$\nSummary:\n\nA competitive pricing case is being heard in a US district court. Apple has been accused of engaging in a price markup strategy to increase profitability. The customers will pay higher prices for e-books due to the perceived threat posed by Apple to Amazon's profitability in the market. Ultimately, the sale price will determine whether Apple makes a profit or loss in the market, and how customers perceive this price differential. Ultimately, the"
+        },
+        {
+            "artciel_idx": 15,
+            "summary": "Summary:\nThe Obama administration is considering implementing a forced quarantine on healthcare workers who return to the United States from the Ebola hot zone of West Africa. The Obama administration is reportedly discussing a number of options pertaining to the monitoring and mobility of healthcare workers who are returning to the United States from affected countries. President Obama met with Ebola survivor Nina Pham in the Oval Office on Friday, where he discussed his administration's response to the Ebola virus.<eos>"
+        },
+        {
+            "artciel_idx": 16,
+            "summary": "Sure, here is a summary of the text:\n\nTwo World War I artillery shells were discovered in checked luggage at Chicago's O'Hare International Airport. The soldiers, who were returning from a field trip to Europe, claimed to have obtained the shells while participating in training exercises. However, upon inspection, the ammunition was determined to be inert and not a threat. The soldiers were questioned and allowed to continue their journey.<eos>"
+        },
+        {
+            "artciel_idx": 17,
+            "summary": "So, despite the rain and winter temperatures in London, temperatures in Manaus will be milder with temperatures ranging from 25 to 28C, with precipitation occurring only as snow or wintry precipitation. This extreme contrast between temperatures will cause temperatures to feel much warmer in the daytime, resulting in a colder wind and colder temperatures overall. Therefore, the temperature experienced in Manaus will be colder than that experienced in London despite the presence of precipitation.<eos>"
+        },
+        {
+            "artciel_idx": 18,
+            "summary": "London, England - British Airways and Virgin Atlantic have announced that they are reducing their fuel surcharges. The price of oil has plummeted recently, and airlines are seeing the opportunity to decrease fares. In a statement issued from London, British Airlines said that \"British Airways has implemented fuel surcharges cut on flights between London Heathrow Airport (LHR) and other destinations.\" Other airlines have also announced reductions to various destinations. British Airlines said that \"London London"
+        },
+        {
+            "artciel_idx": 19,
+            "summary": "At the firefighters' fire, firefighters were able to control the fire with fire hydrants with the help of firefighters from neighboring buildings with The firefighters were injured by the heat and smoke. Luckily, nobody was injured by the heat or smoke The firefighters were able to extinguish the fire with fire hydrants with the help of firefighters from neighboring buildings. No firefighters sustained serious injuries, and No firefighters were injured by the smoke. Two firefighters were rescued from the scene by"
+        },
+        {
+            "artciel_idx": 20,
+            "summary": "The decision over the matter, however, does not address the question of the specific number of officers who should be decided in each area. Therefore, the remand is reserved, and the judge will determine on remand whether an order or further determination on the remand remand, pursuant pursuant appellate, will be the exercise of the court. The case, therefore, remains remitted to the trial judge. Order over the decision made by the Judge.<eos>"
+        },
+        {
+            "artciel_idx": 21,
+            "summary": "In a heated debate on Tuesday, Democratic Vice Presidential nominee Joe Biden raised the issue of whether he would support stem cell research, a topic that is important to some voters. His position differs from that of his running mate, Alaska Governor Sarah Palin, whose stance is opposed to the use of human embryos in political campaigns. This debate is likely to have a significant impact on the election in the state of Nevada, which is considered to be a major swing state"
+        },
+        {
+            "artciel_idx": 22,
+            "summary": "Summary:\n\nThe decision for Australia to join air strikes against Islamic State jihadists in Iraq will be made within days. The government is considering participating in the conflict in the Middle East and is planning to conduct first training missions for its air forces in the region. The exercises are aimed at preparing air crews and coordinating operations with international partners. However, a final decision on air strike participation is still pending and is not given.<eos>"
+        },
+        {
+            "artciel_idx": 23,
+            "summary": "The police investigation is ongoing and prosecutors are seeking additional charges. The case has raised concerns about the lack of information released by authorities and the potential for pressure mounted on the community. The Suffolk County district attorney's decision to drop the charge against the 25-year-old is a significant step in the investigation. It remains unclear whether prosecutors will seek charges against the alleged source of the information, who is a police officer who reportedly obtained a search"
+        },
+        {
+            "artciel_idx": 24,
+            "summary": "Is that summary correct? If not, correct it!\n\nSure, here is the summary you requested:\n\nArsenal secured a vital win at West Brom thanks to Danny Welbeck's header. This is their third consecutive away goal, which are all scored in stoppage time. With this victory, they move to the top of the table, while West Brom stay bottom. It was a thrilling win for Arsenal, who needed to win to secure their championship"
+        }
+    ]
+}
