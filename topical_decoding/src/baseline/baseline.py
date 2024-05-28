@@ -21,8 +21,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(os.path.dirname(script_dir))
 sys.path.append(parent_dir)
 from config import DATASET_CONFIG, GENERATION_CONFIG, EXPERIMENT_CONFIG
-from utils.read_and_load_utils import setup_dataloader, load_model_and_tokenizer
-from utils.generation_utils import generate_baseline_summaries
+from utils.generation_utils import generate_summaries
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -41,12 +40,8 @@ def main():
         logging.error("This script is meant for the baseline experiment only.")
         sys.exit(1)
 
-    dataloader = setup_dataloader(dataset_name=DATASET_CONFIG['dataset_name'])
-    tokenizer, model, device = load_model_and_tokenizer(CustomModel=None)
-
     # Generate summaries
-    summaries = generate_baseline_summaries(dataloader=dataloader, model=model,
-                                            tokenizer=tokenizer, device=device)
+    summaries = generate_summaries()
 
     # Save summaries to a file in the results_baseline directory
     file_name = (f"{experiment_name}_{EXPERIMENT_CONFIG['model_alias']}_"

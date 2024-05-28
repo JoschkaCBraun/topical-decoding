@@ -6,8 +6,9 @@ dictionary.
 # Standard library imports
 import os
 import sys
+import pickle
 import logging
-from typing import Dict, Optional, Tuple
+from typing import Dict, Optional, Tuple, List
 
 # Third-party imports
 import torch
@@ -21,7 +22,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 script_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(os.path.dirname(script_dir))
 sys.path.append(parent_dir)
-from config import DATASET_CONFIG, EXPERIMENT_CONFIG, MODEL_ALIAS_DICT
+from config import DATASET_CONFIG, EXPERIMENT_CONFIG, MODEL_ALIAS_DICT, TOPIC_VECTORS_CONFIG
 
 # Configure logging at the module level
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -261,3 +262,35 @@ def load_lda() -> LdaModel:
     """
     lda, _ = load_lda_and_dictionary(should_load_lda=True, should_load_dictionary=False)
     return lda
+
+def get_topic_vector(tid: int, topic_encoding_type: str) -> Dict[str, float]:
+    """
+    Get the steering vector for a given topic id.
+    
+    :param tid: The topic id for which to get the steering vector.
+    :return: The steering vector for the specified topic id.
+    """
+    start_path = os.getcwd()
+    data_path = find_data_dir(start_path)
+    topic_vector_folder_name = get_topic_vectors_folder_name(topic_encoding_type)
+    topic_vectors_path = os.path.join(data_path, 'topic_vectors_data', topic_vector_folder_name)
+
+    results_dir = os.path.join(topic_vectors_path, f'topic_vector_tid_{tid}.pkl')
+    with open(results_dir, 'rb') as f:
+        topic_vector = pickle.load(f)
+    return topic_vector
+
+def get_topic_vectors_folder_name(topic_encoding_type: str) -> str:
+    '''Get the folder name for storing topic vectors.'''
+    config_dict = TOPIC_VECTORS_CONFIG[topic_encoding_type]
+    model_alias = EXPERIMENT_CONFIG['model_alias']
+    folder_name = f"topic_vectors_from_{config_dict['topic_encoding_type']}_for_{model_alias}"
+
+    if config_dict['topic_encoding_type'] == 'topical_summaries':
+        if config_dict['include_non_matching']:
+            folder_name += f"_fill_non_matching_up_to_{config_dict['num_samples']}_samples"
+        else:
+            folder_name += '_only_matching'
+    elif config_dict['topic_encoding_type'] == 'zeros':
+        folder_name = f'topic_vectors_all_zeros_for_{model_alias}'
+    return folder_name
