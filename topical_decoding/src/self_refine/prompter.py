@@ -1,5 +1,4 @@
 import json
-import re
 
 
 class Prompter:
@@ -161,7 +160,9 @@ follow the example templates exactly."""
             ]
             sequences.append(self.iter_separator.join(example_strings))
 
-        return f"{self.init_prefix}\n\n\n{self.separator.join(sequences)}{self.separator}"
+        return (
+            f"{self.init_prefix}\n\n\n{self.separator.join(sequences)}{self.separator}"
+        )
 
     def create_iter_prompt(
         self,

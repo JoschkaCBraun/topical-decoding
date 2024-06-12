@@ -3,34 +3,45 @@ Utility functions for loading models from the transformers AutoModelForCausalLM 
 from AutoTokenizer class. Also utility functions for loading the NEWTS dataset, LDA model and 
 dictionary.
 """
+import logging
+
 # Standard library imports
 import os
-import sys
 import pickle
-import logging
-from typing import Dict, Optional, Tuple, List
+import sys
+from typing import Dict, List, Optional, Tuple
+
+import pandas as pd
 
 # Third-party imports
 import torch
-import pandas as pd
 from gensim.corpora import Dictionary
 from gensim.models.ldamodel import LdaModel
-from torch.utils.data import Dataset, DataLoader
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from torch.utils.data import DataLoader, Dataset
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Local imports
 script_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(os.path.dirname(script_dir))
 sys.path.append(parent_dir)
-from config import DATASET_CONFIG, EXPERIMENT_CONFIG, MODEL_ALIAS_DICT, TOPIC_VECTORS_CONFIG
+from config import (
+    DATASET_CONFIG,
+    EXPERIMENT_CONFIG,
+    MODEL_ALIAS_DICT,
+    TOPIC_VECTORS_CONFIG,
+)
 
 # Configure logging at the module level
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
-def load_model_and_tokenizer(CustomModel: Optional[AutoModelForCausalLM] = None,
-                             device_map: str = "auto",
-                             ) -> Tuple[AutoTokenizer, AutoModelForCausalLM, torch.device]:
+
+def load_model_and_tokenizer(
+    CustomModel: Optional[AutoModelForCausalLM] = None,
+    device_map: str = "auto",
+) -> Tuple[AutoTokenizer, AutoModelForCausalLM, torch.device]:
     """
     Loads the model and tokenizer for a given model alias.
 
@@ -39,40 +50,60 @@ def load_model_and_tokenizer(CustomModel: Optional[AutoModelForCausalLM] = None,
     :return: A tuple containing the tokenizer, model, and device.
     """
     try:
-        model_alias = EXPERIMENT_CONFIG['model_alias']
+        model_alias = EXPERIMENT_CONFIG["model_alias"]
         model_details = MODEL_ALIAS_DICT.get(model_alias, {})
-        model_name = model_details.get('model_name')
-        tokenizer_name = model_details.get('tokenizer_name')
-        hf_auth_token = model_details.get('hf_auth_token')
+        model_name = model_details.get("model_name")
+        tokenizer_name = model_details.get("tokenizer_name")
+        hf_auth_token = model_details.get("hf_auth_token")
         logger.info(f"Loading model: {model_name} and tokenizer: {tokenizer_name}")
 
-        device = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
+        device = torch.device(
+            "mps"
+            if torch.backends.mps.is_available()
+            else "cuda"
+            if torch.cuda.is_available()
+            else "cpu"
+        )
         logger.info(f"Using device: {device}")
 
-        tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path=tokenizer_name,
-                                                  padding_side='left',
-                                                  torch_dtype=torch.float16,
-                                                  token=hf_auth_token)
-        
-        experiment_name = EXPERIMENT_CONFIG['experiment_name']
-        if experiment_name in ['factor_scaling', 'constant_shift', 'threshold_selection']:
+        tokenizer = AutoTokenizer.from_pretrained(
+            pretrained_model_name_or_path=tokenizer_name,
+            padding_side="left",
+            torch_dtype=torch.float16,
+            token=hf_auth_token,
+        )
+
+        experiment_name = EXPERIMENT_CONFIG["experiment_name"]
+        if experiment_name in [
+            "factor_scaling",
+            "constant_shift",
+            "threshold_selection",
+        ]:
             if CustomModel:
-                model = CustomModel(pretrained_model_name_or_path=model_name,
-                                    device_map=device_map,
-                                    torch_dtype=torch.float16,
-                                    token=hf_auth_token,
-                                    trust_remote_code=True)
+                model = CustomModel(
+                    pretrained_model_name_or_path=model_name,
+                    device_map=device_map,
+                    torch_dtype=torch.float16,
+                    token=hf_auth_token,
+                    trust_remote_code=True,
+                )
                 model.model.to(device)
                 model.model.generation_config.pad_token_id = tokenizer.eos_token_id
             else:
-                logger.error("Custom model is required for this experiment: {experiment_name}.")
-                raise ValueError(f"Custom model is required for this experiment: {experiment_name}.")
+                logger.error(
+                    "Custom model is required for this experiment: {experiment_name}."
+                )
+                raise ValueError(
+                    f"Custom model is required for this experiment: {experiment_name}."
+                )
         else:
-            model = AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path=model_name,
-                                                         device_map=device_map,
-                                                         torch_dtype=torch.float16,
-                                                         token=hf_auth_token,
-                                                         trust_remote_code=True).to(device)
+            model = AutoModelForCausalLM.from_pretrained(
+                pretrained_model_name_or_path=model_name,
+                device_map=device_map,
+                torch_dtype=torch.float16,
+                token=hf_auth_token,
+                trust_remote_code=True,
+            ).to(device)
             model.generation_config.pad_token_id = tokenizer.eos_token_id
 
         # Ensure the tokenizer has a pad token, set to eos token if not
@@ -82,23 +113,27 @@ def load_model_and_tokenizer(CustomModel: Optional[AutoModelForCausalLM] = None,
             if CustomModel:
                 model.model.resize_token_embeddings(len(tokenizer))
             else:
-               model.resize_token_embeddings(len(tokenizer))
+                model.resize_token_embeddings(len(tokenizer))
 
         # Gemma's activation function should be approximate GeLU and not exact GeLU.
         # Changing the activation function to `gelu_pytorch_tanh`.if you want to use the legacy
         # `gelu`, edit the `model.config` to set `hidden_activation=gelu` instead of `hidden_act`.
         # See https://github.com/huggingface/transformers/pull/29402 for more details.
-        if model_name in ['google/gemma-2b-it', 'google/gemma-7b-it']:
+        if model_name in ["google/gemma-2b-it", "google/gemma-7b-it"]:
             if CustomModel:
                 previous_activation = model.model.config.hidden_act
-                model.model.config.hidden_act = 'hidden_act'
-                logger.info(f"Changed activation function to 'hidden_act' from "
-                            f"{previous_activation} for model: {model_name}")
+                model.model.config.hidden_act = "hidden_act"
+                logger.info(
+                    f"Changed activation function to 'hidden_act' from "
+                    f"{previous_activation} for model: {model_name}"
+                )
             else:
                 previous_activation = model.config.hidden_act
-                model.config.hidden_act = 'hidden_act'
-                logger.info(f"Changed activation function to 'hidden_act' from "
-                            f"{previous_activation} for model: {model_name}")
+                model.config.hidden_act = "hidden_act"
+                logger.info(
+                    f"Changed activation function to 'hidden_act' from "
+                    f"{previous_activation} for model: {model_name}"
+                )
         logger.info(f"Loaded model: {model_name} and tokenizer: {tokenizer_name}")
 
     except Exception as e:
@@ -106,36 +141,42 @@ def load_model_and_tokenizer(CustomModel: Optional[AutoModelForCausalLM] = None,
         raise
     return tokenizer, model, device
 
+
 def load_tokenizer(model_alias: str) -> AutoTokenizer:
     """
     Loads and returns the tokenizer for a given model alias. Used for evaluation purposes.
-    
+
     :return: The tokenizer for the specified model.
     """
     try:
         model_details = MODEL_ALIAS_DICT.get(model_alias, {})
-        tokenizer_name = model_details.get('tokenizer_name')
-        hf_auth_token = model_details.get('hf_auth_token')
+        tokenizer_name = model_details.get("tokenizer_name")
+        hf_auth_token = model_details.get("hf_auth_token")
         logger.info(f"Loading tokenizer: {tokenizer_name}")
 
-        tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path=tokenizer_name,
-                                                  token=hf_auth_token)
+        tokenizer = AutoTokenizer.from_pretrained(
+            pretrained_model_name_or_path=tokenizer_name, token=hf_auth_token
+        )
         logger.info(f"Loaded tokenizer: {tokenizer_name}")
         return tokenizer
     except Exception as e:
         logger.error(f"Error loading tokenizer: {e}")
         raise
 
+
 def find_project_root(start_path):
     """
     Recursively finds and returns the path to the project root, which is indicated by the presence of a '.git' directory.
     """
     current_path = start_path
-    while current_path != os.path.dirname(current_path):  # Iterate until the filesystem root is reached
-        if os.path.exists(os.path.join(current_path, '.git')):
+    while current_path != os.path.dirname(
+        current_path
+    ):  # Iterate until the filesystem root is reached
+        if os.path.exists(os.path.join(current_path, ".git")):
             return current_path
         current_path = os.path.dirname(current_path)
     return None  # Return None if no project root is found
+
 
 def find_data_dir(start_path):
     """
@@ -147,7 +188,7 @@ def find_data_dir(start_path):
         logging.error("Project root not found.")
         return None
 
-    potential_data_path = os.path.join(project_root, 'topical_decoding', 'data')
+    potential_data_path = os.path.join(project_root, "topical_decoding", "data")
     if os.path.exists(potential_data_path):
         logging.info(f"Data directory found at {potential_data_path}.")
         return potential_data_path
@@ -155,10 +196,11 @@ def find_data_dir(start_path):
         logging.error("Data directory not found in the project structure.")
         return None
 
+
 def read_dataset(dataset_name: str) -> pd.DataFrame:
     """
     Loads and returns the specified dataset as a Pandas DataFrame.
-    
+
     :param dataset_name: The name of the dataset to load.
     :return: The specified dataset DataFrame or None if an error occurs.
     """
@@ -166,28 +208,32 @@ def read_dataset(dataset_name: str) -> pd.DataFrame:
     data_path = find_data_dir(start_path)
     if not data_path:
         return None
-    if dataset_name == 'newts_train':
-        dataset_name = 'NEWTS_train_2400'
-    elif dataset_name == 'newts_test':
-        dataset_name = 'NEWTS_test_600'
+    if dataset_name == "newts_train":
+        dataset_name = "NEWTS_train_2400"
+    elif dataset_name == "newts_test":
+        dataset_name = "NEWTS_test_600"
     else:
-        logging.error(f"Given dataset_name {dataset_name} is not valid. Please provide a valid"/
-                      "dataset name with 'newts_train' or 'newts_test'")
+        logging.error(
+            f"Given dataset_name {dataset_name} is not valid. Please provide a valid"
+            / "dataset name with 'newts_train' or 'newts_test'"
+        )
         return None
     file_path = os.path.join(data_path, "NEWTS", f"{dataset_name}.csv")
     try:
-        df = pd.read_csv(file_path, encoding='utf-8')
-        df.rename(columns={df.columns[0]: 'article_idx'}, inplace=True)
+        df = pd.read_csv(file_path, encoding="utf-8")
+        df.rename(columns={df.columns[0]: "article_idx"}, inplace=True)
         logging.info(f"Successfully loaded {dataset_name} dataset.")
         return df
     except Exception as e:
         logging.error(f"Error reading {dataset_name} dataset: {e}")
         return None
 
+
 class NEWTSDataset(Dataset):
     """
     Dataset class for the NEWTS dataset.
     """
+
     def __init__(self, dataframe):
         self.data = dataframe
 
@@ -197,13 +243,14 @@ class NEWTSDataset(Dataset):
     def __getitem__(self, idx: int) -> Dict[str, str]:
         article = self.data.iloc[idx]
         return {
-            'article': article['article'],
-            'summary1': article['summary1'],
-            'summary2': article['summary2'],
-            'article_idx': article['article_idx'],
-            'tid1': article['tid1'],
-            'tid2': article['tid2'],
+            "article": article["article"],
+            "summary1": article["summary1"],
+            "summary2": article["summary2"],
+            "article_idx": article["article_idx"],
+            "tid1": article["tid1"],
+            "tid2": article["tid2"],
         }
+
 
 def setup_dataloader(dataset_name: str) -> DataLoader:
     """
@@ -213,19 +260,24 @@ def setup_dataloader(dataset_name: str) -> DataLoader:
     :return: A DataLoader for the specified NEWTS dataset.
     """
     try:
-        dataloader = DataLoader(dataset=NEWTSDataset(dataframe=read_dataset(dataset_name)),
-                                batch_size=DATASET_CONFIG['batch_size'],
-                                num_workers=DATASET_CONFIG['num_workers'],
-                                shuffle=DATASET_CONFIG['shuffle'])
+        dataloader = DataLoader(
+            dataset=NEWTSDataset(dataframe=read_dataset(dataset_name)),
+            batch_size=DATASET_CONFIG["batch_size"],
+            num_workers=DATASET_CONFIG["num_workers"],
+            shuffle=DATASET_CONFIG["shuffle"],
+        )
         return dataloader
     except Exception as e:
         logging.error(f"Error setting up the DataLoader: {e}")
         return None
 
-def load_lda_and_dictionary(should_load_lda: bool=True, should_load_dictionary: bool=True) -> Tuple:
+
+def load_lda_and_dictionary(
+    should_load_lda: bool = True, should_load_dictionary: bool = True
+) -> Tuple:
     """
     Loads and returns the LDA model and dictionary from the filesystem.
-    
+
     Returns:
     - tuple: (LdaModel or None, Dictionary or None) depending on success or failure of loading.
     """
@@ -234,16 +286,16 @@ def load_lda_and_dictionary(should_load_lda: bool=True, should_load_dictionary: 
     if not data_path:
         return None, None
 
-    lda_model_path = os.path.join(data_path, "LDA_250", 'lda.model')
-    dictionary_path = os.path.join(data_path, "LDA_250", 'dictionary.dic')
+    lda_model_path = os.path.join(data_path, "LDA_250", "lda.model")
+    dictionary_path = os.path.join(data_path, "LDA_250", "dictionary.dic")
     lda, dictionary = None, None
 
     try:
         if should_load_lda:
-            lda = LdaModel.load(lda_model_path, mmap='r')
+            lda = LdaModel.load(lda_model_path, mmap="r")
             logging.info("Successfully loaded the LDA model.")
         if should_load_dictionary:
-            dictionary = Dictionary.load(dictionary_path, mmap='r')
+            dictionary = Dictionary.load(dictionary_path, mmap="r")
             logging.info("Successfully loaded the dictionary.")
         return lda, dictionary
 
@@ -251,10 +303,14 @@ def load_lda_and_dictionary(should_load_lda: bool=True, should_load_dictionary: 
         logging.error(f"Error loading the LDA model or dictionary: {e}")
         return None, None
 
+
 def load_dictionary() -> Dictionary:
     """Loads and returns the dictionary from the filesystem."""
-    _, dictionary = load_lda_and_dictionary(should_load_lda=False, should_load_dictionary=True)
+    _, dictionary = load_lda_and_dictionary(
+        should_load_lda=False, should_load_dictionary=True
+    )
     return dictionary
+
 
 def load_lda() -> LdaModel:
     """
@@ -263,34 +319,42 @@ def load_lda() -> LdaModel:
     lda, _ = load_lda_and_dictionary(should_load_lda=True, should_load_dictionary=False)
     return lda
 
+
 def get_topic_vector(tid: int, topic_encoding_type: str) -> Dict[str, float]:
     """
     Get the steering vector for a given topic id.
-    
+
     :param tid: The topic id for which to get the steering vector.
     :return: The steering vector for the specified topic id.
     """
     start_path = os.getcwd()
     data_path = find_data_dir(start_path)
     topic_vector_folder_name = get_topic_vectors_folder_name(topic_encoding_type)
-    topic_vectors_path = os.path.join(data_path, 'topic_vectors_data', topic_vector_folder_name)
+    topic_vectors_path = os.path.join(
+        data_path, "topic_vectors_data", topic_vector_folder_name
+    )
 
-    results_dir = os.path.join(topic_vectors_path, f'topic_vector_tid_{tid}.pkl')
-    with open(results_dir, 'rb') as f:
+    results_dir = os.path.join(topic_vectors_path, f"topic_vector_tid_{tid}.pkl")
+    with open(results_dir, "rb") as f:
         topic_vector = pickle.load(f)
     return topic_vector
 
-def get_topic_vectors_folder_name(topic_encoding_type: str) -> str:
-    '''Get the folder name for storing topic vectors.'''
-    config_dict = TOPIC_VECTORS_CONFIG[topic_encoding_type]
-    model_alias = EXPERIMENT_CONFIG['model_alias']
-    folder_name = f"topic_vectors_from_{config_dict['topic_encoding_type']}_for_{model_alias}"
 
-    if config_dict['topic_encoding_type'] == 'topical_summaries':
-        if config_dict['include_non_matching']:
-            folder_name += f"_fill_non_matching_up_to_{config_dict['num_samples']}_samples"
+def get_topic_vectors_folder_name(topic_encoding_type: str) -> str:
+    """Get the folder name for storing topic vectors."""
+    config_dict = TOPIC_VECTORS_CONFIG[topic_encoding_type]
+    model_alias = EXPERIMENT_CONFIG["model_alias"]
+    folder_name = (
+        f"topic_vectors_from_{config_dict['topic_encoding_type']}_for_{model_alias}"
+    )
+
+    if config_dict["topic_encoding_type"] == "topical_summaries":
+        if config_dict["include_non_matching"]:
+            folder_name += (
+                f"_fill_non_matching_up_to_{config_dict['num_samples']}_samples"
+            )
         else:
-            folder_name += '_only_matching'
-    elif config_dict['topic_encoding_type'] == 'zeros':
-        folder_name = f'topic_vectors_all_zeros_for_{model_alias}'
+            folder_name += "_only_matching"
+    elif config_dict["topic_encoding_type"] == "zeros":
+        folder_name = f"topic_vectors_all_zeros_for_{model_alias}"
     return folder_name
