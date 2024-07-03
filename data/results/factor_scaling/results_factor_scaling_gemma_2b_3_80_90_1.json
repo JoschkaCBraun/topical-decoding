@@ -1,0 +1,74 @@
+{
+    "experiment_info": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "factor_scaling",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "training_dataset_name": "newts_train",
+            "test_dataset_name": "newts_test",
+            "num_articles": 3,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "FACTOR_SCALING_CONFIG": {
+            "scaling_factors": [
+                0.125,
+                0.25,
+                0.5,
+                1,
+                2,
+                4,
+                8
+            ]
+        }
+    },
+    "generated_summaries": [
+        {
+            "article_idx": 0,
+            "tid1": 218,
+            "0.125": "Sure, here is the summary you requested:\n\nAn American tourist fell 15 meters off a cliff in the Blue Mountains, west of Sydney, and was stranded overnight. Rescue teams found the woman suffering from possible broken ankles and ribs and transported her to an ambulance for medical attention. Due to low light and fog conditions, thez had to wait for the fog to lift before completing the rescue.<eos>",
+            "0.25": "The text is about an American tourist stranded in the Blue Mountains. She fell 15 meters and rolled a further z 20 meters down a steep slope before being rescued by a helicopter this morning. The woman sustained leg and chest injuries and was taken to a nearby hospital. Police are still investigating the incident. This is the third time in the past two years that a tourist has fallen off a cliff in the Blue Mountains.<eos>",
+            "0.5": "The American tourist has been flown to a hospital in Sydney for treatment. Police are investigating the incident to determine how the woman was able to fall so far and the circumstances surrounding her fall. Authorities have expressed their concern for the woman's safety and have offered assistance to her family and friends. The Blue Mountains are a popular tourist destination, and authorities are working to ensure that tourists are safe while they are visiting the area.<eos>",
+            "1": "The 25-year-old American tourist is in a stable condition and is being treated at a nearby hospital. Police have been thanked by the tourist's family for their swift response. Blue Mountains residents are grateful for the tireless work of the emergency services and the community support for those affected by the incident. The incident highlights the dangers of cliff walking and the need for appropriate safety precautions. It also highlights the importance of community support during times of",
+            "2": "The woman's injuries are not life-threatening but she will be flown to a hospital in Sydney for further treatment. The authorities have thanked the local community for their assistance in the rescue. The rescue operation has raised awareness of the dangers of cliff climbing in the Blue Mountains. The police are reminding people not to bushwalk near cliffs without proper training and equipment. It is important to stay away from cliff faces, rocks and loose objects.<eos>",
+            "4": "The American tourist is now receiving medical attention. Her injuries are not life-degreeding, but she will require medical attention. Her case has caused a disruption to the popular tourist area and road closures are being put in place to ensure the safety of visitors. The Blue Mountains National Park is also assessing the situation and planning to reopen the area once it is safe. The local community is expressing concern for the stranded tourist and has rallied around to provide assistance",
+            "8": "**Highliliear Points:**\n- American tourist fell 15m off a cliff while bushmlowking.\n-Fall resulted in possible broken ankle and broken ribs.\n-Weather conditions were foggy and low-licount.\n-Higher rescue team deployed to finish the rescue.\n-Weather conditions forced them to use a helicopter to reach the stranded woman.\n-Highliliear injuries include a possible broken ankle and"
+        },
+        {
+            "article_idx": 1,
+            "tid1": 105,
+            "0.125": "Theinvestigation into the incident is ongoing, andallegationsaccuingcountycounselAndrewStewartWoodofviolationofFloridastatute307.24(3)reportedlyFinesAndrewStewartWoodtheamountof$200chargeshefacedforhisbehavior. TheInvestigativeativeprocessintotheincident is ongoing andauthorities willbi continuing toreleaseacountupdates.reportedlyacountycouncilmanAndrewStewartWoodhasbeen chargedcounsel",
+            "0.25": "Sure, here is a summary of the text:\n\nA 41-year-old British man named Andrew Stewart Wood has been charged after he relieved himself in an ice machine at the Hard Rock Hotel in the Universal theme park resort in Orlando. The security guard found Wood urinating in an ice machine and became belligerent when the guard tried to stop him. The security guard called the police, who removed Wood from the premises after he refused to stay",
+            "0.5": "The 41-year-old British man, Andrew Stewart Wood, faces charges of disorderly conduct and public intoxication. The incident has raised concerns about the safety of guests at the Hard Rock Hotel, with security guards being forced to intervene multiple times to try to control the behavior of the disruptive guest. The case has sparked debate on social media, with many expressing their concern about the incident and the hotel's security measures.<eos>",
+            "1": " \nIn summary, a 41-year-old British man was charged after he allegedly relieved himself in an ice machine at an Orlando hotel. He was found urinating into an ice machine and became belligerent when confronted by security guards. The man was arrested and charged with disorderly conduct. He was released from jail with a $1,000 bond. The Hard Rock Hotel has removed the ice machine from service and is unable to provide",
+            "2": "Sure, here is a summary of the text:\n\nA 41-year-old British man named Andrew Stewart Wood was charged after he allegedly relieved himself in an ice machine at an Orlando hotel. The incident took place at the Hard Rock Hotel in the Universal theme park resort in the early hours of Tuesday. The security guard found Wood urinating into an ice machine and immediately arrested him. Wood became belligerent and refused to cooperate with the security guard",
+            "4": "Summary: A 41-year-old British man named Andrew Stewart Wood was charged after he allegedly relieved himself in an ice machine at an Orlando hotel. Andrew Wood was caught urinatoring into an ice machine while intoxicated at the Hard Rock Hotel in the Universal theme park resort. He was arrested by security guards and placed in jail. Wood posted a $1,000 bond and was released from Orange CountyJail on Tuesday afternoon.<eos>",
+            "8": "Sure, here is the summary of the text:\n\nAccused of relieving himself in an ice machine at an Orlando hotel, Andrew Stewart Wood, 41, from the UK, was arrested after being caught urinatoring in an ice machine while intoxicated. The security guard located Wood and saw him urinatoring into an ice machine. When the guard tried to stop him, Wood became belligerent, began shouting, and would not cooperate. The security"
+        },
+        {
+            "article_idx": 2,
+            "tid1": 162,
+            "0.125": "The textry does not provide information about thePresidencyleaderpressr'sWashingtonMeet withPresidentTrumpAdministration.Concise summaryPresserConferenceReprocessUnited StateshouseDepartment.House.govConciseAmericanPoliticalAnalysis\n\nSure. Here's a summary of the text:\n\nThe text discusses the ongoing war against ISIS and theidreportsecret relationship between Iran and the United States. DespiteSecretviceProgramreprogrambarpresidentsapprovalWhite",
+            "0.25": "The text discusses theSecret servicereportunitMeetingAmerica,press briefing conducted byHashim Rouhani on September 12, revolving around theUnited StatesHobax war in Iraq andstatesreportermeetingwithCNNrepresentatives discussing thebarriers to cooperation between Iran and the U.S.Bush administrationreportermeetingPresident Obamawhite about the same warWashington,DC.\n\nTheSecretary of State Rex TillersonWhitePress SecretaryUnited StatesBar",
+            "0.5": "The text is about the Basij militia and its role in the fight against ISIS. The author provides an overview of the Basij's mission, the tensions between Iran and the U.S., and the challenges facing Iran in fighting ISIS. The author also raises the question of whether an Iran-Saudi proxy war might erupt as a result of their ongoing involvement in the fight against ISIS. It is important to note that the text does not provide",
+            "1": "The text is about the Basij militia in Iran and its involvement in the fight against ISIS. It highlights the tensions between Iran and the U.S., particularly with regard to the U.S. military involvement in Iraq. The text also suggests that the Basij may be playing a mixed blessing for Iran by helping to push back against ISIS but that Iran's elites believe that the level of trust between the two countries is simply not there.<eos>",
+            "2": "The text is about the Basij, a militia made up of fighters loyal to Iran's religious leaders, and their role in the fight against ISIS. The text highlights the gulf that still exists between Iran and the U.S., despite any thaw in relations in the wake of the recent agreement on a framework nuclear deal and ongoing talks. The text also provides an insight into the strategic debate between Iran and the U.S., with both sides having",
+            "4": "Sure, here's a summary of the text:\n\nAmerican and Iranian militias are involved in a mixed blessing fight against ISIS. While Iranian officials believe their strategy is making a difference, the U.S. denies any direct coordination with Iran. The conflict is important to Iran, which is a common enemy of the United States. Both sides share a common enemy, but there is no apparent common strategy to defeat ISIS.<eos>",
+            "8": "The text discusses the Iranian militia, the Basari, and the role of Iran's elite Revolutionary Guard's Qid Force. The text also explores the Iran-UnitedStates relations and the ongoing battle against ISIS in Iraq and Syria. It concludes by mentioning the potential for an Iran-UnitedStates proxy war to erry, based on their common enemy and shared interests in defeating ISIS. However, it also emphasizes that a common strategy is still lacking"
+        }
+    ]
+}

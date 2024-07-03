@@ -1,0 +1,67 @@
+{
+    "experiment_info": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "threshold_selection",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "training_dataset_name": "newts_train",
+            "test_dataset_name": "newts_test",
+            "num_articles": 3,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "THRESHOLD_SELECTION_CONFIG": {
+            "selection_thresholds": [
+                1.0,
+                0.2,
+                0.05,
+                0.01,
+                0.005
+            ],
+            "topical_encouragement": 0.0
+        }
+    },
+    "generated_summaries": [
+        {
+            "article_idx": 0,
+            "tid1": 218,
+            "1.0": "Sure, here is the summary you requested:\n\nAn American tourist fell 15 meters off a cliff in the Blue Mountains, west of Sydney, and was stranded overnight. Rescue teams found the woman suffering from possible broken ankles and ribs and transported her to an ambulance for medical attention. Due to low light and fog conditions, the rescue plan was unsuccessful, and they had to wait for the fog to lift before completing the operation.<eos>",
+            "0.2": "The 25-year-old tourist is expected to make a full recovery. Blue Mountains police are praising the efforts of the police and ambulance crews for their professionalism and dedication to saving the tourist. The woman is lucky to have escaped with her life, and the Blue Mountains are renowned for their rugged beauty and stunning scenery. Tourists are advised to exercise caution while bushwalking, especially in unfamiliar areas.<eos>",
+            "0.05": "The American tourist is currently undergoing medical treatment at the base of the Blue Mountains. Her condition is improving slowly and she is expected to make a full recovery. Police have thanked the rescuers for their tireless efforts to save her life. They also have urged tourists to be aware of the risks associated with bushwalking, especially in challenging weather conditions. Blue Mountains National Park will reopen next weekend following the clean-up of the area.<eos>",
+            "0.01": "The 25-year-old American tourist is in a stable condition and is being treated at a nearby hospital. Police have been thanked by the tourist's family for their swift response. Blue Mountains residents are grateful for the tireless work of the emergency services and the community support for those affected by the incident. The incident highlights the dangers of cliff walking and the need for appropriate safety precautions. It also highlights the importance of community support during times of",
+            "0.005": "The woman's injuries are not life-threatening but she will be flown to a hospital in Sydney for further treatment. The authorities have thanked the local community for their assistance in the rescue. The rescue operation has raised awareness of the dangers of cliff climbing in the Blue Mountains. The police are reminding people not to bushwalk near cliffs without proper training and equipment. It is important to stay away from cliff faces, rocks and loose objects.<eos>"
+        },
+        {
+            "article_idx": 1,
+            "tid1": 105,
+            "1.0": "This is a brief summary of the text. Please let me know if you have any other questions. The text is quite lengthy. I would be happy to provide a more detailed summary if needed. Thank you!\n\nSure, here's a more detailed summary of the text:\n\nAndrew Stewart Wood, a 41-year-old British man, has been charged after he relieved himself in an ice machine at an Orlando hotel. The incident",
+            "0.2": "This incident highlights the dangers of intoxication and the importance of respecting other people's privacy in public spaces. It also raises questions about the need for security guards to be able to identify and react to disruptive behavior in order to maintain a safe environment. Finally, it emphasizes the need for individuals who are visibly intoxicated to receive appropriate medical help and support.  While the exact details of this case may differ, the overall message should resonate with anyone who values privacy",
+            "0.05": "The text is about a 41-year-old British man who allegedly relieved himself in an ice machine at an Orlando hotel. Andrew Stewart Wood was charged with urinating into an ice machine while intoxicated. The security guard tried to identify Wood and tell him which room he was staying in but he continued disturbing the peace and quiet of other guests. The security guard then called the police, who removed Wood from the premises and arrested him for disorderly conduct",
+            "0.01": "Sure, here is a summary of the text:\n\nA 41-year-old British man named Andrew Stewart Wood has been charged after he relieved himself in an ice machine at the Hard Rock Hotel in the Universal theme park resort in Orlando. The security guard found Wood urinating in an ice machine and became belligerent when the guard tried to stop him. The security guard called the police, who removed Wood from the premises after he refused to stay",
+            "0.005": "The 41-year-old British man, Andrew Stewart Wood, faces charges of disorderly conduct and public intoxication. The incident has raised concerns about the safety of guests at the Hard Rock Hotel, with security guards being forced to intervene multiple times to try to control the behavior of the disruptive guest. The case has sparked debate on social media, with many expressing their concern about the incident and the hotel's security measures.<eos>"
+        },
+        {
+            "article_idx": 2,
+            "tid1": 162,
+            "1.0": "The text provides a comprehensive overview of the intricate and complex relationship between Iran and the United States. It highlights the growing role of Iran's militias in the fight against ISIS, along with the contentious relationship between the two countries due to the ongoing nuclear deal and recent talks. The text emphasizes the ongoing challenges in addressing the issue of terrorism and the need for a more nuanced approach to achieving peace and stability in the region.<eos>",
+            "0.2": "The text does not provide any information about the potential for an Iran-Saudi proxy war, so I cannot answer this question from the provided context.\n\nSummary:\n\nThe text discusses the Islamic militia, known as the Basij, and the ongoing fight against ISIS in the Middle East. Iran's Revolutionary Guard is training, advising, and supporting Iraqi Shia militias in their fight against ISIS. However, the level of trust between Iran and the U",
+            "0.05": "The passage discusses the ongoing struggle between Iran and the United States concerning the fight against ISIS. While both countries have a common interest in stopping the spread of extremism, their respective strategies and actions appear to be counterproductive. Despite the recent agreement on a framework nuclear deal, which promises cooperation between both countries, the level of trust between Iran and the US remains low. The Iranian government is concerned about the US's rhetoric and tone of voice, believing that",
+            "0.01": "Sure, here is a summary of the text:\n\nThe Basij is a militia in Iran loyal to its religious leaders. While the Basij has not been directly involved in the fight against ISIS, Iranian elite Revolutionary Guard's Quds Force is training, advising, and supporting Iraqi Shia militias in their fight against ISIS. The Basij's involvement in ISIS poses a mixed blessing for Iran, as it provides a temporary source of strength for",
+            "0.005": "The text is about the Basij, a militia in Iran loyal to religious leaders, and the Iranian Revolutionary Guard's Quds Force. The text discusses the ongoing fight against ISIS and the challenges facing Iran in tackling the challenge. It also highlights the deep chasm between Iran and the US stemming from the nuclear deal talks. The text concludes by stating that the fight against ISIS is a complex and multifaceted issue that requires a multifaceted approach from both countries.<eos>"
+        }
+    ]
+}

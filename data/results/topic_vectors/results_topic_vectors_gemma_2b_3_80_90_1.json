@@ -1,0 +1,71 @@
+{
+    "experiment_info": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "topic_vectors",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "training_dataset_name": "newts_train",
+            "test_dataset_name": "newts_test",
+            "num_articles": 3,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "TOPIC_VECTORS_CONFIG": {
+            "zeros": {
+                "topic_encoding_type": "zeros"
+            },
+            "topic_strings": {
+                "topic_encoding_type": "topic_strings"
+            },
+            "topical_summaries_excluding_non_matching": {
+                "topic_encoding_type": "topical_summaries",
+                "include_non_matching": false
+            },
+            "topical_summaries_including_non_matching": {
+                "topic_encoding_type": "topical_summaries",
+                "include_non_matching": true,
+                "num_samples": 250
+            }
+        }
+    },
+    "generated_summaries": [
+        {
+            "article_idx": 0,
+            "tid1": 218,
+            "zeros": "Sure, here is the summary you requested:\n\nAn American tourist fell 15 meters off a cliff in the Blue Mountains, west of Sydney, and was stranded overnight. Rescue teams found the woman suffering from possible broken ankles and ribs and transported her to an ambulance for medical attention. Due to low light and fog conditions, the rescue plan was unsuccessful, and they had to wait for the fog to lift before completing the operation.<eos>",
+            "topic_strings": " forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast forecast",
+            "topical_summaries_excluding_non_matching": "The snowfall that snowpack temperatures in the region are causing treacherous winter conditions in the region resulting in snowfall and snowpack conditions. This winter period is affecting all regions of the state causing snowfall and snowpack conditions. However, the warmest days of December temperatures are causing temperatures above freezing in the region. This means that snow and ice conditions are unusual in the region, but precipitation is still possible. Therefore, the snowfall and snowpack temperatures are unusual in the",
+            "topical_summaries_including_non_matching": " Temperatures temperatures lows temperatures temperatures temperatures lows temperatures temperatures highs temperatures coldest coldest temperatures coldest temperatures coldest temperatures coldest temperatures coldest temperatures coldest temperatures warmest temperatures coldest coldest temperatures temperatures coldest temperatures temperature coldest temperatures coldest temperatures temperatures temperatures coldest coldest coldest temperatures temperatures coldest temperatures coldest coldest temperatures temperatures coldest temperatures snow snow snow snowfall snowfall snowfall snowfall snowfall snowfall snowfall snow temperature snow snow snowfall snow snow snow temperatures temperatures coldest coldest coldest temperatures temperatures snow snow snow snow snow snow snow snow snow snow snow snow snow"
+        },
+        {
+            "article_idx": 1,
+            "tid1": 105,
+            "zeros": "The 41-year-old British man faces charges of disorderly conduct and public urination. The case highlights the importance of vigilance and security at luxury hotels, with staff being aware of potential issues and taking necessary measures to ensure the safety of guests. This incident underscores the responsibility of hotel staff to uphold a safe environment and maintain a quiet atmosphere for all visitors. It also raises questions about the limitations of guest access to information and the potential consequences of not",
+            "topic_strings": " investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation investigation",
+            "topical_summaries_excluding_non_matching": "The investigation is ongoing and prosecutors are expected to file charges against the suspect. The authorities are also investigating the hotel's policies and procedures for handling cases of alleged sexual misconduct. The case has raised concerns about the security of the hotel and the ongoing investigation will likely raise questions about the conduct of law enforcement officials. Neighbors described the incident as a 'shock' and expressed concerns about the hotel's security practices.\"<eos>",
+            "topical_summaries_including_non_matching": "Police authorities alleged that the investigation is ongoing and prosecutors prosecutors have alleged prosecutors prosecutors are investigating the case police court prosecutors will determine prosecutors bail bail bond bond will be reviewed on Wednesday police police police body camera footage was allegedly obtained during the investigation according District Attorney prosecutor District Attorney prosecutor bond bonds police bail police authorities will allegedly investigate the case ongoing prosecutors prosecutors have alleged authorities authorities found evidence prosecutors prosecutors allegedly found the police police body camera footage allegedly obtained during the investigation prosecutors prosecutors"
+        },
+        {
+            "article_idx": 2,
+            "tid1": 162,
+            "zeros": "The text is about the Basij and Iran's involvement in the fight against ISIS. It mentions that Iran's elite Revolutionary Guard's Quds Force is already training, advising and supporting Iraqi Shia militias in their fight against ISIS. The text also discusses the mixed blessing of Iran's involvement in ISIS fight, as Iranian officials believe their strategy is making a difference in the fight against ISIS, but the level of trust simply isn't",
+            "topic_strings": " John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John John",
+            "topical_summaries_excluding_non_matching": "The text does not mention whether he Obama administration's relationship with Iran had any impact on Obama's statement. Obama stated Obama vowed to \"degrade and ultimately defeat\" the terrorist group. Obama administration's policy on Obama's statement about Obama's presidency is not mentioned in the text. Obama Obama's presidency from 2009 Obama was a president of Obama Obama's presidency.<eos>",
+            "topical_summaries_including_non_matching": " Obama administration Obama administration Obama administration Obama administration Obama administration Obama administration Obama administration Obama administration Obama administration Obama administration Obama administration Obama administration Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama Obama"
+        }
+    ]
+}

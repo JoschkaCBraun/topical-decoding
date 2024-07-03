@@ -1,0 +1,46 @@
+{
+    "experiment_info": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "baseline",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "training_dataset_name": "newts_train",
+            "test_dataset_name": "newts_test",
+            "num_articles": 3,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "BASELINE_CONFIG": {}
+    },
+    "generated_summaries": [
+        {
+            "article_idx": 0,
+            "tid1": 218,
+            "baseline": "Sure, here is the summary you requested:\n\nAn American tourist fell 15 meters off a cliff in the Blue Mountains, west of Sydney, and was stranded overnight. Rescue teams found the woman suffering from possible broken ankles and ribs and transported her to an ambulance for medical attention. Due to low light and fog conditions, the rescue plan was unsuccessful, and they had to wait for the fog to lift before completing the operation.<eos>"
+        },
+        {
+            "article_idx": 1,
+            "tid1": 105,
+            "baseline": "This is a 41-year-old British man charged with relieving himself in an ice machine at an Orlando hotel. He was arrested after a guest reported that there was an intoxicated man on the premises. The security guard tried to have the guest identify himself and tell him what room he was staying in but he continued disturbing the peace and quiet of other guests. The guard then called the police. The police removed Wood from the premises after he refused"
+        },
+        {
+            "article_idx": 2,
+            "tid1": 162,
+            "baseline": "The provided text does not specify whether an Iran-Saudi proxy war will erupt, so I cannot answer this question from the provided context.\n\nSummary:\n\nThe provided text discusses the complex relationship between Iran and the United States, focusing on the Basij militia and its role in the fight against ISIS. While the Basij has so far remained out of the fight against ISIS, Iranian authorities believe its presence is making a difference. The text also highlights"
+        }
+    ]
+}

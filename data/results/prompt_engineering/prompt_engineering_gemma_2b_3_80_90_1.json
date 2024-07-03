@@ -1,0 +1,61 @@
+{
+    "experiment_information": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "prompt_engineering",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "training_dataset_name": "newts_train",
+            "test_dataset_name": "newts_test",
+            "num_articles": 3,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "PROMPT_ENGINEERING_CONFIG": {
+            "focus_types": [
+                "tid1_focus",
+                "no_focus",
+                "tid2_focus"
+            ]
+        }
+    },
+    "generated_summaries": [
+        {
+            "article_idx": 0,
+            "tid1": 218,
+            "tid2": 62,
+            "tid1_focus": "Sure, here is the summary you requested:\n\n**Snow, weather, cold, winter, temperatures, conditions, hot, morning, expected, parts, freezing, weekend, summer, today, georgia, days, degrees, fall, met, country, low, early, high, retailers, forecast**\n\nThe text describes an incident where an American tourist fell 15 metres off a cliff in the Blue Mountains, west of Sydney. She spent",
+            "no_focus": "The text is about an American tourist who fell 15 metres off a cliff while bushwalking in the Blue Mountains, west of Sydney, Australia. She was rescued by rescue teams and taken to a hospital for medical attention. The tourist sustained leg and chest injuries and was hospitalised overnight. Her condition is uncertain at this time, but she is receiving medical attention. The text does not specify the outcome of the rescue.<eos>",
+            "tid2_focus": "The text provides a summary of the incident, highlighting the following points:\n\n- American tourist fell 15 metres off a cliff.\n- She rolled 20 metres down a steep slope.\n- Rescue crews found the woman suffering a possible broken ankle and broken ribs.\n- She was taken to a hospital in Sydney for treatment.\n- Rescue teams used a helicopter to evacuate the woman.<eos>"
+        },
+        {
+            "article_idx": 1,
+            "tid1": 105,
+            "tid2": 229,
+            "tid1_focus": "This text focuses on the following charged, alleged, arrested, alleged, investigation, arrest, accused, authorities, office, attorney, bail, fbi, criminal, charge, released, investigators, jail, reported, detectives, federal, documents, custody, county, article. It provides an overview of the incident and the subsequent charges against the 41-year-old British man. The text also mentions the hotel's actions and the release",
+            "no_focus": "Sure, here's a summary:\n\nA 41-year-old British man was charged after he relieved himself in an ice machine at an Orlando hotel. He was found urinating into an ice machine while intoxicated. The security guard attempted to stop him, but Wood became belligerent and refused to cooperate. The police were called, and Wood was arrested on disorderly conduct charges. He was released from Orange County Jail on Tuesday afternoon after posting $",
+            "tid2_focus": "The hotel has been the subject of various negative reviews and criticisms in recent years, including a 2018 lawsuit over a broken window in a guest's room. The hotel has also been criticized for its high prices and lack of amenities. The Hard Rock Hotel at Universal Orlando offers various amenities for guests, including a lagoon-style pool, a spa, a casino, and a variety of restaurants.<eos>"
+        },
+        {
+            "article_idx": 2,
+            "tid1": 162,
+            "tid2": 39,
+            "tid1_focus": "The provided context does not mention anything about Iran-Saudi proxy war, so I cannot extract the requested information from the context. Therefore, I cannot generate the summary you requested. I hope this clarifies. Is there anything else I can help you with? Let me know. Thank you.\n\n**Summary:**\n\nThe context does not mention the Iran-Saudi proxy war, and therefore I cannot generate the requested summary.<eos>",
+            "no_focus": "The text is about the Iranian Basij militia and its involvement in the fight against ISIS. It also discusses the broader dynamics between Iran and the US. The text indicates that the Basij is not directly involved in the fight against ISIS, but the IRGC is training, advising, and supporting Iraqi Shia militias in their fight against ISIS. The text also explores the gap between the U.S. and Iran's strategic thinking, and the challenges",
+            "tid2_focus": "The text does not discuss the issue of an Iran-Saudi proxy war erupting, so I cannot answer this question from the provided context.\n\n**Summary:**\n\nSure, here's a summary of the text focusing on war, military, defense, army, Iraq, soldiers, troops, forces, battle, iraqi, soldier, force, commander, combat, armed, base, served, personnel, command, men, defense, general,"
+        }
+    ]
+}

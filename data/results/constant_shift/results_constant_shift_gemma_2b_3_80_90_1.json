@@ -1,0 +1,74 @@
+{
+    "experiment_info": {
+        "EXPERIMENT_CONFIG": {
+            "experiment_name": "constant_shift",
+            "model_alias": "gemma_2b"
+        },
+        "GENERATION_CONFIG": {
+            "min_new_tokens": 80,
+            "max_new_tokens": 90,
+            "num_beams": 1,
+            "do_sample": true,
+            "top_p": 0.95,
+            "top_k": 50
+        },
+        "DATASET_CONFIG": {
+            "training_dataset_name": "newts_train",
+            "test_dataset_name": "newts_test",
+            "num_articles": 3,
+            "batch_size": 1,
+            "num_workers": 0,
+            "shuffle": false
+        },
+        "TOPICS_CONFIG": {
+            "num_topic_words": 25,
+            "min_phi_value": 0.001
+        },
+        "CONSTANT_SHIFT_CONFIG": {
+            "shift_constants": [
+                -5,
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                5
+            ]
+        }
+    },
+    "generated_summaries": [
+        {
+            "article_idx": 0,
+            "tid1": 218,
+            "-5": "Sure, here is the summary you requested:\n\nAn American tourist fell 15 meters off a cliff in the Blue Mountains, west of Sydney, and was stranded overnight. Rescue teams found the woman suffering from possible broken ankles and ribs and transported her to an ambulance for medical attention. Due to low light and fog conditions, the rescue plan was unsuccessful, and they had to wait for the fog to lift before completing the operation.<eos>",
+            "-2": "The 25-year-old tourist is expected to make a full recovery. Blue Mountains police are praising the efforts of the police and ambulance crews for their professionalism and dedication to saving the tourist. The woman is lucky to have escaped with her life, and the Blue Mountains are renowned for their rugged beauty and stunning scenery. Tourists are advised to exercise caution while bushwalking, especially in unfamiliar areas.<eos>",
+            "-1": "The American tourist is currently undergoing medical treatment at the base of the Blue Mountains. Her condition is improving slowly and she is expected to make a full recovery. Police have thanked the rescuers for their tireless efforts to save her life. They also have urged tourists to be aware of the risks associated with bushwalking, especially in challenging weather conditions. Blue Mountains National Park will reopen next weekend following the clean-up of the area.<eos>",
+            "0": "The 25-year-old American tourist is in a stable condition and is being treated at a nearby hospital. Police have been thanked by the tourist's family for their swift response. Blue Mountains residents are grateful for the tireless work of the emergency services and the community support for those affected by the incident. The incident highlights the dangers of cliff walking and the need for appropriate safety precautions. It also highlights the importance of community support during times of",
+            "1": "The woman's injuries are not life-threatening but she will be flown to a hospital in Sydney for further treatment. The authorities have thanked the local community for their assistance in the rescue. The rescue operation has raised awareness of the dangers of cliff climbing in the Blue Mountains. The police are reminding people not to bushwalk near cliffs without proper training and equipment. It is important to stay away from cliff faces, rocks and loose objects.<eos>",
+            "2": "The American tourist is now receiving medical attention. Her injuries are not life-threatening, but she is expected to stay hospitalized for at least three days. It is unclear how she sustained the broken ankle and ribs. The Blue Mountains are a popular tourist destination in Australia and many tourists visit the area every year. The incident highlights the need for tourists to stay alert and not take unnecessary risks when bushwalking.<eos>",
+            "5": "The text is about an American tourist who fell 15 meters off a cliff while bushwalking in the Blue Mountains, west of Sydney. The woman was rescued by helicopter this morning after spending the night stranded. She sustained leg and chest injuries, but she is expected to make a full recovery. The police are investigating the incident and will work with the Australian and New Zealand high commissions to ensure that the tourist is adequately compensated for her injuries.<eos>"
+        },
+        {
+            "article_idx": 1,
+            "tid1": 105,
+            "-5": "Sure. Here's a summary:\n\nA 41-year-old British man, Andrew Stewart Wood, has been charged with relieving himself in an ice machine at an Orlando hotel. The guest reported him to security, and when the guard confronted Wood, he became belligerent and refused to cooperate. The guard called the police, who removed Wood from the hotel and placed him in jail on disorderly conduct charges. He was released from jail on Tuesday",
+            "-2": "The following are the key points of the text:\n* A 41-year-old British man named Andrew Stewart Wood has been charged with relieving himself in an ice machine at an Orlando hotel.\n\n\n* The hotel has removed the ice machine from service.\n\n\n* Wood was caught urinating in an ice machine while intoxicated and became belligerent and refused to cooperate with the security guard.\n\n\n* He was arrested on disorderly conduct charges and placed in",
+            "-1": "In summary, a 41-year-old British man was charged after he allegedly relieved himself in an ice machine at an Orlando hotel. He was identified by a guest as he was acting belligerent and disturbing the peace of other guests. The police were called and Wood was arrested for disorderly conduct and placed in jail. The Hard Rock Hotel at Universal Orlando confirmed that they removed the ice machine from service but were unable to provide any information about the guest",
+            "0": "Sure, here is a summary of the text:\n\nA 41-year-old British man named Andrew Stewart Wood has been charged with urinating into an ice machine at an Orlando hotel. He was caught on Tuesday while visibly intoxicated. The security guard intervened and tried to identify Wood and tell him his room number, but Wood resisted and became belligerent. Wood was eventually arrested on disorderly conduct charges and placed in jail.<eos>",
+            "1": "The 41-year-old British man faces charges related to relieving himself in an ice machine at the Hard Rock Hotel in Orlando, Florida. The man's behavior caused disruption and created an uncomfortable environment for other guests. He was taken into custody by the authorities and released after his bond was posted. The hotel has removed the ice machine from service while investigating the incident. It is unclear at this time whether Andrew Stewart Wood will face additional legal",
+            "2": "Andrew Stewart Wood, a 41-year-old Briton, was charged with relieving himself in an ice machine at the Hard Rock Hotel in Universal Studios resort in Florida. He appeared to be very intoxicated and made unruly behavior toward guests. Police removed him from the premises and he posted bond and was released. The Hard Rock Hotel at Universal Orlando confirmed that the ice machine has been removed from service due to a safety hazard.<eos>",
+            "5": "This case highlights the dangers of consuming alcohol in public spaces and the importance of maintaining respect and quiet in public areas. It also raises the issue of identifying and managing intoxicated individuals in hotels and theme parks. Despite the hotel's attempts to enforce safety protocols, the incident highlights the potential for disruptive behavior and the difficulty in identifying and stopping intoxicated patrons. It also raises questions about accountability and the potential impact of such incidents on the hotel's reputation and the"
+        },
+        {
+            "article_idx": 2,
+            "tid1": 162,
+            "-5": "Sure, here's a summary of the text:\n\nThe text discusses the ongoing fight against ISIS in Iraq and Syria and the role of Iranian and Saudi proxy militias in the battle. Despite the efforts of the Basij militia, an Iranian Shia militia group, the group has been unable to effectively combat ISIS. On the other hand, the Quds Force, led by General Qassem Suleimani, is receiving training and support from Iran to",
+            "-2": "The text discusses the role of the Basij militia and Iran's Revolutionary Guard (Quds) forces in the fight against ISIS, and the complicated relationship between Iran and the US regarding this war. It highlights the gap in trust and the differences in strategies between the two nations. The text suggests that both Iran and the US may be willing to continue fighting ISIS, but that this is unlikely to lead to a sustainable solution to the problem.<eos>",
+            "-1": "The text is a summary of the article. It discusses the Basij militia, the Iranian Revolutionary Guard, and the fight against ISIS in Iraq and Syria. It also points out the gulf that still exists between Iran and the US. It also highlights the conflicting narratives from the US and Iran on the war. Finally, it suggests that the war against ISIS might escalate. It is important to note that the article is biased and has its own perspective on the",
+            "0": "The text does not specify whether an Iran-Saudi proxy war will erupt. Therefore, I cannot answer this question from the provided context. However, it does provide an overview of the challenges faced by Iran and the United States in their fight against ISIS. Would you like to know anything else? I would be happy to provide more context or answer other questions you may have. Let me know how I can assist you.<eos>",
+            "1": "The text does not explicitly mention whether the Iran-Saudi proxy war will erupt. Therefore, I cannot answer this question from the provided context.\n\nSummary:\n\nThe text discusses the complex dynamics between Iran and the United States regarding the fight against ISIS. While both countries share a common enemy, they maintain mistrust and conflict, stemming from historical grievances and the ongoing proxy war. The Basij militia, an Iranian Shia militia, is actively involved in the",
+            "2": "The text discusses the ongoing fight against ISIS in Iraq and Syria, highlighting the role of Iran and the Revolutionary Guard in battling the terrorist group. It emphasizes the complex relationship between Iran and the United States, both in terms of military cooperation and potential proxy war.\n\nSummary:\n\nThe text provides a detailed account of the ongoing fight against ISIS in Iraq and Syria, with an emphasis on the role of Iran and the Revolutionary Guard. It highlights the complex geopolitical",
+            "5": "The text does not mention whether the Iran-Saudi proxy war is discussed or mentioned in the text. So I cannot answer this question from the provided context. The context does not provide information about the Iran-Saudi proxy war. Therefore, I cannot answer this question from the provided context.\n\nSummary:\n\nThe text discusses the role of the Basij, a militia in Iran, in the fight against ISIS. While the Basij has not been directly"
+        }
+    ]
+}
