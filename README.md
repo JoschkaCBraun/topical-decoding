@@ -86,4 +86,19 @@ jupyter notebook notebooks/plot_results.ipynb
 ## License
 This project is provided for educational purposes and is not licensed for commercial use.
 
-For more details on the project's methodology, findings, and implications, please refer to the accompanying project report: logits_reweighting_project_report.pdf or contact the authors.
+For more details on the project's methodology, findings, and implications, please refer to the accompanying research project report, which is published on arXiv: https://arxiv.org/abs/2507.05235 (the PDF is also included in this repository as logits_reweighting.pdf), or contact the authors.
+
+## Citation
+If you use this work, please cite:
+
+```bibtex
+@misc{braun2025logitreweightingtopicfocusedsummarization,
+      title={Logit Reweighting for Topic-Focused Summarization}, 
+      author={Joschka Braun and Bálint Mucsányi and Seyed Ali Bahrainian},
+      year={2025},
+      eprint={2507.05235},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2507.05235}, 
+}
+```
